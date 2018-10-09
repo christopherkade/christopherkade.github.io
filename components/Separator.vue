@@ -20,6 +20,7 @@ export default {
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: 700;
+  text-align: left;
 }
 
 .sep-title::before {
@@ -37,5 +38,11 @@ export default {
   display: inline-block;
   padding-right: 1.4em;
   background: #fff;
+}
+
+@media only screen and (max-width: 1080px) {
+  .sep-title span {
+    padding-left: 1em;
+  }
 }
 </style>
