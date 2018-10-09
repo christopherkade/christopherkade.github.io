@@ -1,7 +1,7 @@
 <template>
-    <div class="banner-wrapper">
-        <img id="bannerPhoto" :class="{ activeB: this.$store.state.navAnimation, inactiveB: !this.$store.state.navAnimation }"/>
-        <div id="bannerRow" :class="{ activeP: this.$store.state.navAnimation, inactiveP: !this.$store.state.navAnimation }">
+    <div class="bannerWrapper">
+        <img class="bannerPhoto" :class="{ bannerSmall: this.$store.state.navAnimation, bannerNormal: !this.$store.state.navAnimation }"/>
+        <div class="bannerRow" :class="{ rowUp: this.$store.state.navAnimation, rowDown: !this.$store.state.navAnimation }">
           <img class="personalPhoto" src="/img/kade.jpg" />
           <h1>Christopher Kade</h1>
           <p>Full-stack Developer</p>
@@ -9,26 +9,23 @@
     </div>
 </template>
 
-<script>
-export default {}
-</script>
-
 <style lang="scss">
-.banner-wrapper {
+.bannerWrapper {
   text-align: center;
   padding: 0 0 30px 0;
 }
 
-#banner-row {
+.bannerRow {
   padding-top: 125px;
+  transition: padding-top 1s;
 }
 
-.banner-wrapper h1 {
+.bannerWrapper h1 {
   font-weight: 300;
   font-size: 1.4em;
 }
 
-.banner-wrapper p {
+.bannerWrapper p {
   font-size: 1em;
   margin: 0.5em 0 0.6em;
   display: inline-block;
@@ -46,7 +43,7 @@ export default {}
   border: 5px solid white;
 }
 
-#bannerPhoto {
+.bannerPhoto {
   background-image: url('https://uploads.gridify.me/original/5bb1c0dcba342f7387315a55.jpg');
   background-size: cover;
   height: 250px;
@@ -54,72 +51,29 @@ export default {}
   z-index: -1;
   display: block;
   position: absolute;
+  transition: height 1s;
 }
 
-.activeP {
-  animation-name: pushUpPersonal;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+.rowUp {
+  padding-top: 25px;
 }
 
-.activeB {
-  animation-name: pushUpBanner;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+.rowDown {
+  padding-top: 125px;
 }
 
-.inactiveP {
-  animation-name: pushDownPersonal;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+.bannerSmall {
+  height: 150px;
 }
 
-.inactiveB {
-  animation-name: pushDownBanner;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes pushUpBanner {
-  from {
-    height: 250px;
-  }
-  to {
-    height: 150px;
-  }
-}
-
-@keyframes pushUpPersonal {
-  from {
-    padding-top: 125px;
-  }
-  to {
-    padding-top: 25px;
-  }
-}
-
-@keyframes pushDownBanner {
-  from {
-    height: 150px;
-  }
-  to {
-    height: 250px;
-  }
-}
-
-@keyframes pushDownPersonal {
-  from {
-    padding-top: 25px;
-  }
-  to {
-    padding-top: 125px;
-  }
+.bannerNormal {
+  height: 250px;
 }
 
 /* Tablets (portrait) ----------- */
 
 @media only screen and (max-width: 868px) {
-  .banner-row {
+  .bannerRow {
     padding-top: 100px;
   }
 
@@ -131,7 +85,7 @@ export default {}
 /* Smartphones (portrait) ----------- */
 
 @media only screen and (max-width: 468px) {
-  .banner-row {
+  .bannerRow {
     padding-top: 75px;
   }
 
