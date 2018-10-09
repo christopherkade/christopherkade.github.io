@@ -22,13 +22,13 @@
       </div>
 
       <div class="column is-narrow">
-        <nuxt-link to="/resume">
-          <a class="button" @click="navAnimation()">
+        <!-- <nuxt-link to="/resume"> -->
+          <a class="button" disabled>
             <span class="icon">
               <i class="fas fa-file"></i>
             </span>
           </a>
-        </nuxt-link>
+        <!-- </nuxt-link> -->
       </div>
     </div>
   </section>
@@ -56,5 +56,7 @@ export default {
 
 .button {
   font-size: 2em;
+  border-radius: 50%;
+  background-color: #eaeeef;
 }
 </style>

@@ -131,7 +131,7 @@ export default {
   height: 120px;
   padding: 30px 10px;
   margin: 1em auto 3em;
-  background: $highlight;
+  background: #eaeeef;
   border-radius: 50%;
 }
 
