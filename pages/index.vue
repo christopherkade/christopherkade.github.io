@@ -7,7 +7,6 @@
             <span class="icon">
               <i class="fas fa-pencil-alt"></i>
             </span>
-            <span>Blog</span>
           </a>
         </nuxt-link>
       </div>
@@ -18,7 +17,6 @@
             <span class="icon">
               <i class="fas fa-user-alt"></i>
             </span>
-            <span>About</span>
           </a>
         </nuxt-link>
       </div>
@@ -29,7 +27,6 @@
             <span class="icon">
               <i class="fas fa-file"></i>
             </span>
-            <span>Resume</span>
           </a>
         </nuxt-link>
       </div>
@@ -41,6 +38,7 @@
 export default {
   methods: {
     navAnimation() {
+      // Starts the closing pannel animation of the banner
       this.$store.commit('navAnimationStart')
     }
   },
@@ -54,5 +52,9 @@ export default {
 <style lang="scss">
 .index-wrapper {
   min-height: 100vh;
+}
+
+.button {
+  font-size: 2em;
 }
 </style>
