@@ -1,7 +1,7 @@
 <template>
     <div class="banner-wrapper">
-        <img class="bannerPhoto" />
-        <div class="banner-row">
+        <img id="bannerPhoto" :class="{ activeB: this.$store.state.navAnimation, inactiveB: !this.$store.state.navAnimation }"/>
+        <div id="bannerRow" :class="{ activeP: this.$store.state.navAnimation, inactiveP: !this.$store.state.navAnimation }">
           <img class="personalPhoto" src="/img/kade.jpg" />
           <h1>Christopher Kade</h1>
           <p>Full-stack Developer</p>
@@ -19,13 +19,7 @@ export default {}
   padding: 0 0 30px 0;
 }
 
-.personalPhoto {
-  height: 175px;
-  border-radius: 50%;
-  border: 5px solid white;
-}
-
-.banner-row {
+#banner-row {
   padding-top: 125px;
 }
 
@@ -46,7 +40,13 @@ export default {}
   line-height: 1;
 }
 
-.bannerPhoto {
+.personalPhoto {
+  height: 175px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+#bannerPhoto {
   background-image: url('https://uploads.gridify.me/original/5bb1c0dcba342f7387315a55.jpg');
   background-size: cover;
   height: 250px;
@@ -54,6 +54,66 @@ export default {}
   z-index: -1;
   display: block;
   position: absolute;
+}
+
+.activeP {
+  animation-name: pushUpPersonal;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.activeB {
+  animation-name: pushUpBanner;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.inactiveP {
+  animation-name: pushDownPersonal;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.inactiveB {
+  animation-name: pushDownBanner;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pushUpBanner {
+  from {
+    height: 250px;
+  }
+  to {
+    height: 150px;
+  }
+}
+
+@keyframes pushUpPersonal {
+  from {
+    padding-top: 125px;
+  }
+  to {
+    padding-top: 25px;
+  }
+}
+
+@keyframes pushDownBanner {
+  from {
+    height: 150px;
+  }
+  to {
+    height: 250px;
+  }
+}
+
+@keyframes pushDownPersonal {
+  from {
+    padding-top: 25px;
+  }
+  to {
+    padding-top: 125px;
+  }
 }
 
 /* Tablets (portrait) ----------- */

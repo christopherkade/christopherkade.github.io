@@ -30,7 +30,13 @@ module.exports = {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Raleway'
       }
-    ]
+    ],
+    script: [{ src: 'https://use.fontawesome.com/releases/v5.3.1/js/all.js' }]
+  },
+  generate: {
+    routes: function() {
+      return files.map(getSlugs)
+    }
   },
 
   /*
@@ -41,10 +47,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [
-    { src: '@/assets/main.scss', lang: 'sass' },
-    { src: 'font-awesome/scss/font-awesome.scss', lang: 'scss' }
-  ],
+  css: [{ src: '@/assets/main.scss', lang: 'sass' }],
 
   /*
   ** Plugins to load before mounting the App
@@ -86,11 +89,6 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
-  },
-  generate: {
-    routes: function() {
-      return files.map(getSlugs)
     }
   }
 }
