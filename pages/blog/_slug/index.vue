@@ -1,5 +1,5 @@
 <template>
-  <div :key="$route.params.slug">
+  <div :key="$route.params.slug" class="articleSlug">
     <div class="container">
       <div v-html="file" class="contentWrapper content"></div>
     </div>
@@ -20,4 +20,7 @@ export default {
 </script>
 
 <style>
+.articleSlug {
+  padding-bottom: 50px;
+}
 </style>
