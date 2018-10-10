@@ -8,7 +8,8 @@
       :autoplayHoverPause="true"
       :autoplay="true"
       :perPageCustom="[[768, 2], [1024, 4]]"
-      :perPage=1>
+      :perPage=1
+      :loop="true">
       <slide v-for="project in projects" :key="project.id">
         <a class="projectLink" :href="project.html_url">
           <div class="card projectCard">
