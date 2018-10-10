@@ -61,7 +61,6 @@ export default {
   top: 50%;
   margin-top: -10px;
   right: -30px;
-  font-family: FontAwesome;
 }
 
 .workflowBox {
@@ -80,9 +79,13 @@ export default {
 
 /* Tablets (portrait) ----------- */
 
-@media only screen and (max-width: 868px) {
+@media only screen and (max-width: 770px) {
   .workflowColumns .column {
     padding: 0;
+  }
+
+  .workflowArrow:before {
+    display: none;
   }
 }
 </style>

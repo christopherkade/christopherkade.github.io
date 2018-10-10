@@ -3,19 +3,19 @@
     <Separator title='EDUCATION' icon='fas fa-graduation-cap' />
 
     <EducationRow
-      logo='https://gitlab.clementdugal.fr/uploads/-/system/group/avatar/4/epitech.png'
+      logo='/img/epitech.png'
       degree='Master of Computer Software Engineering'
       school='Epitech, Paris, France'
       date='2017-2019' />
 
     <EducationRow
-      logo='https://study-eu.s3.amazonaws.com/uploads/university/dublin-city-university--dcu--445-logo.png'
+      logo='/img/dcu.png'
       degree='Computing (year abroad)'
       school='DCU, Dublin, Ireland'
       date='2017-2018' />
 
     <EducationRow
-      logo='https://gitlab.clementdugal.fr/uploads/-/system/group/avatar/4/epitech.png'
+      logo='/img/epitech.png'
       degree='Bachelor of Computer Software Engineering'
       school='Epitech, Paris, France'
       date='2014-2017' />
