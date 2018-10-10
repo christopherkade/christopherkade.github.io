@@ -65,6 +65,10 @@ module.exports = {
     ['@nuxtjs/markdownit', { linkify: true }]
   ],
 
+  router: {
+    middleware: 'reload'
+  },
+
   /*
   ** Build configuration
   */

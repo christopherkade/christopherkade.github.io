@@ -21,6 +21,14 @@ export default {
 
 <style>
 .articleSlug {
-  padding-bottom: 50px;
+  padding: 50px;
+}
+
+/* Smartphones (portrait) ----------- */
+
+@media only screen and (max-width: 468px) {
+  .articleSlug {
+    padding: 25px;
+  }
 }
 </style>

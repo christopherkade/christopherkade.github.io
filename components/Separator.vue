@@ -17,7 +17,6 @@ export default {
 .sep-title {
   position: relative;
   margin-bottom: 1em;
-  font-size: 12px;
   letter-spacing: 1px;
   font-weight: 700;
   text-align: left;

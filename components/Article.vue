@@ -14,4 +14,10 @@ export default {
 .articleTitle {
   color: black;
 }
+
+@media only screen and (max-width: 468px) {
+  .articleTitle {
+    font-size: 1em;
+  }
+}
 </style>

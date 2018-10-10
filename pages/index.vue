@@ -1,46 +1,15 @@
 <template>
   <section class="index-wrapper">
-    <div class="columns is-centered is-mobile">
-      <div class="column is-narrow">
-        <nuxt-link to="/blog">
-          <a class="button" @click="navAnimation()">
-            <span class="icon">
-              <i class="fas fa-pencil-alt"></i>
-            </span>
-          </a>
-        </nuxt-link>
-      </div>
-
-      <div class="column is-narrow">
-        <nuxt-link to="/about">
-          <a class="button" @click="navAnimation()">
-            <span class="icon">
-              <i class="fas fa-user-alt"></i>
-            </span>
-          </a>
-        </nuxt-link>
-      </div>
-
-      <div class="column is-narrow">
-        <!-- <nuxt-link to="/resume"> -->
-          <a class="button" disabled>
-            <span class="icon">
-              <i class="fas fa-file"></i>
-            </span>
-          </a>
-        <!-- </nuxt-link> -->
-      </div>
-    </div>
+    <Nav />
   </section>
 </template>
 
 <script>
+import Nav from '@/components/Nav'
+
 export default {
-  methods: {
-    navAnimation() {
-      // Starts the closing pannel animation of the banner
-      this.$store.commit('navAnimationStart')
-    }
+  components: {
+    Nav
   },
   created() {
     // On Index nav, close the banner
@@ -50,13 +19,4 @@ export default {
 </script>
 
 <style lang="scss">
-.index-wrapper {
-  min-height: 100vh;
-}
-
-.button {
-  font-size: 2em;
-  border-radius: 50%;
-  background-color: #eaeeef;
-}
 </style>

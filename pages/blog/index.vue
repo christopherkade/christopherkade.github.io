@@ -103,4 +103,12 @@ export default {
 .section {
   padding-top: 0;
 }
+
+/* Smartphones (portrait) ----------- */
+
+@media only screen and (max-width: 468px) {
+  .title {
+    font-size: 1.25em;
+  }
+}
 </style>
