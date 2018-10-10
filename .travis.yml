@@ -1,0 +1,21 @@
+language: 'node_js'
+node_js: '8'
+
+cache:
+  directories:
+    - 'node_modules'
+
+before_script:
+  - npm run generate
+  - cp ./dist/index.html ./dist/404.html
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local_dir: dist
+  repo: christopherkade/christopherkade.github.io
+  fqdn: christopherkade.com
+  target_branch: master
+  on:
+    branch: code
