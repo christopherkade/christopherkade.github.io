@@ -1,5 +1,5 @@
 <template>
-    <div class="columns is-centered is-mobile">
+    <div class="columns is-centered">
         <div class="column is-narrow">
             <nuxt-link to="/about">
               <a class="button" @click="navAnimation()">
@@ -50,5 +50,13 @@ export default {
 .button {
   font-size: 2em;
   background-color: #eaeeef;
+}
+
+/* Tablets (portrait) ----------- */
+
+@media only screen and (max-width: 868px) {
+  .columns {
+    text-align: center;
+  }
 }
 </style>
