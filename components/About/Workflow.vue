@@ -56,7 +56,7 @@ export default {
 }
 
 .workflowArrow:before {
-  content: '=>';
+  content: '▶';
   position: absolute;
   top: 50%;
   margin-top: -10px;

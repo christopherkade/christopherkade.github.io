@@ -4,83 +4,85 @@
       <div class="section">
         <h1 class="title">My thoughts put into words</h1>
         
-        <Article 
-          title='How to start contributing to the open-source community'
-          url='/blog/open-source' />
+        <div class="articles">
 
-        <Separator />
+          <Article 
+            title='How to start contributing to the open-source community'
+            url='/blog/open-source' />
 
-        <Article
-          title='Rewriting my website using Vue'
-          url='/blog/website-vue' />
+          <Separator />
 
-        <Separator />
+          <Article
+            title='Rewriting my website using Vue'
+            url='/blog/website-vue' />
 
-        <Article
-          title='2017 in review - The multiple designs of christopherkade.com'
-          url='/blog/website-design' />
+          <Separator />
 
-        <Separator />
+          <Article
+            title='2017 in review - The multiple designs of christopherkade.com'
+            url='/blog/website-design' />
 
-        <Article
-          title='Optimizing the performance of my personal website'
-          url='/blog/optimisation' />
+          <Separator />
 
-        <Separator />
+          <Article
+            title='Optimizing the performance of my personal website'
+            url='/blog/optimisation' />
 
-        <Article
-          title='Developing the Star Wars opening crawl in HTML/CSS'
-          url='/blog/star-wars' />
+          <Separator />
 
-        <Separator />
+          <Article
+            title='Developing the Star Wars opening crawl in HTML/CSS'
+            url='/blog/star-wars' />
 
-        <Article
-          title='Deploying an API to Heroku'
-          url='/blog/heroku-api' />
+          <Separator />
 
-        <Separator />
+          <Article
+            title='Deploying an API to Heroku'
+            url='/blog/heroku-api' />
 
-        <Article
-          title='Coding a desktop app with Electron and Angular'
-          url='/blog/intro-electron' />
+          <Separator />
 
-        <Separator />
+          <Article
+            title='Coding a desktop app with Electron and Angular'
+            url='/blog/intro-electron' />
 
-        <Article
-          title='Serving your Github pages custom domain using HTTPS'
-          url='/blog/ssh-githubpages' />
+          <Separator />
 
-        <Separator />
+          <Article
+            title='Serving your Github pages custom domain using HTTPS'
+            url='/blog/ssh-githubpages' />
 
-        <Article
-          title='Discovering React - The basics'
-          url='/blog/intro-reactjs' />
+          <Separator />
 
-        <Separator />
+          <Article
+            title='Discovering React - The basics'
+            url='/blog/intro-reactjs' />
 
-        <Article
-          title='Define quality requirements for your projects'
-          url='/blog/requirements' />
+          <Separator />
 
-        <Separator />
+          <Article
+            title='Define quality requirements for your projects'
+            url='/blog/requirements' />
 
-        <Article
-          title='My journey discovering Phaser, an HTML5 game framework'
-          url='/blog/intro-phaser' />
+          <Separator />
 
-        <Separator />
+          <Article
+            title='My journey discovering Phaser, an HTML5 game framework'
+            url='/blog/intro-phaser' />
 
-        <Article
-          title='Deploy a project page or a custom subdomain on Github pages'
-          url='/blog/subdomain-githubpages' />
+          <Separator />
 
-        <Separator />
-        
-        <Article
-          title='Create and deploy a Jekyll blog to Github pages'
-          url='/blog/jekyll-blog' />
+          <Article
+            title='Deploy a project page or a custom subdomain on Github pages'
+            url='/blog/subdomain-githubpages' />
 
-        <Separator />
+          <Separator />
+
+          <Article
+            title='Create and deploy a Jekyll blog to Github pages'
+            url='/blog/jekyll-blog' />
+
+        </div>        
       </div>
     </section>
   </section>
@@ -102,6 +104,10 @@ export default {
 <style lang="scss" scoped>
 .section {
   padding-top: 0;
+}
+
+.articles {
+  margin-top: 50px;
 }
 
 /* Smartphones (portrait) ----------- */

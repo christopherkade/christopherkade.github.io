@@ -11,8 +11,16 @@ export default {
 </script>
 
 <style>
+.article {
+  padding-top: 10px;
+}
+
 .articleTitle {
   color: black;
+}
+
+.articleTitle:hover {
+  opacity: 0.5;
 }
 
 @media only screen and (max-width: 468px) {
