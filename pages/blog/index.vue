@@ -7,6 +7,12 @@
         <div class="articles">
 
           <Article 
+            title='Rewriting my website using NuxtJS'
+            url='/blog/website-nuxt' />
+
+          <Separator />
+
+          <Article 
             title='How to start contributing to the open-source community'
             url='/blog/open-source' />
 

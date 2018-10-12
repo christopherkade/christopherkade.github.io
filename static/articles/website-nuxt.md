@@ -1,4 +1,4 @@
-# Rewriting my portfolio website using NuxtJS
+# Rewriting my website using NuxtJS
 
 A few days ago I published the latest version of my website, completely redone using [NuxtJS](https://nuxtjs.org/).
 
