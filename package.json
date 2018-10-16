@@ -16,6 +16,7 @@
     "@nuxtjs/bulma": "^1.2.0",
     "axios": "^0.18.0",
     "cross-env": "^5.2.0",
+    "markdown-it-highlightjs": "^3.0.0",
     "nuxt": "^2.0.0",
     "vue-carousel": "^0.14.0"
   },
@@ -27,7 +28,6 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-prettier": "2.6.2",
     "eslint-plugin-vue": "^4.0.0",
-    "fs": "0.0.1-security",
     "glob": "^7.1.3",
     "node-sass": "^4.9.3",
     "nodemon": "^1.11.0",

@@ -57,7 +57,9 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [{ src: '~/plugins/vue-carousel.js', ssr: false }],
-
+  css: [
+    { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' }
+  ],
   /*
   ** Nuxt.js modules
   */
@@ -68,6 +70,10 @@ module.exports = {
     ['nuxt-sass-resources-loader', './assets/main.scss'],
     ['@nuxtjs/markdownit', { linkify: true }]
   ],
+  markdownit: {
+    injected: true,
+    use: ['markdown-it-highlightjs']
+  },
 
   router: {
     middleware: 'reload'
