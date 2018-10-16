@@ -1,24 +1,26 @@
 <template>
   <div>
-    <Separator title='EDUCATION' icon='fas fa-graduation-cap' />
+    <Separator
+      title="EDUCATION"
+      icon="fas fa-graduation-cap" />
 
     <EducationRow
-      logo='/img/epitech.png'
-      degree='Master of Computer Software Engineering'
-      school='Epitech, Paris, France'
-      date='2017-2019' />
+      logo="/img/epitech.png"
+      degree="Master of Computer Software Engineering"
+      school="Epitech, Paris, France"
+      date="2017-2019" />
 
     <EducationRow
-      logo='/img/dcu.png'
-      degree='Computing (year abroad)'
-      school='DCU, Dublin, Ireland'
-      date='2017-2018' />
+      logo="/img/dcu.png"
+      degree="Computing (year abroad)"
+      school="DCU, Dublin, Ireland"
+      date="2017-2018" />
 
     <EducationRow
-      logo='/img/epitech.png'
-      degree='Bachelor of Computer Software Engineering'
-      school='Epitech, Paris, France'
-      date='2014-2017' />
+      logo="/img/epitech.png"
+      degree="Bachelor of Computer Software Engineering"
+      school="Epitech, Paris, France"
+      date="2014-2017" />
   </div>
 </template>
 

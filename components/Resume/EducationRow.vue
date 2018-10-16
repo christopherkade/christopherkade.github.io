@@ -1,23 +1,36 @@
 <template>
-    <section class="section">
-     
-        <div class="columns is-centered">
-            <div class="column is-narrow">
-                <img class="edLogo" :src="logo"/>
-            </div>
-            <div class="column is-narrow edTextMain is-3">
-                <h1 class="title">{{degree}}</h1>
-                <h2>{{school}}</h2>
-                <h3 class="edDate">{{date}}</h3>
-            </div>
-        </div>
-     
-    </section>
+  <section class="section">
+    <div class="columns is-centered">
+      <div class="column is-narrow">
+        <img
+          :src="logo"
+          class="edLogo"/>
+      </div>
+      <div class="column is-narrow edTextMain is-3">
+        <h1 class="title">{{ degree }}</h1>
+        <h2>{{ school }}</h2>
+        <h3 class="edDate">{{ date }}</h3>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
-  props: ['logo', 'degree', 'school', 'date']
+  props: {
+    logo: {
+      type: String
+    },
+    degree: {
+      type: String
+    },
+    school: {
+      type: String
+    },
+    date: {
+      type: String
+    }
+  }
 }
 </script>
 

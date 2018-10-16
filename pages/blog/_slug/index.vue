@@ -1,7 +1,11 @@
 <template>
-  <div :key="$route.params.slug" class="articleSlug">
+  <div
+    :key="$route.params.slug"
+    class="articleSlug">
     <div class="container">
-      <div v-html="file" class="contentWrapper content"></div>
+      <div
+        class="contentWrapper content"
+        v-html="file"></div>
     </div>
   </div>
 </template>

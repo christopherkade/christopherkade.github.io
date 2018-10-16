@@ -1,15 +1,24 @@
 <template>
-    <h2 class="sep-title">
-        <span>
-            <i class="faIcon" :class="icon"></i>
-            {{title}}
-        </span>
-    </h2>
+  <h2 class="sep-title">
+    <span>
+      <i
+        :class="icon"
+        class="faIcon"></i>
+      {{ title }}
+    </span>
+  </h2>
 </template>
 
 <script>
 export default {
-  props: ['title', 'icon']
+  props: {
+    title: {
+      type: String
+    },
+    icon: {
+      type: String
+    }
+  }
 }
 </script>
 

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <Separator title='CONTACT' icon='fas fa-envelope' />
+    <Separator
+      title="CONTACT"
+      icon="fas fa-envelope" />
 
     <div class="columns is-centered">
       <div class="column is-narrow is-2">

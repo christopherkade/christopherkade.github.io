@@ -1,26 +1,33 @@
 <template>
   <div>
-    <Separator title='WORK' icon='fas fa-file-code' />
-    <carousel class="projectCarousel" 
+    <Separator
+      title="WORK"
+      icon="fas fa-file-code" />
+    <carousel
       :navigationEnabled="true"
       :paginationEnabled="false"
       :autoplayTimeout="3000"
       :autoplayHoverPause="true"
       :autoplay="true"
       :perPageCustom="[[768, 2], [1024, 4]]"
-      :perPage=1
-      :loop="true">
-      <slide v-for="project in projects" :key="project.id">
-        <a class="projectLink" :href="project.html_url">
+      :perPage="1"
+      :loop="true"
+      class="projectCarousel">
+      <slide
+        v-for="project in projects"
+        :key="project.id">
+        <a
+          :href="project.html_url"
+          class="projectLink">
           <div class="card projectCard">
             <div class="card-header">
               <p class="card-header-title">
-                {{project.name}}
+                {{ project.name }}
               </p>
             </div>
             <div class="card-content">
               <div class="content">
-                {{project.description}}
+                {{ project.description }}
               </div>
             </div>
           </div>
@@ -36,15 +43,15 @@ import { Carousel, Slide } from 'vue-carousel'
 import Separator from '@/components/Separator'
 
 export default {
-  data() {
-    return {
-      projects: []
-    }
-  },
   components: {
     Separator,
     Carousel,
     Slide
+  },
+  data() {
+    return {
+      projects: []
+    }
   },
   async mounted() {
     let { data } = await axios.get(

@@ -1,39 +1,41 @@
 <template>
   <div>
-    <Separator title='SKILLS' icon='fas fa-laptop-code' />
+    <Separator
+      title="SKILLS"
+      icon="fas fa-laptop-code" />
     <div class="columns skillColumns">
-        <div class="column">
-          <div class="skill">
-            <div class="skillBox">
-              <i class="fab fa-vuejs fa-2x"></i>
-              <h4>VueJS</h4>
-            </div>
+      <div class="column">
+        <div class="skill">
+          <div class="skillBox">
+            <i class="fab fa-vuejs fa-2x"></i>
+            <h4>VueJS</h4>
           </div>
         </div>
-        <div class="column">
-          <div class="skill">
-            <div class="skillBox">
-              <i class="fab fa-node-js fa-2x"></i>
-              <h4>NodeJS</h4>
-            </div>
+      </div>
+      <div class="column">
+        <div class="skill">
+          <div class="skillBox">
+            <i class="fab fa-node-js fa-2x"></i>
+            <h4>NodeJS</h4>
           </div>
         </div>
-        <div class="column">
-          <div class="skill">
-            <div class="skillBox">
-              <i class="fab fa-android fa-2x"></i>
-              <h4>Android</h4>
-            </div>
+      </div>
+      <div class="column">
+        <div class="skill">
+          <div class="skillBox">
+            <i class="fab fa-android fa-2x"></i>
+            <h4>Android</h4>
           </div>
         </div>
-        <div class="column">
-          <div class="skill">
-            <div class="skillBox">
-              <i class="fab fa-angular fa-2x"></i>
-              <h4>Angular</h4>
-            </div>
+      </div>
+      <div class="column">
+        <div class="skill">
+          <div class="skillBox">
+            <i class="fab fa-angular fa-2x"></i>
+            <h4>Angular</h4>
           </div>
         </div>
+      </div>
     </div>
   </div>
 </template>

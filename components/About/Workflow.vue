@@ -1,42 +1,43 @@
 <template>
-    <section class="workflow">
-      <Separator title='WORKFLOW' icon='fas fa-code-branch'/>
-
-      <div class="columns workflowColumns">
-          <div class="column">
-            <div class="workflow">
-              <div class="workflowBox workflowArrow">
-                <i class="fas fa-lightbulb fa-2x"></i>
-                <h4>Ideation</h4>
-              </div>
-            </div>
+  <section class="workflow">
+    <Separator
+      title="WORKFLOW"
+      icon="fas fa-code-branch"/>
+    <div class="columns workflowColumns">
+      <div class="column">
+        <div class="workflow">
+          <div class="workflowBox workflowArrow">
+            <i class="fas fa-lightbulb fa-2x"></i>
+            <h4>Ideation</h4>
           </div>
-          <div class="column">
-            <div class="workflow workflowArrow">
-              <div class="workflowBox">
-                <i class="fas fa-code fa-2x"></i>
-                <h4>Coding</h4>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="workflow workflowArrow">
-              <div class="workflowBox">
-                <i class="fas fa-vial fa-2x"></i>
-                <h4>Testing</h4>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="workflow">
-              <div class="workflowBox">
-                <i class="fas fa-upload fa-2x"></i>
-                <h4>Publishing</h4>
-              </div>
-            </div>
-          </div>
+        </div>
       </div>
-    </section>
+      <div class="column">
+        <div class="workflow workflowArrow">
+          <div class="workflowBox">
+            <i class="fas fa-code fa-2x"></i>
+            <h4>Coding</h4>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="workflow workflowArrow">
+          <div class="workflowBox">
+            <i class="fas fa-vial fa-2x"></i>
+            <h4>Testing</h4>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="workflow">
+          <div class="workflowBox">
+            <i class="fas fa-upload fa-2x"></i>
+            <h4>Publishing</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>

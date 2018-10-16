@@ -1,12 +1,18 @@
 <template>
-    <div class="bannerWrapper">
-        <img class="bannerPhoto" :class="{ bannerSmall: this.$store.state.navAnimation, bannerNormal: !this.$store.state.navAnimation }"/>
-        <div class="bannerRow" :class="{ rowUp: this.$store.state.navAnimation, rowDown: !this.$store.state.navAnimation }">
-          <img class="personalPhoto" src="/img/kade.jpg"/>
-          <h1>Christopher Kade</h1>
-          <p>Full-Stack Developer</p>
-        </div>
+  <div class="bannerWrapper">
+    <img
+      :class="{ bannerSmall: this.$store.state.navAnimation, bannerNormal: !this.$store.state.navAnimation }"
+      class="bannerPhoto" />
+    <div
+      :class="{ rowUp: this.$store.state.navAnimation, rowDown: !this.$store.state.navAnimation }"
+      class="bannerRow">
+      <img
+        class="personalPhoto"
+        src="/img/kade.jpg"/>
+      <h1>Christopher Kade</h1>
+      <p>Full-Stack Developer</p>
     </div>
+  </div>
 </template>
 
 <style lang="scss">

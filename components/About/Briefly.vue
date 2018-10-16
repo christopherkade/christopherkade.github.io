@@ -1,13 +1,13 @@
 <template>
-    <section class="briefly">
-      <Separator title='BRIEFLY' icon='fas fa-user-astronaut'/>
-
-      <div class="section">
-        <h1 class="aboutText brieflyMain">Full-stack developer, open-source enthusiast and foodie.</h1>
-        <h1 class="aboutText brieflySub">Newly graduated and constantly working on my craft, I'm always open to new project ideas.</h1>
-      </div>
-        
-    </section>
+  <section class="briefly">
+    <Separator
+      title="BRIEFLY"
+      icon="fas fa-user-astronaut"/>
+    <div class="section">
+      <h1 class="aboutText brieflyMain">Full-stack developer, open-source enthusiast and foodie.</h1>
+      <h1 class="aboutText brieflySub">Newly graduated and constantly working on my craft, I'm always open to new project ideas.</h1>
+    </div>
+  </section>
 </template>
 
 <script>
