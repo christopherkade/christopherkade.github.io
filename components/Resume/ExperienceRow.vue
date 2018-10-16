@@ -1,26 +1,42 @@
 <template>
-    <section class="section">
-     
-        <div class="columns is-centered">
-            <div class="column is-narrow">
-                <img class="xpLogo" :src="logo"/>
-            </div>
-            <div class="column is-narrow xpTextMain is-3">
-                <h1 class="title">{{title}}</h1>
-                <h2 class="xpRole">{{role}}</h2>
-                <h3 class="xpDate">{{date}}</h3>
-            </div>
-            <div class="column is-narrow xpTextDesc is-3">
-                <h1 class="xpDesc">{{desc}}</h1>
-            </div>
-        </div>
-     
-    </section>
+  <section class="section">
+    <div class="columns is-centered">
+      <div class="column is-narrow">
+        <img
+          :src="logo"
+          class="xpLogo"/>
+      </div>
+      <div class="column is-narrow xpTextMain is-3">
+        <h1 class="title">{{ title }}</h1>
+        <h2 class="xpRole">{{ role }}</h2>
+        <h3 class="xpDate">{{ date }}</h3>
+      </div>
+      <div class="column is-narrow xpTextDesc is-3">
+        <h1 class="xpDesc">{{ desc }}</h1>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
-  props: ['logo', 'title', 'role', 'date', 'desc']
+  props: {
+    logo: {
+      type: String
+    },
+    title: {
+      type: String
+    },
+    role: {
+      type: String
+    },
+    date: {
+      type: String
+    },
+    desc: {
+      type: String
+    }
+  }
 }
 </script>
 

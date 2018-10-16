@@ -1,24 +1,25 @@
 <template>
-    <section class="hobbies">
-      <Separator title='HOBBIES' icon='fas fa-bicycle'/>
-
-      <div class="section">
-        <div class="columns">
-          <div class="column">
-            <i class="fas fa-drum fa-5x"></i>
-            <span class="aboutText hobbyTitle">Music</span>
-          </div>
-          <div class="column">
-            <i class="fas fa-gamepad fa-5x"></i>
-            <span class="aboutText hobbyTitle">Gaming</span>
-          </div>
-          <div class="column">
-            <i class="fas fa-code fa-5x"></i>
-            <span class="aboutText hobbyTitle">Coding</span>
-          </div>
+  <section class="hobbies">
+    <Separator
+      title="HOBBIES"
+      icon="fas fa-bicycle"/>
+    <div class="section">
+      <div class="columns">
+        <div class="column">
+          <i class="fas fa-drum fa-5x"></i>
+          <span class="aboutText hobbyTitle">Music</span>
+        </div>
+        <div class="column">
+          <i class="fas fa-gamepad fa-5x"></i>
+          <span class="aboutText hobbyTitle">Gaming</span>
+        </div>
+        <div class="column">
+          <i class="fas fa-code fa-5x"></i>
+          <span class="aboutText hobbyTitle">Coding</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 </template>
 
 <script>

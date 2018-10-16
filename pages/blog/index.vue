@@ -5,10 +5,13 @@
         <h1 class="title">My thoughts put into words</h1>
 
         <div class="articles">
-          <div class="article" v-for="(article, index) in articles" :key="article.title">
+          <div
+            v-for="(article, index) in articles"
+            :key="article.title"
+            class="article">
             <Article
-              :title=article.title
-              :url=article.path />
+              :title="article.title"
+              :url="article.path" />
             <Separator v-if="index != articles.length - 1" />
           </div>
         </div>
@@ -24,14 +27,14 @@ import articleList from '@/static/articleList.json'
 
 export default {
   name: 'Blog',
+  components: {
+    Separator,
+    Article
+  },
   data() {
     return {
       articles: articleList
     }
-  },
-  components: {
-    Separator,
-    Article
   }
 }
 </script>
