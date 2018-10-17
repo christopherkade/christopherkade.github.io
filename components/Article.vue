@@ -1,12 +1,25 @@
 <template>
-    <section class="article">
-        <nuxt-link class="articleTitle subtitle" :to="url">{{title}}</nuxt-link>
-    </section>
+  <section class="article">
+    {{ date }} -
+    <nuxt-link
+      :to="url"
+      class="articleTitle subtitle">{{ title }}</nuxt-link>
+  </section>
 </template>
 
 <script>
 export default {
-  props: ['title', 'url']
+  props: {
+    title: {
+      type: String
+    },
+    url: {
+      type: String
+    },
+    date: {
+      type: String
+    }
+  }
 }
 </script>
 

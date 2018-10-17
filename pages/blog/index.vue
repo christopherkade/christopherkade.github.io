@@ -7,8 +7,9 @@
         <div class="articles">
           <div class="article" v-for="(article, index) in articles" :key="article.title">
             <Article
-              :title=article.title
-              :url=article.path />
+              :title="article.title"
+              :url="article.path"
+              :date="article.date" />
             <Separator v-if="index != articles.length - 1" />
           </div>
         </div>
