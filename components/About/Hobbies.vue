@@ -1,21 +1,28 @@
 <template>
   <section class="hobbies">
     <Separator
-      title="HOBBIES"
-      icon="fas fa-bicycle"/>
+      title="HOBBIES"/>
     <div class="section">
       <div class="columns">
         <div class="column">
           <i class="fas fa-drum fa-5x"></i>
-          <span class="aboutText hobbyTitle">Music</span>
+          <span class="hobbyTitle">Music</span>
+          <span class="hobbySubtitle">I play guitar and drums when my neighbors are cool with it.</span>
         </div>
         <div class="column">
           <i class="fas fa-gamepad fa-5x"></i>
-          <span class="aboutText hobbyTitle">Gaming</span>
+          <span class="hobbyTitle">Gaming</span>
+          <span class="hobbySubtitle">PC, console; old-school, <br/>next-gen, you name it.</span>
         </div>
         <div class="column">
           <i class="fas fa-code fa-5x"></i>
-          <span class="aboutText hobbyTitle">Coding</span>
+          <span class="hobbyTitle">Coding</span>
+          <span class="hobbySubtitle">That one's pretty obvious, but I often develop side projects.</span>
+        </div>
+        <div class="column">
+          <i class="fas fa-dice-d20 fa-5x"></i>
+          <span class="hobbyTitle">Tabletop games</span>
+          <span class="hobbySubtitle">There's nothing some beer and board games can't fix.</span>
         </div>
       </div>
     </div>
@@ -32,7 +39,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .section {
   text-align: center;
 }
@@ -41,5 +48,12 @@ export default {
   margin-top: 1em;
   font-size: 1.25em;
   display: inherit;
+}
+
+.hobbySubtitle {
+  font-size: 1em;
+  display: inherit;
+  padding: 0 15px 0 15px;
+  color: #7f8c8d;
 }
 </style>

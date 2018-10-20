@@ -6,9 +6,8 @@
     <carousel
       :navigationEnabled="true"
       :paginationEnabled="false"
-      :autoplayTimeout="3000"
-      :autoplayHoverPause="true"
       :autoplay="true"
+      :autoplayTimeout="2000"
       :perPageCustom="[[768, 2], [1024, 4]]"
       :perPage="1"
       :loop="true"

@@ -1,11 +1,12 @@
 <template>
   <section class="briefly">
     <Separator
-      title="BRIEFLY"
-      icon="fas fa-user-astronaut"/>
+      title="BRIEFLY"/>
     <div class="section">
       <h1 class="aboutText brieflyMain">Full-stack developer, open-source enthusiast and foodie.</h1>
-      <h1 class="aboutText brieflySub">Newly graduated and constantly working on my craft, I'm always open to new project ideas.</h1>
+      <h1 class="aboutText brieflySub">I'm newly graduated with a Masters in Software Engineering and currently live in Paris, France.</h1>
+
+      <h1 class="aboutText brieflySub">I enjoy working with a multitude of web technologies and am always on the lookout for new ways to optimize and improve on my work.</h1>
     </div>
   </section>
 </template>
@@ -27,10 +28,12 @@ export default {
 
 .brieflyMain {
   font-size: 2em;
+  margin-bottom: 10px;
 }
 
 .brieflySub {
-  font-size: 1.25em;
+  font-size: 1.15em;
+  color: #7f8c8d;
 }
 
 /* Tablets (portrait) ----------- */
@@ -49,11 +52,12 @@ export default {
 
 @media only screen and (max-width: 468px) {
   .brieflyMain {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 
   .brieflySub {
-    font-size: 0.75em;
+    font-size: 1em;
+    text-align: justify;
   }
 }
 </style>

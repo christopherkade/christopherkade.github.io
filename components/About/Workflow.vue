@@ -1,13 +1,12 @@
 <template>
   <section class="workflow">
     <Separator
-      title="WORKFLOW"
-      icon="fas fa-code-branch"/>
+      title="WORKFLOW"/>
     <div class="columns workflowColumns">
       <div class="column">
         <div class="workflow">
           <div class="workflowBox workflowArrow">
-            <i class="fas fa-lightbulb fa-2x"></i>
+            <i class="icon fas fa-lightbulb fa-2x"></i>
             <h4>Ideation</h4>
           </div>
         </div>
@@ -15,7 +14,7 @@
       <div class="column">
         <div class="workflow workflowArrow">
           <div class="workflowBox">
-            <i class="fas fa-code fa-2x"></i>
+            <i class="icon fas fa-code fa-2x"></i>
             <h4>Coding</h4>
           </div>
         </div>
@@ -23,7 +22,7 @@
       <div class="column">
         <div class="workflow workflowArrow">
           <div class="workflowBox">
-            <i class="fas fa-vial fa-2x"></i>
+            <i class="icon fas fa-vial fa-2x"></i>
             <h4>Testing</h4>
           </div>
         </div>
@@ -31,7 +30,7 @@
       <div class="column">
         <div class="workflow">
           <div class="workflowBox">
-            <i class="fas fa-upload fa-2x"></i>
+            <i class="icon fas fa-upload fa-2x"></i>
             <h4>Publishing</h4>
           </div>
         </div>
@@ -50,7 +49,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .workflow {
   text-align: center;
   position: relative;
@@ -76,6 +75,14 @@ export default {
 .workflowColumns {
   margin-top: 1em;
   padding-top: 25px;
+}
+
+.icon {
+  margin-bottom: 10px;
+}
+
+h4 {
+  color: $highlight;
 }
 
 /* Tablets (portrait) ----------- */
