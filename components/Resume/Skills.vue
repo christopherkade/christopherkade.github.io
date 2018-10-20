@@ -71,6 +71,10 @@ export default {
   padding-top: 25px;
 }
 
+h4 {
+  color: white;
+}
+
 /* Tablets (portrait) ----------- */
 
 @media only screen and (max-width: 868px) {
