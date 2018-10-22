@@ -68,7 +68,13 @@ module.exports = {
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
     ['nuxt-sass-resources-loader', './assets/main.scss'],
-    ['@nuxtjs/markdownit', { linkify: true }]
+    ['@nuxtjs/markdownit', { linkify: true }],
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-127876951-1'
+      }
+    ]
   ],
   markdownit: {
     injected: true,
