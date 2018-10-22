@@ -1,77 +1,92 @@
 [
   {
     "title": "Automatically deploying a website to Github pages using Travis CI",
-    "date": "15/10/2018",
+    "date": "Oct 15",
+    "year": 2018,
     "path": "/blog/travis-githubpages"
   },
   {
     "title": "Rewriting my website using NuxtJS",
-    "date": "10/10/2018",
+    "date": "Oct 10",
+    "year": 2018,
     "path": "/blog/website-nuxt"
   },
   {
     "title": "How to start contributing to the open-source community",
-    "date": "02/08/2018",
+    "date": "Aug 02",
+    "year": 2018,
     "path": "/blog/open-source"
   },
   {
     "title": "Rewriting my website using Vue",
-    "date": "20/05/2018",
+    "date": "May 20",
+    "year": 2018,
     "path": "/blog/website-vue"
   },
   {
     "title": "2017 in review - The multiple designs of christopherkade.com",
-    "date": "12/02/2018",
+    "date": "Feb 12",
+    "year": 2018,
     "path": "/blog/website-design"
   },
   {
     "title": "Optimizing the performance of my personal website",
-    "date": "24/01/2018",
+    "date": "Jan 24",
+    "year": 2018,
     "path": "/blog/optimisation"
   },
   {
     "title": "Developing the Star Wars opening crawl in HTML/CSS",
-    "date": "15/01/2018",
+    "date": "Jan 15",
+    "year": 2018,
     "path": "/blog/star-wars"
   },
   {
     "title": "Deploying an API to Heroku",
-    "date": "28/12/2017",
+    "date": "Dec 28",
+    "year": 2017,
     "path": "/blog/heroku-api"
   },
   {
     "title": "Coding a desktop app with Electron and Angular",
-    "date": "20/12/2017",
+    "date": "Dec 20",
+    "year": 2017,
     "path": "/blog/intro-electron"
   },
   {
     "title": "Serving your Github pages custom domain using HTTPS",
-    "date": "06/12/2017",
+    "date": "Dec 06",
+    "year": 2017,
     "path": "/blog/ssh-githubpages"
   },
   {
     "title": "Discovering React - The basics",
-    "date": "25/11/2017",
+    "date": "Nov 25",
+    "year": 2017,
     "path": "/blog/intro-reactjs"
   },
   {
     "title": "Define quality requirements for your projects",
-    "date": "20/11/2017",
+    "date": "Nov 20",
+    "year": 2017,
     "path": "/blog/requirements"
   },
   {
     "title": "My journey discovering Phaser, an HTML5 game framework",
-    "date": "14/11/2017",
+    "date": "Nov 17",
+    "year": 2017,
     "path": "/blog/intro-phaser"
   },
   {
     "title": "Deploy a project page or a custom subdomain on Github pages",
-    "date": "02/10/2017",
+    "date": "Oct 02",
+    "year": 2017,
     "path": "/blog/subdomain-githubpages"
   },
   {
     "title": "Create and deploy a Jekyll blog to Github pages",
-    "date": "20/09/2017",
+    "date": "Sep 20",
+    "year": 2017,
     "path": "/blog/jekyll-blog"
   }
 ]

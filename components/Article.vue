@@ -1,6 +1,8 @@
 <template>
   <section class="article">
-    {{ date }} -
+    <span class="date">
+      {{ date }} -
+    </span>
     <nuxt-link
       :to="url"
       class="articleTitle subtitle">{{ title }}</nuxt-link>
@@ -34,6 +36,11 @@ export default {
 
 .articleTitle:hover {
   opacity: 0.5;
+}
+
+.date {
+  opacity: 0.75;
+  font-size: 0.9em;
 }
 
 @media only screen and (max-width: 468px) {

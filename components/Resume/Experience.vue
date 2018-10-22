@@ -8,7 +8,7 @@
       logo="/img/zenika.png"
       title="Zenika"
       role="Web consulting internship"
-      date="September 2018 - February 2019"
+      date="September 2018 - Present"
       desc="Developping multiple in-house projects to be used daily by the company."/>
 
     <Experience-Row

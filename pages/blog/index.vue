@@ -9,11 +9,15 @@
             v-for="(article, index) in articles"
             :key="article.title"
             class="article">
+            <div
+              v-if="index == 0 || (index > 0
+              && articles[index - 1].year != article.year)"
+              class="article-year">{{ article.year }}</div>
             <Article
               :title="article.title"
               :url="article.path"
-              :date="article.date" />
-            <Separator v-if="index != articles.length - 1" />
+              :date="article.date"
+              class="article"/>
           </div>
         </div>
       </div>
@@ -46,7 +50,17 @@ export default {
 }
 
 .articles {
-  margin-top: 50px;
+  margin-top: 25px;
+}
+
+.article-year {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 25px;
+}
+
+.article {
+  padding-left: 25px;
 }
 
 /* Smartphones (portrait) ----------- */
@@ -54,6 +68,10 @@ export default {
 @media only screen and (max-width: 468px) {
   .title {
     font-size: 1.25em;
+  }
+
+  .article {
+    padding-left: 0px;
   }
 }
 </style>
