@@ -47,6 +47,7 @@ export default {
 <style lang="scss" scoped>
 .section {
   padding-top: 0;
+  text-align: left;
 }
 
 .articles {
