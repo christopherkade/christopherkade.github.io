@@ -10,7 +10,9 @@
         class="personalPhoto"
         src="/img/kade.jpg"/>
       <h1>Christopher Kade</h1>
+
       <p>Full-Stack Developer</p>
+
     </div>
   </div>
 </template>
@@ -50,7 +52,7 @@
 }
 
 .bannerPhoto {
-  background-image: url('https://uploads.gridify.me/original/5bb1c0dcba342f7387315a55.jpg');
+  background-image: url('/img/SF.jpg');
   background-size: cover;
   height: 250px;
   width: 100vw;
