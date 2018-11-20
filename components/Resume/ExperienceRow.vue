@@ -55,12 +55,10 @@ export default {
 }
 
 .xpTextMain {
-  text-align: left;
   margin-top: 20px;
 }
 
 .xpTextDesc {
-  text-align: left;
   margin-top: 10px;
 }
 
