@@ -6,7 +6,9 @@
       <div class="column">
         <div class="workflow">
           <div class="workflowBox workflowArrow">
-            <i class="icon fas fa-lightbulb fa-2x"></i>
+            <img
+              class="workflow-icon icon-lightbulb"
+              src="/icons/lightbulb.svg" />
             <h4>Ideation</h4>
           </div>
         </div>
@@ -14,7 +16,9 @@
       <div class="column">
         <div class="workflow workflowArrow">
           <div class="workflowBox">
-            <i class="icon fas fa-code fa-2x"></i>
+            <img
+              class="workflow-icon icon-code"
+              src="/icons/code.svg" />
             <h4>Coding</h4>
           </div>
         </div>
@@ -22,7 +26,9 @@
       <div class="column">
         <div class="workflow workflowArrow">
           <div class="workflowBox">
-            <i class="icon fas fa-vial fa-2x"></i>
+            <img
+              class="workflow-icon"
+              src="/icons/vial.svg" />
             <h4>Testing</h4>
           </div>
         </div>
@@ -30,7 +36,9 @@
       <div class="column">
         <div class="workflow">
           <div class="workflowBox">
-            <i class="icon fas fa-upload fa-2x"></i>
+            <img
+              class="workflow-icon"
+              src="/icons/upload.svg" />
             <h4>Publishing</h4>
           </div>
         </div>
@@ -77,8 +85,17 @@ export default {
   padding-top: 25px;
 }
 
-.icon {
-  margin-bottom: 10px;
+.workflow-icon {
+  width: 1.8em;
+  opacity: 0.75;
+}
+
+.icon-lightbulb {
+  width: 1.25em;
+}
+
+.icon-code {
+  width: 2em;
 }
 
 h4 {

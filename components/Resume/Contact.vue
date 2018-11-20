@@ -7,17 +7,23 @@
     <div class="columns is-centered">
       <div class="column is-narrow is-2">
         <a href="https://www.linkedin.com/in/christopher-kade/">
-          <i class="fab fa-linkedin-in fa-5x"></i>
+          <img
+            class="contact-icon"
+            src="/icons/linkedin.svg" />
         </a>
       </div>
       <div class="column is-narrow is-2">
         <a href="https://github.com/christopherkade">
-          <i class="fab fa-github-alt fa-5x"></i>
+          <img
+            class="contact-icon"
+            src="/icons/github.svg" />
         </a>
       </div>
       <div class="column is-narrow is-2">
         <a href="mailto:c.kade96@gmail.com">
-          <i class="fas fa-envelope fa-5x"></i>
+          <img
+            class="contact-icon"
+            src="/icons/email.svg" />
         </a>
       </div>
     </div>
@@ -45,6 +51,11 @@ export default {
 
 .column a:hover {
   color: $highlight;
+}
+
+.contact-icon {
+  width: 4.5em;
+  opacity: 0.7;
 }
 
 /* Tablets (portrait) ----------- */

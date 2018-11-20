@@ -4,7 +4,8 @@
       <nuxt-link to="/about">
         <a class="button">
           <span class="icon">
-            <i class="fas fa-user-alt"></i>
+            <img
+              src="/icons/user.svg" />
           </span>
           <span>About</span>
         </a>
@@ -14,7 +15,8 @@
       <nuxt-link to="/blog">
         <a class="button">
           <span class="icon">
-            <i class="fas fa-pencil-alt"></i>
+            <img
+              src="/icons/pencil.svg" />
           </span>
           <span>Blog</span>
         </a>
@@ -24,7 +26,9 @@
       <nuxt-link to="/resume">
         <a class="button">
           <span class="icon">
-            <i class="fas fa-file"></i>
+            <img
+              class="resume"
+              src="/icons/resume.svg" />
           </span>
           <span>Resume</span>
         </a>
@@ -32,17 +36,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  methods: {
-    navAnimation() {
-      // Starts the closing pannel animation of the banner
-      this.$store.commit('navAnimationStart')
-    }
-  }
-}
-</script>
 
 <style scoped>
 .button {
@@ -58,6 +51,15 @@ export default {
 
 .columns {
   margin-top: 35px;
+}
+
+.icon img {
+  width: 0.9em;
+  opacity: 0.75;
+}
+
+.icon .resume {
+  width: 0.65em;
 }
 
 /* Tablets (portrait) ----------- */

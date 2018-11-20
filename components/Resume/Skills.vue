@@ -7,7 +7,9 @@
       <div class="column">
         <div class="skill">
           <div class="skillBox">
-            <i class="fab fa-vuejs fa-2x"></i>
+            <img
+              class="skill-icon"
+              src="/icons/vue.svg" />
             <h4>VueJS</h4>
           </div>
         </div>
@@ -15,7 +17,9 @@
       <div class="column">
         <div class="skill">
           <div class="skillBox">
-            <i class="fab fa-node-js fa-2x"></i>
+            <img
+              class="skill-icon"
+              src="/icons/node.svg" />
             <h4>NodeJS</h4>
           </div>
         </div>
@@ -23,7 +27,9 @@
       <div class="column">
         <div class="skill">
           <div class="skillBox">
-            <i class="fab fa-android fa-2x"></i>
+            <img
+              class="skill-icon"
+              src="/icons/android.svg" />
             <h4>Android</h4>
           </div>
         </div>
@@ -31,7 +37,9 @@
       <div class="column">
         <div class="skill">
           <div class="skillBox">
-            <i class="fab fa-angular fa-2x"></i>
+            <img
+              class="skill-icon"
+              src="/icons/angular.svg" />
             <h4>Angular</h4>
           </div>
         </div>
@@ -73,6 +81,11 @@ export default {
 
 h4 {
   color: white;
+}
+
+.skill-icon {
+  width: 1.8em;
+  opacity: 0.65;
 }
 
 /* Tablets (portrait) ----------- */

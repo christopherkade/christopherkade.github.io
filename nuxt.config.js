@@ -34,8 +34,7 @@ module.exports = {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Lato'
       }
-    ],
-    script: [{ src: 'https://use.fontawesome.com/releases/v5.4.1/js/all.js' }]
+    ]
   },
   generate: {
     routes: function() {
