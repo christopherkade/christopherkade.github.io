@@ -1,5 +1,11 @@
 [
   {
+    "title": "Understanding the Node.js event loop",
+    "date": "Jan 13",
+    "year": 2019,
+    "path": "/blog/node-eventloop"
+  },
+  {
     "title": "How Mob Programming can help developers",
     "date": "Oct 25",
     "year": 2018,
