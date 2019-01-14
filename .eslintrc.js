@@ -16,6 +16,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'vue/html-self-closing': 0,
     'vue/require-default-prop': 0,
-    'vue/attribute-hyphenation': 0
+    'vue/attribute-hyphenation': 0,
+    'vue/max-attributes-per-line': 0
   }
 }

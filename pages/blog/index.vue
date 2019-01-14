@@ -1,23 +1,23 @@
 <template>
   <section class="blog-wrapper">
+    <Back url="/"/>
     <section class="container">
       <div class="section">
         <h1 class="title">My thoughts put into words</h1>
 
         <div class="articles">
-          <div
-            v-for="(article, index) in articles"
-            :key="article.title"
-            class="article">
+          <div v-for="(article, index) in articles" :key="article.title" class="article">
             <div
               v-if="index == 0 || (index > 0
               && articles[index - 1].year != article.year)"
-              class="article-year">{{ article.year }}</div>
+              class="article-year"
+            >{{ article.year }}</div>
             <Article
               :title="article.title"
               :url="article.path"
               :date="article.date"
-              class="article"/>
+              class="article"
+            />
           </div>
         </div>
       </div>
@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import Back from '@/components/Back.vue'
 import Separator from '@/components/Separator'
 import Article from '@/components/Article'
 import articleList from '@/static/articleList.json'
@@ -33,6 +34,7 @@ import articleList from '@/static/articleList.json'
 export default {
   name: 'Blog',
   components: {
+    Back,
     Separator,
     Article
   },

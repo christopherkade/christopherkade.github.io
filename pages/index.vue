@@ -1,6 +1,6 @@
 <template>
   <section class="index-wrapper">
-    <Nav />
+    <Nav/>
   </section>
 </template>
 
@@ -17,6 +17,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-</style>
