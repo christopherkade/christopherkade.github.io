@@ -3,8 +3,6 @@
     <Back url="/"/>
     <section class="container">
       <div class="section">
-        <h1 class="title">My thoughts put into words</h1>
-
         <div class="articles">
           <div v-for="(article, index) in articles" :key="article.title" class="article">
             <div
@@ -69,10 +67,6 @@ export default {
 /* Smartphones (portrait) ----------- */
 
 @media only screen and (max-width: 468px) {
-  .title {
-    font-size: 1.25em;
-  }
-
   .article {
     padding-left: 0px;
   }
