@@ -1,29 +1,26 @@
 <template>
   <div>
-    <Separator
-      title="CONTACT"
-      icon="fas fa-envelope" />
+    <Separator title="CONTACT" icon="fas fa-envelope"/>
 
     <div class="columns is-centered">
       <div class="column is-narrow is-2">
         <a href="https://www.linkedin.com/in/christopher-kade/">
-          <img
-            class="contact-icon"
-            src="/icons/linkedin.svg" />
+          <img class="contact-icon" src="/icons/linkedin.svg">
         </a>
       </div>
       <div class="column is-narrow is-2">
         <a href="https://github.com/christopherkade">
-          <img
-            class="contact-icon"
-            src="/icons/github.svg" />
+          <img class="contact-icon" src="/icons/github.svg">
+        </a>
+      </div>
+      <div class="column is-narrow is-2">
+        <a href="https://twitter.com/christo_kade">
+          <img class="contact-icon" src="/icons/twitter.svg">
         </a>
       </div>
       <div class="column is-narrow is-2">
         <a href="mailto:c.kade96@gmail.com">
-          <img
-            class="contact-icon"
-            src="/icons/email.svg" />
+          <img class="contact-icon" src="/icons/email.svg">
         </a>
       </div>
     </div>
