@@ -4,21 +4,9 @@
       <nuxt-link to="/about">
         <a class="button">
           <span class="icon">
-            <img
-              src="/icons/user.svg" />
+            <img src="/icons/user.svg">
           </span>
           <span>About</span>
-        </a>
-      </nuxt-link>
-    </div>
-    <div class="column is-narrow">
-      <nuxt-link to="/blog">
-        <a class="button">
-          <span class="icon">
-            <img
-              src="/icons/pencil.svg" />
-          </span>
-          <span>Blog</span>
         </a>
       </nuxt-link>
     </div>
@@ -26,11 +14,29 @@
       <nuxt-link to="/resume">
         <a class="button">
           <span class="icon">
-            <img
-              class="resume"
-              src="/icons/resume.svg" />
+            <img class="resume" src="/icons/resume.svg">
           </span>
           <span>Resume</span>
+        </a>
+      </nuxt-link>
+    </div>
+    <div class="column is-narrow">
+      <nuxt-link to="/blog">
+        <a class="button">
+          <span class="icon">
+            <img src="/icons/pencil.svg">
+          </span>
+          <span>Blog</span>
+        </a>
+      </nuxt-link>
+    </div>
+    <div class="column is-narrow">
+      <nuxt-link to="/slides">
+        <a class="button">
+          <span class="icon">
+            <img src="/icons/slides.svg">
+          </span>
+          <span>Slides</span>
         </a>
       </nuxt-link>
     </div>
