@@ -84,4 +84,5 @@ If not, your Github page is now up and running thanks to the `deploy` statement 
 
 I hope this was useful to some of you, as discovering CI has truly made my development process more enjoyable as a whole.
 
-Have a good one :-)
+Have a good one :-)  
+[@christo_kade](https://twitter.com/christo_kade)

@@ -86,4 +86,4 @@ I've enjoyed multiple aspects of Vue:
 - And many other little things that make the development process a pleasure.
 
 Thanks for reading,  
-Christopher Kade
+[@christo_kade](https://twitter.com/christo_kade)

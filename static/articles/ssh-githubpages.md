@@ -73,4 +73,4 @@ Serving through HTTPS is a norm nowadays, and even though Github pages serves as
 It took a lot of research to intertwine these two services, and I hope this post may be of use to at least one of you.
 
 Thanks for reading,  
-Christopher Kade
+[@christo_kade](https://twitter.com/christo_kade)

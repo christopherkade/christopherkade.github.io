@@ -30,4 +30,4 @@ The current version isn't a completely finished product, as it could use some an
 A complete redesign is a challenge and a pleasure, having a clean slate to work on is exciting and I believe that's why I will always find myself reworking it. I will keep on learning and increasing my skills in both design and quality of code in the near future and will surely share new features and designs on this blog.
 
 Thanks for reading,  
-Christopher Kade
+[@christo_kade](https://twitter.com/christo_kade)

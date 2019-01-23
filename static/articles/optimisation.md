@@ -46,4 +46,4 @@ Many other forms of performance optimization could be applied, but some of them 
 I hope this post will be a call to action for some of you to consider performance in your development choices, it's very rewarding to be able to see improvements on your projects and is an incremental task that must be considered at the beginning of every project.
 
 Thanks for reading,  
-Christopher Kade
+[@christo_kade](https://twitter.com/christo_kade)

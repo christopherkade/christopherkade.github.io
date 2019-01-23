@@ -93,4 +93,4 @@ We have briefly learned a couple of things:
 This is a repeatable process, you can deploy as many projects / subdomains as you want. This can be useful if you wish to showcase one of your projects, create a blog, or simply have a safe development repository (under a `dev` subdomain for example).
 
 Thanks for reading,  
-Christopher Kade
+[@christo_kade](https://twitter.com/christo_kade)

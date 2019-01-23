@@ -146,4 +146,5 @@ And that should be enough ! Navigate to `/blog/article-name` and your `.md` docu
 I hope this article was useful to some of you,
 
 Until next time,  
-Have a good one :-)
+Have a good one :-)  
+[@christo_kade](https://twitter.com/christo_kade)

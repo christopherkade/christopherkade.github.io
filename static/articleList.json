@@ -1,5 +1,11 @@
 [
   {
+    "title": "Designing for Developers - a discussion at Algolia",
+    "date": "Jan 23",
+    "year": 2019,
+    "path": "/blog/designing-for-devs"
+  },
+  {
     "title": "Understanding the Node.js Event Loop",
     "date": "Jan 13",
     "year": 2019,

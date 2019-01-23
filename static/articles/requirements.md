@@ -65,4 +65,4 @@ Linking each requirement to its source is essential, to achieve it, each require
 Agile software development took its rightful place as it advocates continuous improvements, adaptive planning alongside many other principles. Utilizing it to its full and best potential can be a daunting task for any newcomer like myself, but I hope this short blog post covers my general understanding of defining quality requirements for a project to a good degree.
 
 Thanks for reading,  
-Christopher Kade
+[@christo_kade](https://twitter.com/christo_kade)

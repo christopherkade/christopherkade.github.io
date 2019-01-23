@@ -102,3 +102,5 @@ We covered some very important points in this article, so here's a TL;DR to reme
 - The Event Loop is composed of **more than one** queue (or queue-like structure)
 
 Thank you so much for taking the time to read this article, I hope it has taught you on a lower level the workings of Node's Event Loop system. Researching on it helped be grasp some concepts that will probably be of use in my future projects.
+
+[@christo_kade](https://twitter.com/christo_kade)

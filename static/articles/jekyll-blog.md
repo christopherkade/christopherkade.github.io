@@ -117,4 +117,4 @@ Github Pages and Jekyll are two very cool free tools that should be used by anyo
 
 I hope this post has been of help to some of you,  
 Until next time,  
-Christopher Kade
+[@christo_kade](https://twitter.com/christo_kade)

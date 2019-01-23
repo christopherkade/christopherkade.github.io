@@ -42,4 +42,5 @@ For example, my last session had us take someone's project and tackle some of th
 I'm sure most of you already heard or used this concept in your current jobs, but hopefully some of you may be inspired to give it a try and understand the benefit of working alongside individuals who may think differently.
 
 Thanks for reading,  
-Have a good one :-)
+Have a good one :-)  
+[@christo_kade](https://twitter.com/christo_kade)

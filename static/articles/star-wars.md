@@ -353,4 +353,4 @@ You can check out the final product on my [website](https://christopherkade.com/
 It really was a blast to develop and I hope it shows how much possibilities you have with such a basic kit.
 
 Thanks for reading,  
-Christopher Kade
+[@christo_kade](https://twitter.com/christo_kade)

@@ -308,4 +308,4 @@ React's concepts seem somewhat odd and will take time to get accustomed to, but 
 We haven't seen everything that React has to offer, we still need to go through some notions such as **forms** and **lifting state up**. I will try to document them very soon.
 
 Thanks for reading,  
-Christopher Kade
+[@christo_kade](https://twitter.com/christo_kade)

@@ -130,4 +130,4 @@ We covered how to set up a very basic Node API from scratch and how to deploy it
 I hope that this post was helpful to some of you,
 
 Happy coding,  
-Christopher Kade
+[@christo_kade](https://twitter.com/christo_kade)
