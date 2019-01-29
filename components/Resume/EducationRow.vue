@@ -2,9 +2,7 @@
   <section class="section">
     <div class="columns is-centered">
       <div class="column is-narrow">
-        <img
-          :src="logo"
-          class="edLogo"/>
+        <img :src="logo" class="edLogo">
       </div>
       <div class="column is-narrow edTextMain is-3">
         <h1 class="title">{{ degree }}</h1>

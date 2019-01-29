@@ -124,7 +124,7 @@ h4 {
 }
 
 .randomizeBox {
-  background: $secondary;
+  background: whitesmoke;
 }
 
 .refresh-title {

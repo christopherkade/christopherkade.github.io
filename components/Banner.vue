@@ -2,17 +2,16 @@
   <div class="bannerWrapper">
     <img
       :class="{ bannerSmall: this.$store.state.navAnimation, bannerNormal: !this.$store.state.navAnimation }"
-      class="bannerPhoto" />
+      class="bannerPhoto"
+    >
     <div
       :class="{ rowUp: this.$store.state.navAnimation, rowDown: !this.$store.state.navAnimation }"
-      class="bannerRow">
-      <img
-        class="personalPhoto"
-        src="/img/kade.jpg"/>
+      class="bannerRow"
+    >
+      <img class="personalPhoto" src="/img/chris.jpg">
       <h1>Christopher Kade</h1>
 
       <p>Full-Stack Developer</p>
-
     </div>
   </div>
 </template>

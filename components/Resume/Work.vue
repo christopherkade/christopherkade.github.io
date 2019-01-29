@@ -1,87 +1,150 @@
 <template>
-  <div>
-    <Separator
-      title="WORK"
-      icon="fas fa-file-code" />
-    <carousel
-      :navigationEnabled="true"
-      :paginationEnabled="false"
-      :autoplay="true"
-      :autoplayTimeout="2000"
-      :perPageCustom="[[768, 2], [1024, 4]]"
-      :perPage="1"
-      :loop="true"
-      class="projectCarousel">
-      <slide
-        v-for="project in projects"
-        :key="project.id">
+  <div class="work-wrapper">
+    <Separator title="THINGS I'VE MADE" icon="fas fa-file-code"/>
+
+    <div class="projects-wrapper">
+      <h1 class="subtitle open-source">Some of my open-source projects</h1>
+      <div class="columns is-multiline projects">
         <a
-          :href="project.html_url"
-          class="projectLink">
-          <div class="card projectCard">
-            <div class="card-header">
-              <p class="card-header-title">
+          v-for="project in OSSProjects"
+          :key="project.name"
+          :href="project.url"
+          class="project column is-3"
+        >
+          <article class="message oss-message">
+            <div class="message-body">
+              <h1 class="subtitle project-name">
                 {{ project.name }}
-              </p>
+                <img class="link-icon" src="/icons/link.svg">
+              </h1>
+              <p class="project-desc">{{ project.description }}</p>
+              <span v-for="tech in project.stack" :key="tech" class="tag tech">{{ tech }}</span>
             </div>
-            <div class="card-content">
-              <div class="content">
-                {{ project.description }}
-              </div>
-            </div>
-          </div>
+          </article>
         </a>
-      </slide>
-    </carousel>
+      </div>
+
+      <h1 class="subtitle">Projects done during various internships</h1>
+      <div class="columns is-multiline projects">
+        <div
+          v-for="project in ProProjects"
+          :key="project.name"
+          :href="project.url"
+          class="project column is-3"
+        >
+          <article class="message">
+            <div class="message-body">
+              <h1 class="subtitle project-name">{{ project.name }}</h1>
+              <p class="project-desc">{{ project.description }}</p>
+              <span v-for="tech in project.stack" :key="tech" class="tag tech">{{ tech }}</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-import { Carousel, Slide } from 'vue-carousel'
 import Separator from '@/components/Separator'
 
 export default {
   components: {
-    Separator,
-    Carousel,
-    Slide
+    Separator
   },
   data() {
     return {
-      projects: []
+      OSSProjects: [
+        {
+          name: 'Snippet',
+          description: 'Create elegant code snippets',
+          url: 'https://github.com/christopherkade/snippet',
+          stack: ['Angular']
+        },
+        {
+          name: 'Parks',
+          description: 'Get wait-times for most Disneyland Parks in the world',
+          url: 'https://github.com/christopherkade/parks',
+          stack: ['Angular']
+        },
+        {
+          name: 'STracker',
+          description: 'Basic spending tracker',
+          url: 'https://github.com/christopherkade/STracker',
+          stack: ['Vue', 'Firebase']
+        },
+        {
+          name: 'Start Coding',
+          description: 'Get coding documentation after a short quiz',
+          url: 'https://github.com/christopherkade/start-coding',
+          stack: ['Angular']
+        }
+      ],
+      ProProjects: [
+        {
+          name: 'AYA Team',
+          description: 'Control a team preview web page using your phone',
+          stack: ['React', 'Node', 'WebRTC', 'Travis']
+        },
+        {
+          name: 'PMOSoft',
+          description: 'Project management web application',
+          stack: ['Angular', 'Spring']
+        },
+        {
+          name: 'Activity Report',
+          description:
+            'Intranet with a ticketing, reporting and calendar system',
+          stack: ['ASP .NET']
+        }
+      ]
     }
-  },
-  async mounted() {
-    let { data } = await axios.get(
-      `https://api.github.com/users/christopherkade/repos`
-    )
-    this.projects = data
   }
 }
 </script>
 
 <style lang="scss">
-.projectCarousel {
-  padding: 25px;
+.project-name {
+  font-size: 1.1em;
 }
 
-.projectCard {
-  margin: 25px;
-  border: 1px #e1e4e8 solid;
-  box-shadow: none;
-  height: 185px;
+.project-desc {
+  font-size: 0.9em;
 }
 
-.projectLink:hover {
-  opacity: 0.5;
+.projects-wrapper {
+  padding: 0 25px 0 25px;
 }
 
-/* Tablets (portrait) ----------- */
+.tag:not(body) {
+  background-color: $highlight;
+  color: white;
+}
 
-@media only screen and (max-width: 868px) {
-  .projectCard {
-    margin: 0 10px 0 0;
-  }
+.tech {
+  margin: 10px 5px 0 0;
+}
+
+.oss-message:hover {
+  opacity: 0.75;
+}
+
+.message-header {
+  background-color: $highlight;
+}
+
+.link-icon {
+  width: 1em;
+  opacity: 0.65;
+  margin-left: 5px;
+}
+
+.work-wrapper {
+  margin-bottom: 50px;
+}
+
+.open-source {
+  margin-top: 50px;
 }
 </style>

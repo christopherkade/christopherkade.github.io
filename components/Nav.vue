@@ -46,13 +46,13 @@
 <style scoped>
 .button {
   font-size: 2em;
-  background-color: transparent;
+  background-color: #fcfcfc;
   border: none;
   width: auto;
 }
 
 .button:hover {
-  background-color: #f9f9f9;
+  background-color: #c7c7c7;
 }
 
 .columns {

@@ -2,9 +2,7 @@
   <section class="section">
     <div class="columns is-centered">
       <div class="column is-narrow">
-        <img
-          :src="logo"
-          class="xpLogo"/>
+        <img :src="logo" class="xpLogo">
       </div>
       <div class="column is-narrow xpTextMain is-3">
         <h1 class="title">{{ title }}</h1>

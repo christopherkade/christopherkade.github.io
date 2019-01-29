@@ -48,16 +48,12 @@ module.exports = {
   loading: { color: '#fff' },
 
   /*
-  ** Global CSS
-  */
-  css: [{ src: '@/assets/main.scss', lang: 'sass' }],
-
-  /*
   ** Plugins to load before mounting the App
   */
-  plugins: [{ src: '~/plugins/vue-carousel.js', ssr: false }],
+  plugins: [],
   css: [
-    { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' }
+    { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' },
+    { src: '~/assets/main.scss' }
   ],
   /*
   ** Nuxt.js modules
@@ -66,7 +62,7 @@ module.exports = {
     ,
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
-    ['nuxt-sass-resources-loader', './assets/main.scss'],
+    '@nuxtjs/style-resources',
     ['@nuxtjs/markdownit', { linkify: true }],
     [
       '@nuxtjs/google-analytics',
@@ -78,6 +74,9 @@ module.exports = {
       }
     ]
   ],
+  styleResources: {
+    scss: ['./assets/main.scss']
+  },
   markdownit: {
     injected: true,
     use: ['markdown-it-highlightjs']
