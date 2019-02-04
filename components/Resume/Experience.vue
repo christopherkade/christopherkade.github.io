@@ -30,7 +30,7 @@
       logo="/img/info3.png"
       title="Infocubed"
       role="Software developer internship"
-      date="September 2015 - Nomvember 2015"
+      date="September 2015 - November 2015"
       desc="Rewriting and redesigning of an activity report application."
     />
   </div>
