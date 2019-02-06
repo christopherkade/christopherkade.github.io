@@ -1,12 +1,16 @@
 <template>
   <div :class="{ 'darkTheme': this.$store.state.isDark }" class="layout-wrapper">
-    <contact-bar class="contact-bar-side"/>
+    <no-ssr>
+      <contact-bar class="contact-bar-side"/>
+    </no-ssr>
     <theme-selector/>
     <nuxt-link to="/" class="layout-title">
       <h1>CHRISTOPHER KADE</h1>
     </nuxt-link>
     <nuxt/>
-    <contact-bar class="contact-bar-bottom"/>
+    <no-ssr>
+      <contact-bar class="contact-bar-bottom"/>
+    </no-ssr>
   </div>
 </template>
 
