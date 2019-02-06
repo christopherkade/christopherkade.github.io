@@ -18,15 +18,21 @@ In the second scenario, you will be able to create a _subdomain_ that will be ac
 
 Head over to your AWS DNS console (Route 53), then click on `Hosted zones`:
 
-![post2-picture1](https://user-images.githubusercontent.com/15229355/32547643-073c7f14-c47b-11e7-8c17-949cdc7c4d12.png)
+<p align="center">
+  <img width="70%" height="70%" src="https://user-images.githubusercontent.com/15229355/32547643-073c7f14-c47b-11e7-8c17-949cdc7c4d12.png">
+</p>
 
 Click on the hosted zone to which you wish to add a subdomain, then click on `Create Record Set`:
 
-![post2-picture2](https://user-images.githubusercontent.com/15229355/32547711-4f933294-c47b-11e7-8038-2f24b7906946.png)
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/32547711-4f933294-c47b-11e7-8038-2f24b7906946.png">
+</p>
 
 And fill in the right-hand side form like such:
 
-![post2-picture3](https://user-images.githubusercontent.com/15229355/32547798-98972054-c47b-11e7-88db-468429af0912.png)
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/32547798-98972054-c47b-11e7-88db-468429af0912.png">
+</p>
 
 Where `Name` should contain your new subdomain's name (in my case `blog`), `Type` should be `CNAME - Canonical name` and `Value` should be your personnal Github pages URL.
 

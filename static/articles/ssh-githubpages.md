@@ -24,21 +24,29 @@ To do so, head out to [Cloudflare](https://www.cloudflare.com/)'s website, creat
 
 Cloudflare will then scan your existing DNS configurations and display the records they found, in my case, they found most of them, namely my `A` records and one of my sub-domain's `CNAME` record, like such:
 
-![cloudflare-screenshot](https://user-images.githubusercontent.com/15229355/33068859-7d471316-ceaa-11e7-930b-8c19b9e8f5fe.png)
+<p align="center">
+  <img width="70%" height="70%" src="https://user-images.githubusercontent.com/15229355/33068859-7d471316-ceaa-11e7-930b-8c19b9e8f5fe.png">
+</p>
 
 I then proceeded to add the missing records and most importantly to add a `CNAME` record with `www` as its name and an alias to `username.github.io` as its value. This way, when navigating to `www.christopherkade.com`, you'll be redirected right away to `christopherkade.github.io`. Here's the final records:
 
-![cloudflare-screenshot-2](https://user-images.githubusercontent.com/15229355/33068913-a9e7db12-ceaa-11e7-99b1-397f664c9be0.png)
+<p align="center">
+  <img width="70%" height="70%" src="https://user-images.githubusercontent.com/15229355/33068913-a9e7db12-ceaa-11e7-99b1-397f664c9be0.png">
+</p>
 
 #### Enforcing HTTPS
 
 Head out to the _Crypto_ tab and change the `SSL` option to `Full`.
 
-![screenshot-2017-11-21 christopherkade com cloudflare - web performance security](https://user-images.githubusercontent.com/15229355/33068988-e7a1b7ac-ceaa-11e7-9e50-d8e34b34cb98.png)
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/33068988-e7a1b7ac-ceaa-11e7-9e50-d8e34b34cb98.png">
+</p>
 
 We now want to make sure our website is only accessible via HTTPS, to do so go to the _Page Rules_ tab and add the following rule:
 
-![rule-screenshot](https://user-images.githubusercontent.com/15229355/33068253-8eef832a-cea8-11e7-823f-785e514782f7.png)
+<p align="center">
+  <img width="100%" height="100%" src="https://user-images.githubusercontent.com/15229355/33068253-8eef832a-cea8-11e7-823f-785e514782f7.png">
+</p>
 
 This way, accessing `http://christopherkade.com` will always forward our user to `https://christopherkade.com`.
 

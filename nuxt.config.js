@@ -8,7 +8,7 @@ glob('static/articles/*.md', function(err, output) {
 
 function getSlugs(post, _) {
   let slug = post.substr(0, post.lastIndexOf('.'))
-  return `/blog/${slug}`
+  return `/${slug}`
 }
 
 module.exports = {
@@ -26,13 +26,6 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content: "Christopher Kade's personal website"
-      }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Lato'
       }
     ]
   },
@@ -61,7 +54,6 @@ module.exports = {
   modules: [
     ,
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma',
     '@nuxtjs/style-resources',
     ['@nuxtjs/markdownit', { linkify: true }],
     [
@@ -80,10 +72,6 @@ module.exports = {
   markdownit: {
     injected: true,
     use: ['markdown-it-highlightjs']
-  },
-
-  router: {
-    middleware: 'reload'
   },
 
   /*

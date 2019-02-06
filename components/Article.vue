@@ -1,11 +1,13 @@
 <template>
   <section class="article">
-    <span class="date">
-      {{ date }} -
-    </span>
-    <nuxt-link
-      :to="url"
-      class="articleTitle subtitle">{{ title }}</nuxt-link>
+    <h5>
+      <nuxt-link
+        :class="{ 'darkTheme': this.$store.state.isDark }"
+        :to="url"
+        class="article-title"
+      >{{ title }}</nuxt-link>
+    </h5>
+    <time class="article-date">{{ date }}</time>
   </section>
 </template>
 
@@ -25,27 +27,29 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .article {
-  padding-top: 10px;
+  padding: 25px;
 }
 
-.articleTitle {
-  color: black;
+.article-title {
+  text-decoration: none;
+  font-size: 1.75em;
+  color: #111111;
+  font-weight: bold;
 }
 
-.articleTitle:hover {
-  opacity: 0.5;
+.article-title:hover {
+  opacity: 0.7;
 }
 
-.date {
-  opacity: 0.75;
-  font-size: 0.9em;
+.article-date {
+  color: $highlight-light;
+  font-weight: bold;
+  font-size: 1.25em;
 }
 
-@media only screen and (max-width: 468px) {
-  .articleTitle {
-    font-size: 1em;
-  }
+.darkTheme {
+  color: $text-dark;
 }
 </style>

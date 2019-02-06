@@ -26,7 +26,9 @@ On this blog post we'll focus solely on the deployment of a **Jekyll blog**, but
 
 Replace `username` with your Github username (so in my case, I have inputed `christopherkade.github.io`):
 
-![blog-picture1](https://user-images.githubusercontent.com/15229355/32519362-68ac7a50-c404-11e7-8931-136c43710089.png)
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/32519362-68ac7a50-c404-11e7-8931-136c43710089.png">
+</p>
 
 #### Then clone your repository (this example uses a terminal):
 
