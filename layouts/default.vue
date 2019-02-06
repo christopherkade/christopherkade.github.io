@@ -73,11 +73,11 @@ export default {
     margin-top: 50px;
   }
 
-  .contact-bar-bottom {
+  .layout-wrapper > .contact-bar-bottom {
     display: block;
   }
 
-  .contact-bar-side {
+  .layout-wrapper > .contact-bar-side {
     display: none;
   }
 }
