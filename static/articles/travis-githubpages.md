@@ -18,7 +18,7 @@ Continuous Integration, or CI for short is the development practice of automatin
 This diagram represents the process pretty well:
 
 <p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/15229355/47021076-04f20880-d15b-11e8-8667-1dada62a08af.png">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/47021076-04f20880-d15b-11e8-8667-1dada62a08af.png">
 </p>
 
 ## <a name="howto"></a> How to deploy a website to Github pages using Travis CI

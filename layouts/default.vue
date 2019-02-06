@@ -1,67 +1,84 @@
 <template>
-  <div>
-    <Banner />
+  <div :class="{ 'darkTheme': this.$store.state.isDark }" class="layout-wrapper">
+    <contact-bar class="contact-bar-side"/>
+    <theme-selector/>
+    <nuxt-link to="/" class="layout-title">
+      <h1>CHRISTOPHER KADE</h1>
+    </nuxt-link>
     <nuxt/>
+    <contact-bar class="contact-bar-bottom"/>
   </div>
 </template>
 
 <script>
-import Banner from '@/components/Banner'
+import ContactBar from '@/components/ContactBar'
+import ThemeSelector from '@/components/ThemeSelector'
 
 export default {
   components: {
-    Banner
+    ContactBar,
+    ThemeSelector
   }
 }
 </script>
 
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+<style lang="scss">
+.layout-wrapper {
+  padding: 12px;
+  background-color: $background-light;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
+.layout-title {
+  text-align: center;
   text-decoration: none;
-  padding: 10px 30px;
+  color: $text-light;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.contact-bar-bottom {
+  display: none;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.darkTheme {
+  background-color: $background-dark;
+  color: $text-dark;
+
+  .layout-title {
+    color: $text-dark;
+  }
+
+  .icon {
+    filter: invert(1);
+  }
+
+  .article-date {
+    color: $highlight-dark;
+  }
+
+  p > a,
+  li > a,
+  h1 > a {
+    color: $highlight-dark;
+  }
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+/* Smartphones (portrait) ----------- */
+
+@media only screen and (max-width: 720px) {
+  .layout-title {
+    font-size: 0.75em;
+  }
+
+  .layout-title > h1 {
+    margin-top: 50px;
+  }
+
+  .contact-bar-bottom {
+    display: block;
+  }
+
+  .contact-bar-side {
+    display: none;
+  }
 }
 </style>

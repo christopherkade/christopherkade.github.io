@@ -20,7 +20,9 @@ npm start
 
 Which opens the following window:
 
-![electron](https://user-images.githubusercontent.com/15229355/33723183-db3892e0-db63-11e7-8cfe-5e68e3a345e8.png)
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/33723183-db3892e0-db63-11e7-8cfe-5e68e3a345e8.png">
+</p>
 
 Note the inspection tool on the right, that's because Electron uses **Chromium** to render my project, therefore I have access to the usual inspection tool.
 
@@ -81,13 +83,17 @@ As my navigation is independent to the currently existing routing, I'll add it p
 
 Which displays:
 
-![electron](https://user-images.githubusercontent.com/15229355/33724972-c3f7d4d8-db68-11e7-9e3c-cc2bf780d83d.png)
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/33724972-c3f7d4d8-db68-11e7-9e3c-cc2bf780d83d.png">
+</p>
 
 _Note the little "nav works!" on top of the window._
 
 Let's now make it look like an actual navigation bar:
 
-![electrion-navbar](https://user-images.githubusercontent.com/15229355/33726862-308d767a-db6e-11e7-8265-0e8a48c06319.png)
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/33726862-308d767a-db6e-11e7-8265-0e8a48c06319.png">
+</p>
 
 As you can see, I have made some changes:
 
@@ -120,7 +126,9 @@ export class Todo {
 
 All I have to do, is to add a button to create a new Todo, once clicked, I'll simply push a newly created `Todo` into my currently displayed `List`s array and display said array with an `ngFor`. With all of that said, here is the result:
 
-![electron-todos](https://user-images.githubusercontent.com/15229355/33740261-f40fa0c2-db97-11e7-84e5-ff9520be882f.png)
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/33740261-f40fa0c2-db97-11e7-84e5-ff9520be882f.png">
+</p>
 
 Note the undocumented changes such as the ability to create a new List (which uses the same concept applied to create a new Todo), the ability to mark a Todo as done and the ability to edit the name of a List. All of this is very basic and doesn't really need to be detailed.
 

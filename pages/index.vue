@@ -1,19 +1,45 @@
 <template>
-  <section class="index-wrapper">
-    <Nav/>
-  </section>
+  <div class="index-wrapper">
+    <div v-for="article in articles" :key="article.title" class="articles">
+      <Article :title="article.title" :url="article.path" :date="article.date" class="article"/>
+    </div>
+  </div>
 </template>
 
 <script>
-import Nav from '@/components/Nav'
+import Article from '@/components/Article'
+import articleList from '@/static/articleList.json'
 
 export default {
   components: {
-    Nav
+    Article
   },
-  created() {
-    // On Index nav, close the banner
-    this.$store.commit('navAnimationStop')
+  data() {
+    return {
+      articles: articleList
+    }
   }
 }
 </script>
+
+<style lang="scss">
+.index-wrapper {
+  padding: 25px 350px 100px 350px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .index-wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+
+@media only screen and (max-width: 720px) {
+  .index-wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+</style>

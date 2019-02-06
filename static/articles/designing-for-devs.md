@@ -5,7 +5,7 @@ Last week I attended a Tech Lunch at [Algolia](https://www.algolia.com/)'s Paris
 Note that the full panel can be found [here](https://www.youtube.com/embed/qBJeEWUWUWE?autoplay=1).
 
 <p align="center">
-  <img width="400" height="100" src="https://user-images.githubusercontent.com/15229355/51639773-0903a280-1f62-11e9-8e86-58100e2e4e22.jpg">
+  <img width="50%" height="50%" src="https://user-images.githubusercontent.com/15229355/51639773-0903a280-1f62-11e9-8e86-58100e2e4e22.jpg">
 </p>
 
 ---
@@ -13,7 +13,7 @@ Note that the full panel can be found [here](https://www.youtube.com/embed/qBJeE
 The talk lasted for about 45 minutes (Q&A included) in front of a full room of about 50 to 60 people and addressed questions covering anything from "should designers code?" to "how do you think developers perceive design?", I'll cover some interesting points that were brought up by some of the speakers, comment and mention my opinion on some of them.
 
 <p align="center">
-  <img width="400" height="100" src="https://user-images.githubusercontent.com/15229355/51639784-102ab080-1f62-11e9-81d6-174f427c0bb6.jpg
+  <img width="50%" height="50%" src="https://user-images.githubusercontent.com/15229355/51639784-102ab080-1f62-11e9-81d6-174f427c0bb6.jpg
 ">
 </p>
 

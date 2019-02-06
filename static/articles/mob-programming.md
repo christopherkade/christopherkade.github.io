@@ -15,7 +15,7 @@ We will be covering the following points:
 Mob Programming is an approach in Software development that involves a team of developers in front of a computer, thinking, debating and finding solutions together while one of them takes care of driving the conversation and coding. The whole point of this practice is to find a consensus on problems and to produce something of greater quality as everyone can partake in the conversation. If you already know of _pair programming_ (which involves two developers) then you probably already noted that it's a similar concept but extended to a whole team.
 
 <p align="center">
-  <img width="460" height="300" src="https://gds.blog.gov.uk/wp-content/uploads/sites/60/2016/09/mob-programming.jpg">
+  <img width="70%" height="70%" src="https://gds.blog.gov.uk/wp-content/uploads/sites/60/2016/09/mob-programming.jpg">
 </p>
 
 ## How can it help

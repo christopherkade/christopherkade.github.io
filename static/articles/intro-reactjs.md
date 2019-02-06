@@ -28,7 +28,9 @@ npm start
 
 Which opens up my browser to display:
 
-![react](https://user-images.githubusercontent.com/15229355/32899842-efd05c0a-cae3-11e7-8187-759c55cd10fd.png)
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/32899842-efd05c0a-cae3-11e7-8187-759c55cd10fd.png">
+</p>
 
 ## Learning the basics
 

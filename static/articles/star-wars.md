@@ -144,7 +144,9 @@ And finally in `star-wars.component.sass`:
 
 It looks like this (note that the stars might not be visible on these pictures as they are a single pixel wide):
 
-![space](https://user-images.githubusercontent.com/15229355/34257748-c9afcda8-e663-11e7-8b3b-c9a0e0bd9119.png)
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/34257748-c9afcda8-e663-11e7-8b3b-c9a0e0bd9119.png">
+</p>
 
 ## Adding the famous intro phrase
 
@@ -197,7 +199,9 @@ section
 
 Result:
 
-![intro](https://user-images.githubusercontent.com/15229355/34257979-c9982382-e664-11e7-8453-8ed19a800c4c.png)
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/34257979-c9982382-e664-11e7-8453-8ed19a800c4c.png">
+</p>
 
 ## Displaying the logo
 
@@ -249,7 +253,9 @@ In `star-wars.component.sass`:
 
 And there we go, our beautifully animated logo:
 
-![logo](https://user-images.githubusercontent.com/15229355/34258253-ced4043c-e665-11e7-9393-3fe729f29a57.png)
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/34258253-ced4043c-e665-11e7-9393-3fe729f29a57.png">
+</p>
 
 ## Adding the scrolling text
 
@@ -325,7 +331,9 @@ p
 
 And there we go !
 
-![text](https://user-images.githubusercontent.com/15229355/34258462-bafd09a8-e666-11e7-8002-72b1ad71d343.png)
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/34258462-bafd09a8-e666-11e7-8002-72b1ad71d343.png">
+</p>
 
 ## Final touch: the music
 
@@ -349,7 +357,7 @@ And voilà, everything should work as expected.
 
 # Final thoughts
 
-You can check out the final product on my [website](https://christopherkade.com/) by inputing the Konami Code (🠉, 🠉, 🠋, 🠋, 🠈, 🠊, 🠈, 🠊, b, a).  
+You can check out the final product on my [website](https://christopherkade.com/) by inputing the Konami Code (OUTDATED).
 It really was a blast to develop and I hope it shows how much possibilities you have with such a basic kit.
 
 Thanks for reading,  
