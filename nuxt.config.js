@@ -12,7 +12,7 @@ function getSlugs(post, _) {
 }
 
 module.exports = {
-  mode: 'spa',
+  mode: 'universal',
 
   /*
   ** Headers of the page
@@ -25,7 +25,7 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: "Christopher Kade's personal website"
+        content: "Christopher Kade's blog"
       }
     ]
   },
