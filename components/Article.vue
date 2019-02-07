@@ -50,7 +50,7 @@ export default {
 .article-date {
   color: $highlight-light;
   font-weight: lighter;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 .darkTheme {
