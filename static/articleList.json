@@ -1,5 +1,10 @@
 [
   {
+    "title": "Building a CLI with Yargs",
+    "date": "Feb 7, 2019",
+    "path": "/yargs-cli"
+  },
+  {
     "title": "Designing for Developers - a discussion at Algolia",
     "date": "Jan 23, 2019",
     "path": "/designing-for-devs"
