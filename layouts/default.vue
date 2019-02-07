@@ -27,12 +27,14 @@ export default {
 .layout-wrapper {
   padding: 12px;
   background-color: $background-light;
+  transition: background-color 100ms ease-in-out, color 100ms ease;
 }
 
 .layout-title {
   text-align: center;
   text-decoration: none;
   color: $text-light;
+  background-color: transparent;
 }
 
 .contact-bar-bottom {
@@ -40,8 +42,8 @@ export default {
 }
 
 .darkTheme {
-  background-color: $background-dark;
   color: $text-dark;
+  background-color: $background-dark;
 
   .layout-title {
     color: $text-dark;
@@ -55,6 +57,10 @@ export default {
     color: $highlight-dark;
   }
 
+  .article-title {
+    background: transparent;
+  }
+
   p > a,
   li > a,
   h1 > a {
@@ -66,7 +72,7 @@ export default {
 
 @media only screen and (max-width: 720px) {
   .layout-title {
-    font-size: 0.75em;
+    font-size: 0.9em;
   }
 
   .layout-title > h1 {

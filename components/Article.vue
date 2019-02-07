@@ -32,11 +32,15 @@ export default {
   padding: 25px;
 }
 
+.article > h5 {
+  margin-bottom: 4px;
+}
+
 .article-title {
   text-decoration: none;
   font-size: 1.75em;
   color: #111111;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .article-title:hover {
@@ -45,7 +49,7 @@ export default {
 
 .article-date {
   color: $highlight-light;
-  font-weight: bold;
+  font-weight: lighter;
   font-size: 1.25em;
 }
 

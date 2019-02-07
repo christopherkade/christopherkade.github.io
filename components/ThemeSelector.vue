@@ -36,7 +36,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $background-dark;
+  background-color: black;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
