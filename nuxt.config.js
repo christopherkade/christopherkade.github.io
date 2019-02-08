@@ -2,7 +2,7 @@ const pkg = require('./package')
 const glob = require('glob')
 
 let files = []
-glob('static/articles/*.md', function(err, output) {
+glob('static/articles/*.md', function (err, output) {
   files = output
 })
 
@@ -30,7 +30,7 @@ module.exports = {
     ]
   },
   generate: {
-    routes: function() {
+    routes: function () {
       return files.map(getSlugs)
     }
   },
@@ -59,10 +59,7 @@ module.exports = {
     [
       '@nuxtjs/google-analytics',
       {
-        id: 'UA-127876951-1',
-        debug: {
-          sendHitTask: false
-        }
+        id: 'UA-127876951-1'
       }
     ]
   ],
