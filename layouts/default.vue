@@ -66,6 +66,11 @@ export default {
   h1 > a {
     color: $highlight-dark;
   }
+
+  .prev-link,
+  .next-link {
+    color: $highlight-dark;
+  }
 }
 
 /* Smartphones (portrait) ----------- */
