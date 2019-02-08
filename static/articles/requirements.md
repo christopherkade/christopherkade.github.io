@@ -4,9 +4,13 @@ I was lucky enough to do an internship in a company that embraces agile software
 
 This blog post sums up what I have understood to be good practice in defining requirements for a project, thanks to the tips I have gathered from this experience and certain courses I have attended to.
 
+<br><br>
+
 ## Characteristics of quality requirement statements
 
 In order to define good software requirements, one should always keep in mind 6 distinct characteristics.
+
+<br>
 
 #### A software requirement must be...
 
@@ -34,6 +38,8 @@ A requirement should deliver one interpretation, no matter the reader. Therefore
 
 A requirement must and will be tested by its developers, therefore it must be possible to devise test cases for it.
 
+<br><br>
+
 ## Characteristics of quality requirement specifications
 
 Requirements statements are only a small part of a larger product / system, with that in mind, we must consider how individual requirement statements hold alongside other existing and new requirement statements. Which leads us to look into characteristics of quality requirement specifications.
@@ -41,6 +47,8 @@ Requirements statements are only a small part of a larger product / system, with
 A software requirements specification (SRS) is a "description of a software system to be developed. It lays out functional and non-functional requirements, and may include a set of use cases that describe user interactions that the software must provide" (Source: [Wikipedia](https://en.wikipedia.org/wiki/Software_requirements_specification)).
 
 In order to have the best SRS possible, it should follow these characteristics.
+
+<br>
 
 #### A software requirements specification must be...
 
@@ -59,6 +67,8 @@ One must be able to modify a requirement without impeding on other requirements.
 ### Traceable
 
 Linking each requirement to its source is essential, to achieve it, each requirement must be written in a structured and precise way (as opposed to a narrative and large approach).
+
+<br><br>
 
 ## Final thoughts
 

@@ -4,9 +4,13 @@ Next week, I will be presenting Node's Event Loop system (we'll call it the EL f
 
 This blog post is a textual representation of what I will say using the following [slides](https://slides.com/christopherkade/deck-1/fullscreen).
 
+<br><br>
+
 ## Why learn about the Event Loop?
 
 It's always a good thing to understand how the tools we use work on a lower level. In the case of the EL specifically, it would allow me to understand the workflow of one of the runtimes I use the most which, in time, could help me debug my code more efficiently.
+
+<br><br>
 
 ## Summing up the Event Loop
 
@@ -57,6 +61,8 @@ As you can see, the rather large `for` loop blocks any other execution (that inc
 
 We've summarized the Event Loop pretty well, let's talk about its architecture.
 
+<br><br>
+
 ## The Event Loop's architecture
 
 When most developers think of the EL, they usually visualize a single stack or queue. This is actually a misconception (that even I had in the past) as it is composed of multiple queues (or queue-like structures) like so:
@@ -66,6 +72,8 @@ When most developers think of the EL, they usually visualize a single stack or q
 </p>
 
 Each one of these queues have their own purpose that I'll cover without going into too much detail. For more detail, visit [the official documentation](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#phases-in-detail).
+
+<br><br>
 
 ### Timer
 
@@ -91,7 +99,11 @@ Handles [`setImmediate`](https://nodejs.org/api/timers.html#timers_setimmediate_
 
 Handles callbacks related to closing, such as `socket.on('close', () => {})` when a socket or handle is closed abruptly.
 
+<br>
+
 There is so much more to these phases, I truly recommend to read up on them in the documentation linked earlier as each phase has a different way of handling callback execution.
+
+<br><br>
 
 ## Things to remember from this article
 

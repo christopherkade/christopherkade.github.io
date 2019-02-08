@@ -4,6 +4,8 @@ What better way to inaugurate my blog than to explain how to set up something si
 
 This blog uses a commonly used tool and service: **Jekyll** and **Github Pages**.
 
+<br><br>
+
 ## What is Jekyll?
 
 To quote their website:
@@ -11,6 +13,8 @@ To quote their website:
 "[Jekyll](https://jekyllrb.com/) is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server."
 
 It is widely used by the tech-blogging community and more importantly, is extremely easy to set up with Github pages !
+
+<br><br>
 
 ## What is Github Pages?
 
@@ -20,7 +24,11 @@ The website you are currently viewing is one of them, and so is my [personal web
 
 On this blog post we'll focus solely on the deployment of a **Jekyll blog**, but I might write about how to deploy an Angular4 website in the near future.
 
+<br><br>
+
 ## Step 1: Setup Github Pages
+
+<br>
 
 #### Start by creating a repository named `username.github.io`
 
@@ -30,11 +38,15 @@ Replace `username` with your Github username (so in my case, I have inputed `chr
   <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/32519362-68ac7a50-c404-11e7-8931-136c43710089.png">
 </p>
 
+<br>
+
 #### Then clone your repository (this example uses a terminal):
 
 ```bash
 git clone https://github.com/username/username.github.io
 ```
+
+<br>
 
 #### In order to test that everything works as intended, enter the project folder and add an `index.html` file:
 
@@ -42,6 +54,8 @@ git clone https://github.com/username/username.github.io
 cd username.github.io
 echo "Hello World" > index.html
 ```
+
+<br>
 
 #### Finally, push it:
 
@@ -53,7 +67,11 @@ git push -u origin master
 
 And that's all you need ! Open up your browser of choice and go to `https://username.github.io`.
 
+<br><br>
+
 ## Step 2: Setup Jekyll
+
+<br>
 
 #### Let's start by generating Jekyll's starter blog (make sure you are root):
 
@@ -63,6 +81,8 @@ jekyll new my-blog
 cd my-blog
 bundle exec jekyll serve
 ```
+
+<br><br>
 
 ## Step 3: Deploy our Jekyll blog
 
@@ -78,6 +98,8 @@ gem "github-pages", group: :jekyll_plugins
 ```
 
 Run `bundle update`.
+
+<br>
 
 #### Deploy everything to your Github Pages repository
 
@@ -107,11 +129,15 @@ git push origin master
 
 And **voilà** ! Your Jekyll blog should be up and running, you can now start blogging at your hearts content.
 
+<br><br>
+
 ## Optional: personalize your blog
 
 You can always personalize your Jekyll blog with various themes, for example, this blog uses [John Otander](http://johnotander.com/)'s [Pixyll](https://github.com/johnotander/pixyll/) theme.
 
 It might take a short while to have everything set up, but it's a rather simple process that is very similar to what you have just achieved. Don't forget to check out Jekyll's [official documentation](https://jekyllrb.com/docs/themes/) for more information on theming.
+
+<br><br>
 
 ## Final thoughts
 

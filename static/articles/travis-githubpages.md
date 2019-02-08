@@ -11,6 +11,8 @@ Table of contents:
   - [Configure the CI process for your repository](#configure)
   - [Trigger your first Travis CI build](#trigger)
 
+<br><br>
+
 ## <a name="ci"></a> What is Continuous Integration?
 
 Continuous Integration, or CI for short is the development practice of automating the build and testing of code every time a team member commits changes to their version control system.
@@ -21,6 +23,8 @@ This diagram represents the process pretty well:
   <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/47021076-04f20880-d15b-11e8-8667-1dada62a08af.png">
 </p>
 
+<br><br>
+
 ## <a name="howto"></a> How to deploy a website to Github pages using Travis CI
 
 In my specific case, I wanted to automate the deployment process for the website you're currently visiting.  
@@ -30,6 +34,8 @@ I turned to Travis CI for multiple reasons, it's free, easy to set up and the we
 
 So, how did I do exactly what I wanted?
 
+<br>
+
 ### <a name="activate"></a> Step 1: Activate Travis on your Github repository
 
 - Simply go to Travis-ci.com and Sign up with Github.
@@ -37,6 +43,8 @@ So, how did I do exactly what I wanted?
 - Accept the Authorization of Travis CI. You’ll be redirected to GitHub.
 
 - Click the green Activate button, and activate the repositories you want to use with Travis CI.
+
+<br>
 
 ### <a name="configure"></a> Step 2: Configure the CI process for your repository
 
@@ -72,6 +80,8 @@ deploy:
 Note that the `$GITHUB_TOKEN` must be set up directly in the repository's Settings on the Travis client.
 
 To get that token, follow these brief [instructions](https://docs.travis-ci.com/user/deployment/pages/#setting-the-github-token).
+
+<br>
 
 ### Step 3: <a name="trigger"></a> Trigger your first Travis CI build
 

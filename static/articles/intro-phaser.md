@@ -6,6 +6,8 @@ This blog post sums up my journey of learning how to use the famous (and free) H
 
 I will also try to add my struggles and little snippets of advice I get along the way.
 
+<br><br>
+
 ## The beginning
 
 Curiosity led me to Phaser's [getting started tutorial](http://phaser.io/tutorials/getting-started/index), where I got to follow basic steps to set up my working environment.
@@ -16,6 +18,8 @@ These steps included:
 - **Selecting my editor**: I decided to keep on using my favorite text editor, namely [Atom](https://atom.io/).
 - **Downloading Phaser**: as it is an open-source project, it was as easy as cloning the repository locally.
 - **Testing it out**: using their "Hello World" example where I displayed a black game area with their logo by launching my HTTP server, having it serve my game's folder (`http-server ./my-game/`) and navigating to the displayed link.
+
+<br><br>
 
 ## The next step
 
@@ -70,6 +74,8 @@ It is divided as follows:
 <p align="center">
   <img width="460" height="300" src="http://phaser.io/content/tutorials/making-your-first-phaser-game/part9.png">
 </p>
+
+<br><br>
 
 ### Thoughts on this tutorial
 

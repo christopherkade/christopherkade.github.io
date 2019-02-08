@@ -10,6 +10,8 @@ In today's article we'll be creating a basic CLI from start to finish covering t
 - [Creating a basic CLI](#cli)
 - [Deploying our CLI to NPM](#deploy)
 
+<br><br>
+
 ## <a name="setup"></a> Project set up
 
 Setting up the project is very easy, start by doing the following:
@@ -71,6 +73,8 @@ Before we can start coding our CLI, we need to install `yargs`, do it like so:
 
 Let's get to it.
 
+<br><br>
+
 ## <a name="cli"></a> Creating a basic CLI
 
 Yargs makes it very easy to parse command line parameters, many example projects can be found [here](https://github.com/yargs/yargs/blob/master/docs/examples.md).
@@ -104,6 +108,8 @@ Let's cover everything line by line:
 
 As you can see, this first step is extremely simple, and `yargs` syntax is intuitive.
 
+<br>
+
 Next we'll add the `count` command.
 
 Just add the following lines to your already existing CLI:
@@ -119,6 +125,8 @@ Once again, let's review them line by line.
 1 - `.command("count", "Count the lines in a file")` creates a new command with the name `count` and sets a description.
 
 2 - `.example("$0 count -f foo.js", "count the lines in the given file")` creates an example with a description, it will be displayed when the user calls the `--help` option or when they mess up the command.
+
+<br>
 
 That's all great, but right now running `node yargs-example.js count` doesn't do much, next up we'll require a file name and finish the CLI by counting and displaying its number of lines.
 
@@ -138,8 +146,7 @@ Your file should end up looking like this:
 const argv = require('yargs')
   .usage('Usage: $0 <command> [options]')
   .command('count', 'Count the lines in a file')
-  .example('$0 count -f foo.js', 
-    'count the lines in the given file')
+  .example('$0 count -f foo.js', 'count the lines in the given file')
   .alias('f', 'file')
   .nargs('f', 1)
   .describe('f', 'Load a file')
@@ -156,12 +163,14 @@ const argv = require('yargs')
 
 4 - `.demandOption(["f"])` since we'll need a file name, we're demanding the option `-f`.
 
+<br>
+
 Finally, let's add the program's logic like so:
 
 ```js
 const fs = require('fs')
 
-// Create stream with the file 
+// Create stream with the file
 const s = fs.createReadStream(argv.file)
 
 var lines = 0
@@ -197,6 +206,8 @@ In your application's directory, run the following:
 
 Hurray ! You can now run your script locally like so:  
 `yargs-example count -f package.json`
+
+<br><br>
 
 ## <a name="deploy"></a> Deploying our CLI to NPM
 

@@ -6,6 +6,8 @@ If you're not familiar with Electron, it's a framework that allows anyone to dev
 
 In this blog post, we'll be coding a small app to track accomplishments (a glorified to-do application).
 
+<br><br>
+
 ### Getting started
 
 Since Angular is my framework of choice to discover Electron, I'll be using the awesome bootstrapping project [angular-electron](https://github.com/maximegris/angular-electron) in order to get started as quickly as possible. This project offers great features, such as packaging my app into executables for Linux, Windows & Mac as easily as running `npm run electron:os`.
@@ -26,12 +28,16 @@ Which opens the following window:
 
 Note the inspection tool on the right, that's because Electron uses **Chromium** to render my project, therefore I have access to the usual inspection tool.
 
+<br><br>
+
 ### Tweaking everything to my liking
 
 There are two things that I wish to change:
 
 - I'll use Sass instead of Scss
 - I want to use the CSS framework [Bulma](https://bulma.io/)
+
+<br>
 
 #### Scss to Sass
 
@@ -45,6 +51,8 @@ const styles = ['./src/styles.scss']
 ```
 
 I can now use Sass in my Angular project.
+
+<br>
 
 #### Using Bulma
 
@@ -63,6 +71,8 @@ Then head to `styles.sass` and add the following lines:
 ```
 
 Now that everything is ready, I can start coding my application.
+
+<br><br>
 
 ## Step 1: The initial requirements
 
@@ -100,6 +110,8 @@ As you can see, I have made some changes:
 - The navbar is now a section with a `fixed` position, containing several _Lists_ that will allow our user to navigate through the application.
 - I have added a background picture I find pretty, if you know where it is, please let me know :-)
 
+<br><br>
+
 ## Step 2: The essential feature
 
 I now want to add actual Todos for each list and display them. Here is the current model for a `List`:
@@ -131,6 +143,8 @@ All I have to do, is to add a button to create a new Todo, once clicked, I'll si
 </p>
 
 Note the undocumented changes such as the ability to create a new List (which uses the same concept applied to create a new Todo), the ability to mark a Todo as done and the ability to edit the name of a List. All of this is very basic and doesn't really need to be detailed.
+
+<br><br>
 
 ## To be continued
 

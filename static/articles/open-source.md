@@ -4,6 +4,8 @@ From my experience, the hardest step to contributing to the open-source ecosyste
 
 Note that all terms that might be unknown to you will be defined in the annex!
 
+<br><br>
+
 ### What should I do?
 
 It's pretty straight forward:
@@ -21,6 +23,8 @@ It's pretty straight forward:
 
 Keep in mind that these steps might not be complete depending on the project you're working on. That's why it's essential to read the contribution guidelines thoroughly!
 
+<br><br>
+
 ### Tools I can use
 
 - [First Timers Only](https://www.firsttimersonly.com/), great guidelines on how/why to contribute
@@ -30,7 +34,11 @@ Keep in mind that these steps might not be complete depending on the project you
 
 I hope that this short article will help some of you to start contributing to the open-source as it is a very rewarding process.
 
+<br><br>
+
 ### Annex
+
+<br>
 
 ##### Forking
 

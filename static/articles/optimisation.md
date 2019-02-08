@@ -6,6 +6,8 @@ But one of the things I haven't truly tackled is performance. Why? Because I've 
 
 This post goes over every aspect of performance I have considered while going through what I've learned and applied.
 
+<br><br>
+
 ## Minifying my stylesheets
 
 In order to remove some bytes from my file sizes, minifying my stylesheets seemed like an obvious first thing to do.
@@ -18,7 +20,11 @@ The effects of the minification can be seen in the `styles.bundle.js` file gener
 
 In any case where this process would not be automatic, and when using a pre-processor like **Sass**, it is possible to configure it to automatically minify compiled CSS.
 
+<br><br>
+
 ## Images
+
+<br>
 
 ### Reducing image file sizes
 
@@ -27,12 +33,16 @@ By compressing the pictures of my [projects](https://christopherkade.com/project
 I had to compress them at the cost of visual quality, but my images being divided by rows, this would not affect the user's experience. Many tools are available online such as [this](http://compressimage.toolur.com/) one.  
 When exporting and selecting the quality level, I have chosen the lowest level possible while keeping an acceptable quality.
 
+<br>
+
 ### Using progressive JPEG
 
 Progressive JPEG are simple to create and have little to no performance penalty, the upside is that they appear sooner on the page itself.  
 In order to change a JPEG to its progressive counterpart many tools are available [online](https://www.imgonline.com.ua/eng/make-jpeg-progressive-without-compression.php).
 
 The difference is astonishing, dropping the fetching of the images down to [27ms - 101ms] coming from upwards of [361ms - 510ms].
+
+<br><br>
 
 ## What else could be done?
 

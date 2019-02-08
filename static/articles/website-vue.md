@@ -4,6 +4,8 @@ I finally started fiddling with [Vue](https://vuejs.org/) in my free time and I'
 
 I'll go over the things I've learned and the changes I've had to implement in order to rewrite my website from Angular to Vue.
 
+<br><br>
+
 ### Step 1: Understanding the framework
 
 Vue is well known for being easy to use at first, and coming from an Angular background, the concepts were not that hard to understand.
@@ -17,6 +19,8 @@ I knew I wanted to have an overview of the whole ecosystem (or at least the most
 After digging around, I found multiple tutorials explaining these concepts in detail: [state management](https://alligator.io/vuejs/intro-to-vuex/), [routing](https://scotch.io/tutorials/getting-started-with-vue-router), [Vue 2](https://medium.com/codingthesmartway-com-blog/vue-js-2-quickstart-tutorial-2017-246195cfbdd2) and started coding a cost management application.
 
 Nothing too fancy, it simply allowed me to understand component management via the multiple boxes and elements of my interface and state management via the management of prices and their mutation.
+
+<br><br>
 
 ### Step 2: Rewriting `christopherkade.com`
 
@@ -71,6 +75,8 @@ Therefore, my root component's (`App`) template was as follows:
 With multiple changes here and there, such as centralizing my styles, templates and scripts into single `.vue` files and changing my `*ngFor`s and `ngIf`s into `v-for` and `v-if`s I had a finished product with little to no problems.
 
 Both websites were identical with one exception: Vue's performance was notable.
+
+<br><br>
 
 ### Final thoughts
 

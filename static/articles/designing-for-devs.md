@@ -10,6 +10,8 @@ Note that the full panel can be found [here](https://www.youtube.com/embed/qBJeE
 
 ---
 
+<br>
+
 The talk lasted for about 45 minutes (Q&A included) in front of a full room of about 50 to 60 people and addressed questions covering anything from "should designers code?" to "how do you think developers perceive design?", I'll cover some interesting points that were brought up by some of the speakers, comment and mention my opinion on some of them.
 
 <p align="center">
@@ -18,6 +20,8 @@ The talk lasted for about 45 minutes (Q&A included) in front of a full room of a
 </p>
 
 This panel was composed (from left to right) of Aurora Pleguezuelo, Lucia Kubinska, Vanessa Cahill and Romain Didry - all product designers.
+
+<br><br>
 
 ## Should designers code?
 
@@ -29,15 +33,21 @@ But the answers were mostly geared towards it not being necessary at all in most
 A question was then asked to the crowd: _How many of you are designers?_  
 Surprisingly, I could only see a few hands raised (probably around 4 out of at least 50 people). Pretty odd for a talk about _designing_ for developers, but hey, it shows an interest by lots of devs to understand the problematics and challenges these designers face.
 
+<br><br>
+
 ## Differences between designing for developers & for end consumers
 
 It was mentioned that devs are an interesting group to design for since they tend to be more critical of what has been designed as they know the behind the scenes. Avoiding this black box effect is intentional and seemed to be pushed by the speakers by building transparency and trust.
+
+<br><br>
 
 ## How do you think developers perceive design?
 
 Unfortunately, each one of the speakers had experiences with devs that saw design as a bottleneck or as the end part of a project and not a necessity. Tho it seems like the mindsets have evolved and the vast majority of developers have a symbiotic relationship with designers in their team (especially in their current workplaces).
 
 Devs obviously enjoy good design, especially in the world of dev tools where lots of them are poorly designed as mentionned by Romain Didry.
+
+<br><br>
 
 ## What is obvious to you but may not be to others?
 
@@ -48,11 +58,15 @@ This was probably one of my favorite answers. It's obvious, sure, but it resonat
 
 _Romain Didry_: devs love to be involed in the process itself, understanding design choices and the reasoning behind them.
 
+<br><br>
+
 ## Closing remarks
 
 The closing remarks were overall about including and embracing designers in your teams and answering their questions. As a designer, embracing being uncomfortable and not knowing every technical subject your working on is absolutely normal and should prompt you to ask questions.
 
 ---
+
+<br>
 
 As you probably noted, a big theme of asking questions came up during the second half of this discussion and I believe it's what influenced me the most since then. I'm pushing myself to ask my designer collegues about their processes and choices on a daily basis to grasp their work on a lower level.
 

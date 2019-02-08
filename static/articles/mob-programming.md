@@ -10,6 +10,8 @@ We will be covering the following points:
   - [As a team](#team)
   - [Individually](#individually)
 
+<br><br>
+
 ## <a name="what"></a> What is Mob Programming
 
 Mob Programming is an approach in Software development that involves a team of developers in front of a computer, thinking, debating and finding solutions together while one of them takes care of driving the conversation and coding. The whole point of this practice is to find a consensus on problems and to produce something of greater quality as everyone can partake in the conversation. If you already know of _pair programming_ (which involves two developers) then you probably already noted that it's a similar concept but extended to a whole team.
@@ -18,9 +20,13 @@ Mob Programming is an approach in Software development that involves a team of d
   <img width="70%" height="70%" src="https://gds.blog.gov.uk/wp-content/uploads/sites/60/2016/09/mob-programming.jpg">
 </p>
 
+<br><br>
+
 ## How can it help
 
 I briefly mentioned why this practice can be useful, but I think it's worth going into details with some examples.
+
+<br>
 
 ### <a name="team"></a> As a team
 
@@ -31,11 +37,15 @@ Disparity of level may be the most complicated aspect to manage in Mob Programmi
 
 Finally, it can help a team get closer overall, as it will create a deeper professional bond built over problem-solving and discussion.
 
+<br>
+
 ### <a name="individually"></a> Individually
 
 On an individual level, Mob Programming has obvious advantages.
 
 For example, my last session had us take someone's project and tackle some of their bugs and issues. By taking a feature and applying good TDD practices to it all together I managed to understand some concepts on a deeper and more concrete level. Additionally, I did not hesitate to ask for precisions when something was being typed and was not clear to me, without disrupting the flow of the work.
+
+<br><br>
 
 ## Conclusion
 

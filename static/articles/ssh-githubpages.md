@@ -14,11 +14,15 @@ I had:
 - A custom domain working through HTTP
 - Custom sub-domains
 
+<br><br>
+
 ## Step 1: Setting up Cloudflare
 
 We'll be using Cloudflare as our new DNS (coming from AWS Route 53), to use and force HTTPS.
 
 To do so, head out to [Cloudflare](https://www.cloudflare.com/)'s website, create an account and set up your website by providing your domain; in my case `christopherkade.com`.
+
+<br>
 
 #### Using Cloudflare as our DNS
 
@@ -33,6 +37,8 @@ I then proceeded to add the missing records and most importantly to add a `CNAME
 <p align="center">
   <img width="70%" height="70%" src="https://user-images.githubusercontent.com/15229355/33068913-a9e7db12-ceaa-11e7-99b1-397f664c9be0.png">
 </p>
+
+<br>
 
 #### Enforcing HTTPS
 
@@ -49,6 +55,8 @@ We now want to make sure our website is only accessible via HTTPS, to do so go t
 </p>
 
 This way, accessing `http://christopherkade.com` will always forward our user to `https://christopherkade.com`.
+
+<br><br>
 
 ## Step 2: Changing our nameservers
 
@@ -73,6 +81,8 @@ Click on your domain of choice, then click on `Add or edit name servers` on the 
 Now that your nameservers have been changed, go back to Cloudflare's overview panel and click on `Recheck Nameservers` (you may do that only once per hour, if you have already done it earlier out of curiosity, patience !).
 
 A short while after, you will receive an e-mail from the Cloudflare team confirming your submission ! Just wait some time, hard refresh your website (Ctrl + f5 on Chrome, Ctrl + R on Firefox) and **voilà**, you now have your beautiful green lock of trust (on all sub-domains as well !).
+
+<br><br>
 
 ## Final thoughts
 

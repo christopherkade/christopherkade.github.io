@@ -10,6 +10,8 @@ In this blog post, I'll simply demonstrate how I deployed a subdomain using **AW
 In the first scenario, you will be able to create a _project page_ that will work just like a normal subdomain but will be accessible like such: `username.github.io/project`.  
 In the second scenario, you will be able to create a _subdomain_ that will be accessible in the normal way: `subdomain.website.com` (or any other extension you use).
 
+<br><br>
+
 ## Step 1: Create a CNAME record pointing to your Github page
 
 #### Note: Only follow this step if you already have a custom domain set-up and wish to have a custom subdomain like the one used by this blog, otherwise, jump to step 2.
@@ -41,6 +43,8 @@ A `CNAME` record is simply used to specify that a domain name is an alias to ano
 _Please keep in mind, that in my case, `christopherkade.github.io` actually uses the custom domain `christopherkade.com`_.
 
 Finally, create your Record Set. These changes may take up to two days to occur, but that does not stop us from continuing our work.
+
+<br><br>
 
 ## Step 2: Create your project's Github repository and deploy it
 
@@ -86,6 +90,8 @@ Or your sub-domain:
 
 `subdomain.website.extension`
 
+<br><br>
+
 ## Summary
 
 We have briefly learned a couple of things:
@@ -93,6 +99,8 @@ We have briefly learned a couple of things:
 - The various usages of a subdomain (and its significance)
 - How to create a CNAME record in our AWS DNS (and what it actually is)
 - How to deploy a project page or a new subdomain for our Github page
+
+<br><br>
 
 ## Final thoughts
 
