@@ -1,5 +1,10 @@
 [
   {
+    "title": "Tips I wish I knew when starting studying Software Engineering",
+    "date": "Feb 11, 2019",
+    "path": "/student-tips"
+  },
+  {
     "title": "Building a CLI with Yargs",
     "date": "Feb 7, 2019",
     "path": "/yargs-cli"

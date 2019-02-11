@@ -110,6 +110,10 @@ export default {
   font-size: 2em;
 }
 
+p {
+  font-weight: 350;
+}
+
 p > a,
 li > a,
 h1 > a {

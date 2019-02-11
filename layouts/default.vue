@@ -67,6 +67,10 @@ export default {
     color: $highlight-dark;
   }
 
+  p {
+    font-weight: 100;
+  }
+
   .prev-link,
   .next-link {
     color: $highlight-dark;
