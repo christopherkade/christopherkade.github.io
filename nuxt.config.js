@@ -1,15 +1,4 @@
-const pkg = require('./package')
-const glob = require('glob')
-
-let files = []
-glob('static/articles/*.md', (err, output) => {
-  files = output
-})
-
-function getSlugs(post, _) {
-  let slug = post.substr(0, post.lastIndexOf('.'))
-  return `/${slug}`
-}
+const articles = require('./static/articleList.json')
 
 module.exports = {
   mode: 'universal',
@@ -32,7 +21,8 @@ module.exports = {
   },
   generate: {
     routes: () => {
-      return files.map(getSlugs)
+      const routes = articles.map(article => article.path)
+      return routes
     }
   },
 
