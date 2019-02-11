@@ -18,14 +18,15 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Christopher Kade',
+    title: 'Christopher Kade - Web, Javascript & Tech Blog',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: "Christopher Kade's blog"
+        content:
+          "Christopher Kade's blog - I mostly write about the Web, Javascript, Technology and Self Improvement."
       }
     ]
   },
