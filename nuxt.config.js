@@ -19,32 +19,22 @@ module.exports = {
       }
     ]
   },
-  generate: {
-    routes: () => {
-      const routes = articles.map(article => article.path)
-      return routes
-    }
-  },
 
   /*
   ** Customize the progress-bar color
   */
   loading: { color: '#fff' },
 
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [],
   css: [
     { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' },
     { src: '~/assets/main.scss' }
   ],
+
   /*
   ** Nuxt.js modules
   */
   modules: [
     ,
-    // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/style-resources',
     ['@nuxtjs/markdownit', { linkify: true }],
     [
@@ -54,12 +44,24 @@ module.exports = {
       }
     ]
   ],
+
   styleResources: {
     scss: ['./assets/main.scss']
   },
+
   markdownit: {
     injected: true,
     use: ['markdown-it-highlightjs']
+  },
+
+  /**
+   * Dynamic route generation
+   */
+  generate: {
+    routes: () => {
+      const routes = articles.map(article => article.path)
+      return routes
+    }
   },
 
   /*
@@ -73,6 +75,7 @@ module.exports = {
         }
       }
     },
+
     /*
     ** You can extend webpack config here
     */

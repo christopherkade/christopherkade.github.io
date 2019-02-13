@@ -1,8 +1,7 @@
 <template>
   <div>
     <div :key="$route.params.slug" class="article-slug">
-      <div v-html="file"></div>
-
+      <div v-html="articleContent"></div>
       <div class="links">
         <nuxt-link
           v-if="prevArticle"
@@ -26,17 +25,10 @@ import articleList from '@/static/articleList.json'
 export default {
   data() {
     return {
-      article: {},
+      article: null,
       prevArticle: null,
-      nextArticle: null
-    }
-  },
-  computed: {
-    file() {
-      const fileContent = require(`~/static/articles/${
-        this.$route.params.slug
-      }.md`)
-      return fileContent
+      nextArticle: null,
+      articleContent: null
     }
   },
   created() {
@@ -44,19 +36,27 @@ export default {
   },
   methods: {
     /**
-     * Gets data of the current, next and previous articles in the article list
+     * Gets data and content of the current, next and previous articles in the article list
      */
     getArticleData() {
       this.article = articleList.filter((a, index) => {
-        if (a.path === '/' + this.$route.params.slug) {
+        if (a.path === this.$route.params.slug) {
           this.prevArticle = articleList[index - 1]
           this.nextArticle = articleList[index + 1]
           return a
         }
       })[0]
+
+      // Check if article exists
+      if (!this.article) {
+        this.$router.push('/')
+        return
+      }
+      this.articleContent = require(`~/static/articles/${this.article.path}.md`)
     }
   },
   head() {
+    if (!this.article) return
     return {
       title: this.article.title + ' - Christopher Kade',
       meta: [

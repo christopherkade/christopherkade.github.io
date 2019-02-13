@@ -2,101 +2,101 @@
   {
     "title": "Tips I wish I knew when starting studying Software Engineering",
     "date": "Feb 11, 2019",
-    "path": "/student-tips"
+    "path": "student-tips"
   },
   {
     "title": "Building a CLI with Yargs",
     "date": "Feb 7, 2019",
-    "path": "/yargs-cli"
+    "path": "yargs-cli"
   },
   {
     "title": "Designing for Developers - a discussion at Algolia",
     "date": "Jan 23, 2019",
-    "path": "/designing-for-devs"
+    "path": "designing-for-devs"
   },
   {
     "title": "Understanding the Node.js Event Loop",
     "date": "Jan 13, 2019",
-    "path": "/node-eventloop"
+    "path": "node-eventloop"
   },
   {
     "title": "How Mob Programming can help developers",
     "date": "Oct 25, 2018",
-    "path": "/mob-programming"
+    "path": "mob-programming"
   },
   {
     "title": "Automatically deploying a website to Github pages using Travis CI",
     "date": "Oct 15, 2018",
-    "path": "/travis-githubpages"
+    "path": "travis-githubpages"
   },
   {
     "title": "Rewriting my website using NuxtJS",
     "date": "Oct 10, 2018",
-    "path": "/website-nuxt"
+    "path": "website-nuxt"
   },
   {
     "title": "How to start contributing to the open-source community",
     "date": "Aug 02, 2018",
-    "path": "/open-source"
+    "path": "open-source"
   },
   {
     "title": "Rewriting my website using Vue",
     "date": "May 20, 2018",
-    "path": "/website-vue"
+    "path": "website-vue"
   },
   {
     "title": "2017 in review - The multiple designs of christopherkade.com",
     "date": "Feb 12, 2018",
-    "path": "/website-design"
+    "path": "website-design"
   },
   {
     "title": "Optimizing the performance of my personal website",
     "date": "Jan 24, 2018",
-    "path": "/optimisation"
+    "path": "optimisation"
   },
   {
-    "title": "Developing the Star Wars opening crawl in HTML/CSS",
+    "title": "Developing the Star Wars opening crawl in HTMLCSS",
     "date": "Jan 15, 2018",
-    "path": "/star-wars"
+    "path": "star-wars"
   },
   {
     "title": "Deploying an API to Heroku",
     "date": "Dec 28, 2017",
-    "path": "/heroku-api"
+    "path": "heroku-api"
   },
   {
     "title": "Coding a desktop app with Electron and Angular",
     "date": "Dec 20, 2017",
-    "path": "/intro-electron"
+    "path": "intro-electron"
   },
   {
     "title": "Serving your Github pages custom domain using HTTPS",
     "date": "Dec 06, 2017",
-    "path": "/ssh-githubpages"
+    "path": "ssh-githubpages"
   },
   {
     "title": "Discovering React - The basics",
     "date": "Nov 25, 2017",
-    "path": "/intro-reactjs"
+    "path": "intro-reactjs"
   },
   {
     "title": "Define quality requirements for your projects",
     "date": "Nov 20, 2017",
-    "path": "/requirements"
+    "path": "requirements"
   },
   {
     "title": "My journey discovering Phaser, an HTML5 game framework",
     "date": "Nov 17, 2017",
-    "path": "/intro-phaser"
+    "path": "intro-phaser"
   },
   {
     "title": "Deploy a project page or a custom subdomain on Github pages",
     "date": "Oct 02, 2017",
-    "path": "/subdomain-githubpages"
+    "path": "subdomain-githubpages"
   },
   {
     "title": "Create and deploy a Jekyll blog to Github pages",
     "date": "Sep 20, 2017",
-    "path": "/jekyll-blog"
+    "path": "jekyll-blog"
   }
 ]

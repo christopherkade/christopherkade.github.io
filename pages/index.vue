@@ -1,18 +1,18 @@
 <template>
   <div class="index-wrapper">
     <div v-for="article in articles" :key="article.title" class="articles">
-      <Article :title="article.title" :url="article.path" :date="article.date" class="article"/>
+      <ArticleLink :title="article.title" :url="article.path" :date="article.date" class="article"/>
     </div>
   </div>
 </template>
 
 <script>
-import Article from '@/components/Article'
+import ArticleLink from '@/components/ArticleLink'
 import articleList from '@/static/articleList.json'
 
 export default {
   components: {
-    Article
+    ArticleLink
   },
   data() {
     return {
