@@ -111,7 +111,7 @@ export default {
 }
 
 p {
-  font-weight: 350;
+  font-weight: 400;
 }
 
 p > a,

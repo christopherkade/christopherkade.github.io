@@ -68,7 +68,7 @@ export default {
   }
 
   p {
-    font-weight: 100;
+    font-weight: 250;
   }
 
   .prev-link,
