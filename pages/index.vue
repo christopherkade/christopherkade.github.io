@@ -29,8 +29,8 @@ export default {
 
 @media only screen and (max-width: 1280px) {
   .index-wrapper {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
   }
 }
 

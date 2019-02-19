@@ -65,7 +65,7 @@ export default {
 
 .article-subtitle {
   color: $highlight-light;
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 .article-subtitle > time {

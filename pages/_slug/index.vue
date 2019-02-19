@@ -158,5 +158,9 @@ p > img {
     flex-wrap: wrap;
     text-align: center;
   }
+
+  p {
+    font-weight: 500;
+  }
 }
 </style>
