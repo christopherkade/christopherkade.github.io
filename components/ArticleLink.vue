@@ -7,7 +7,10 @@
         class="article-title"
       >{{ title }}</nuxt-link>
     </h5>
-    <time class="article-date">{{ date }}</time>
+    <div class="article-subtitle">
+      <time class="article-date">{{ date }}</time>
+      <span> ⌛️ {{ readTime }} min read</span>
+    </div>
   </section>
 </template>
 
@@ -22,6 +25,19 @@ export default {
     },
     date: {
       type: String
+    }
+  },
+  computed: {
+    /**
+     * Calculate average reading time based on the number of words in the article
+     * Reading time = words / average words per minute
+     */
+    readTime() {
+      const article = require(`~/static/articles/${this.url}.md`)
+      const words = article.split(' ').length
+      const wordsPerMinute = 200
+      const minutes = words / wordsPerMinute
+      return Math.ceil(minutes)
     }
   }
 }
@@ -47,10 +63,17 @@ export default {
   opacity: 0.7;
 }
 
-.article-date {
+.article-subtitle {
   color: $highlight-light;
   font-weight: lighter;
+}
+
+.article-subtitle > time {
   font-size: 1em;
+}
+
+.article-subtitle > span {
+  font-size: 0.8em;
 }
 
 .darkTheme {
