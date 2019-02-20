@@ -1,7 +1,9 @@
 <template>
   <label class="switch">
     <input type="checkbox" @click="switchTheme">
-    <span class="slider round"></span>
+    <span class="slider round">
+      <div class="switch-night"></div>
+    </span>
   </label>
 </template>
 
@@ -21,6 +23,7 @@ export default {
   display: inline-block;
   width: 60px;
   height: 34px;
+  z-index: 1;
 }
 
 .switch input {
@@ -39,6 +42,25 @@ export default {
   background-color: black;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  z-index: -1;
+}
+
+.switch-night:after {
+  position: absolute;
+  content: '🌙';
+  height: 26px;
+  width: 26px;
+  right: -4px;
+  bottom: 4px;
+  top: calc(50% - 9px);
+  z-index: 0;
+}
+
+.switch-night {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .slider:before {
@@ -51,6 +73,15 @@ export default {
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  z-index: 1;
+}
+
+.slider:after {
+  content: '🔆';
+  top: calc(50% - 9px);
+  position: absolute;
+  left: 4px;
+  z-index: 0;
 }
 
 input:checked + .slider {
@@ -68,10 +99,10 @@ input:checked + .slider:before {
 }
 
 .slider.round {
-  border-radius: 34px;
+  border-radius: 2px;
 }
 
 .slider.round:before {
-  border-radius: 50%;
+  border-radius: 2px;
 }
 </style>
