@@ -96,9 +96,7 @@ Additionnaly, Firebase offers a very useful method to catch any authentication s
 
 ```javascript
 firebase.auth().onAuthStateChanged((user) => {
-  // Triggered on any auth state changes such as:
-  // Sign in, disconnection,
-  // page reloads when signed-in etc.
+  // ...
 })
 ```
 

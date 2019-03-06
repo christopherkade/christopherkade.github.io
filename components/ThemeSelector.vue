@@ -52,7 +52,7 @@ export default {
   width: 26px;
   right: -4px;
   bottom: 4px;
-  top: calc(50% - 9px);
+  top: 12%;
   z-index: 0;
 }
 
@@ -78,7 +78,7 @@ export default {
 
 .slider:after {
   content: '🔆';
-  top: calc(50% - 9px);
+  top: 12%;
   position: absolute;
   left: 4px;
   z-index: 0;

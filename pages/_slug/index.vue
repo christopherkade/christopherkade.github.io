@@ -136,12 +136,21 @@ section > h1 {
 /* Article images */
 p > img {
   margin: 16px;
+  width: 50%;
+  height: 70%;
 }
 
 @media only screen and (max-width: 1280px) {
   .article-slug {
     padding-left: 100px;
     padding-right: 100px;
+  }
+}
+
+@media only screen and (max-width: 1060px) {
+  p > img {
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -161,6 +170,10 @@ p > img {
 
   p {
     font-weight: 500;
+  }
+
+  code {
+    font-size: 0.9em;
   }
 }
 </style>
