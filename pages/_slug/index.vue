@@ -103,7 +103,7 @@ export default {
 }
 
 .article-slug {
-  padding: 25px 350px 100px 350px;
+  padding: 25px 450px 100px 450px;
 }
 
 .article-slug > h1 {
@@ -140,10 +140,17 @@ p > img {
   height: 70%;
 }
 
+@media only screen and (max-width: 1500px) {
+  .article-slug {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+}
+
 @media only screen and (max-width: 1280px) {
   .article-slug {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
   }
 }
 
@@ -151,6 +158,11 @@ p > img {
   p > img {
     width: 100%;
     margin: 0;
+  }
+
+  .article-slug {
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 
@@ -174,6 +186,10 @@ p > img {
 
   code {
     font-size: 0.9em;
+  }
+
+  section > h1 {
+    font-size: 2em;
   }
 }
 </style>

@@ -24,13 +24,27 @@ export default {
 
 <style lang="scss">
 .index-wrapper {
-  padding: 25px 350px 100px 350px;
+  padding: 25px 450px 100px 450px;
+}
+
+@media only screen and (max-width: 1500px) {
+  .index-wrapper {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
 }
 
 @media only screen and (max-width: 1280px) {
   .index-wrapper {
     padding-left: 150px;
     padding-right: 150px;
+  }
+}
+
+@media only screen and (max-width: 1060px) {
+  .index-wrapper {
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 
