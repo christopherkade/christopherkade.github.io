@@ -5,13 +5,13 @@
       <div class="links">
         <nuxt-link
           v-if="prevArticle"
-          :to="prevArticle.path"
+          :to="'/' + prevArticle.path"
           class="prev-link"
         >← {{ prevArticle.title }}</nuxt-link>
 
         <nuxt-link
           v-if="nextArticle"
-          :to="nextArticle.path"
+          :to="'/' + nextArticle.path"
           class="next-link"
         >{{ nextArticle.title }} →</nuxt-link>
       </div>
