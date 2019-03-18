@@ -19,7 +19,7 @@ module.exports = {
       },
       {
         property: 'og:image',
-        content: '~/static/chris.png'
+        content: '~/chris.png'
       }
     ]
   },
