@@ -18,7 +18,7 @@ module.exports = {
           "Christopher Kade's blog - I mostly write about the Web, Javascript, Technology and Self Improvement."
       },
       {
-        property: 'og-image',
+        property: 'og:image',
         content: '~/static/chris.png'
       }
     ]
