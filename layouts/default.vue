@@ -75,6 +75,10 @@ export default {
   .next-link {
     color: $highlight-dark;
   }
+
+  blockquote {
+    color: $text-light;
+  }
 }
 
 /* Smartphones (portrait) ----------- */

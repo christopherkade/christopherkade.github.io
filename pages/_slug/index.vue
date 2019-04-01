@@ -140,6 +140,14 @@ p > img {
   height: 70%;
 }
 
+/* Article blockquotes */
+blockquote {
+  background-color: #eeeeee;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  margin: 0;
+}
+
 @media only screen and (max-width: 1500px) {
   .article-slug {
     padding-left: 300px;
