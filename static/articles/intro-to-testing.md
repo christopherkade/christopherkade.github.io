@@ -88,7 +88,7 @@ describe("add method", () => {
 })
 ```
 
-Note that we used `toThrow()` and not `toBe()`. Jest offers a [multitude](https://jestjs.io/docs/en/using-matchers) of matchers to check if a value matches a given result. So you can check if a value is `null`, `true`, greater or less than etc.
+> **Note**: you may have seen that we used `toThrow()` and not `toBe()`. Jest offers a [multitude](https://jestjs.io/docs/en/using-matchers) of matchers to check if a value matches a given result. So you can check if a value is `null`, `true`, greater or less than etc.
 
 <br>
 <br>
@@ -115,7 +115,7 @@ import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
 ```
 
-> **Note**: If you're using an older version of React, make sure to configure the right adapter for the version you're using, feel free to read up on their [installation](https://airbnb.io/enzyme/docs/installation/#installation) documentation.
+> **Note**: if you're using an older version of React, make sure to configure the right adapter for the version you're using, feel free to read up on their [installation](https://airbnb.io/enzyme/docs/installation/#installation) documentation.
 
 You may have noted that `create-react-app` creates the following unit test:
 
@@ -241,7 +241,7 @@ it("should increase counter when the button is clicked", () => {
 
 We use the `simulate` method on the `button` wrapper to trigger the event and then check our title to see if it is equal to 1.  
 
-Most event types can be simulated using that method, inputs, clicks, focus, blurs, scrolls etc.
+> **Note**: most event types can be simulated using the simulate method including inputs, clicks, focus, blurs, scrolls etc.
 
 <br>
 
@@ -264,8 +264,11 @@ One of the most used code coverage tools our there is called [Istanbul](https://
 
 Tools like Istanbul generate a code coverage report in the form of HTML files that can help you have an overview of what parts of your code haven't been tested. It highlights the specific lines not covered during your unit tests to help you reach that sweet 100% coverage.
 
-Keep in mind that code coverage isn't everything, and that 100% coverage doesn't mean you've tested every scenario for a given component, so you should only strive to it when it makes sense.
+> **Note**: code coverage isn't everything and 100% coverage doesn't mean you've tested every scenario for a given component, so you should only strive to it when it makes sense.
    
+<br>
+<br>
+
 ## Honorable mentions 👏
    
 Here are some things that I didn't talk about that deserve to be mentioned, in no particular order:
@@ -275,6 +278,9 @@ Here are some things that I didn't talk about that deserve to be mentioned, in n
 - Make sure to check out the files generated during code coverage reports, knowing exactly which lines haven't been covered can save tremendous amounts of time.
 - Make sure that you're testing something that needs to be tested, avoid testing that third-party packages do their job and focus on testing that your component fits your specifications.
 - The concept of Test Driven Development (TDD) can be described as follows: "Test-driven development is the act of first deciding what you want your program to do (the specifications), formulating a failing test, then writing the code to make that test pass" ([link](https://medium.freecodecamp.org/an-introduction-to-test-driven-development-c4de6dce5c)), don't worry if you don't understand it fully right away, but it's important to eventually understand its value and to know that you might be asked to  one day practice it. Here's a great [starting point](https://github.com/dwyl/learn-tdd).
+
+<br>
+<br>
 
    
 ## Closing thoughts 🎁
