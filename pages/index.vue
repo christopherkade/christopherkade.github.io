@@ -1,9 +1,16 @@
 <template>
-  <div class="index-wrapper">
-    <div v-for="article in articles" :key="article.title" class="articles">
-      <ArticleLink :title="article.title" :url="article.path" :date="article.date" class="article"/>
-    </div>
-  </div>
+  <section class="index-wrapper">
+    <ul class="article-list">
+      <li
+        v-for="article in articles"
+        :key="article.title"
+        class="article">
+        <ArticleLink
+          :article="article"
+        />
+      </li>
+    </ul>
+  </section>
 </template>
 
 <script>
@@ -27,6 +34,15 @@ export default {
   padding: 25px 450px 100px 450px;
 }
 
+.article-list {
+  padding: 0;
+}
+
+.article {
+  list-style-type: none;
+  padding: 2rem;
+}
+
 @media only screen and (max-width: 1500px) {
   .index-wrapper {
     padding-left: 300px;
@@ -47,8 +63,6 @@ export default {
     padding-right: 100px;
   }
 }
-
-/* Smartphones (portrait) ----------- */
 
 @media only screen and (max-width: 720px) {
   .index-wrapper {

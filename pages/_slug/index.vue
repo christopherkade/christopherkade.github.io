@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <div :key="$route.params.slug" class="article-slug">
       <div v-html="articleContent"></div>
       <div class="links">
@@ -16,7 +16,7 @@
         >{{ nextArticle.title }} →</nuxt-link>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

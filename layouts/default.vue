@@ -2,8 +2,8 @@
   <div :class="{ 'darkTheme': this.$store.state.isDark }" class="layout-wrapper">
     <contact-bar class="contact-bar-side"/>
     <theme-selector/>
-    <nuxt-link to="/" class="layout-title">
-      <h1>CHRISTOPHER KADE</h1>
+    <nuxt-link to="/" class="index-link">
+      <h1 class="layout-title"><span>C</span>HRISTOPHER <span>K</span>ADE</h1>
     </nuxt-link>
     <nuxt/>
     <contact-bar class="contact-bar-bottom"/>
@@ -30,11 +30,19 @@ export default {
   transition: background-color 100ms ease-in-out, color 100ms ease;
 }
 
-.layout-title {
+.index-link {
   text-align: center;
   text-decoration: none;
   color: $text-light;
   background-color: transparent;
+}
+
+.layout-title {
+  font-weight: 400;
+}
+
+.layout-title > span {
+  color: $highlight-light;
 }
 
 .contact-bar-bottom {
@@ -45,8 +53,12 @@ export default {
   color: $text-dark;
   background-color: $background-dark;
 
-  .layout-title {
+  .index-link {
     color: $text-dark;
+  }
+
+  .layout-title > span {
+    color: $highlight-dark;
   }
 
   .icon {
@@ -54,11 +66,23 @@ export default {
   }
 
   .article-date {
-    color: $highlight-dark;
+    color: $text-dark;
   }
 
   .article-title {
     background: transparent;
+  }
+
+  .article-title > a {
+    color: $highlight-dark;
+  }
+
+  .article-description {
+    color: $text-dark;
+  }
+
+  .article-subtitle > span {
+    color: $text-dark;
   }
 
   p > a,
@@ -84,11 +108,11 @@ export default {
 /* Smartphones (portrait) ----------- */
 
 @media only screen and (max-width: 720px) {
-  .layout-title {
+  .index-link {
     font-size: 0.9em;
   }
 
-  .layout-title > h1 {
+  .index-link > h1 {
     margin-top: 50px;
   }
 
