@@ -5,6 +5,7 @@ install:
   - npm install -g codecov
 script:
   - yarn install
+  - yarn build
   - yarn flow-typed
   - yarn lint
   - yarn test:coverage --runInBand --no-cache
