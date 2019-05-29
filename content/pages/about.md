@@ -11,7 +11,7 @@ I've been doing web development for over 5 years and enjoy working with technolo
 I've discovered teaching through writing articles and really enjoy it, 
 I've kept writing ever since and plan on doing training sessions in the future. 👨‍🏫
 
-![christophe-kade](/media/about-1.jpg)
+![christophe-kade](/media/about-photo.jpg)
 
 I **love** traveling, cooking, playing music & working on personal projects in my free time. Most of these projects can be found on my [Github](https://github.com/christopherkade).
 
