@@ -15,7 +15,7 @@ exports[`Author renders correctly 1`] = `
       target="_blank"
     >
       <strong>
-        Find me on Twitter: @
+        @
         #
       </strong>
     </a>
