@@ -22,6 +22,14 @@
     @include margin(0, 0, 1);
   }
 
+  &__body > div > p > a {
+    color: $color-secondary;
+  }
+
+  &__body > div > p > a:hover {
+    color: $color-secondary-light;
+  }
+
 }
 
 @include breakpoint-sm {
