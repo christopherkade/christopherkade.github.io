@@ -55,7 +55,7 @@
 
           &:hover,
           &:focus {
-            color: $color-primary;
+            color: $color-secondary-light;
           }
 
         }
@@ -66,12 +66,12 @@
 
     &-readmore {
       font-size: $typographic-base-font-size;
-      color: $color-primary;
+      color: $color-secondary;
 
       &:hover,
       &:focus {
-        color: $color-primary;
-        border-bottom: 1px solid $color-primary;
+        color: $color-secondary-light;
+        border-bottom: 1px solid $color-secondary-light;
       }
 
     }

@@ -13,6 +13,11 @@
     &-twitter {
       display: block;
       text-decoration: underline;
+      color: $color-secondary;
+    }
+
+    &-twitter:hover {
+      color: $color-secondary-light;
     }
   }
 }

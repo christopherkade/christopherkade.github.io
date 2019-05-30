@@ -41,7 +41,12 @@
     }
 
     & a {
-      text-decoration: underline
+      text-decoration: underline;
+      color: $color-secondary;
+    }
+
+    & a:hover {
+      color: $color-secondary-light;
     }
 
     & * {
