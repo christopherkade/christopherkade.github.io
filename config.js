@@ -16,6 +16,10 @@ module.exports = {
       label: 'About',
       path: '/pages/about'
     },
+    {
+      label: 'Projects',
+      path: '/pages/projects'
+    },
   ],
   author: {
     name: 'Christopher Kade',
