@@ -1,6 +1,6 @@
 ---
 title: "Nuxt.js cheat sheet"
-description: "Nuxt.js development made easier"
+description: "Nuxt.js development made easier."
 date: "2019-05-21"
 slug: "/posts/nuxt-cheat-sheet"
 draft: false
