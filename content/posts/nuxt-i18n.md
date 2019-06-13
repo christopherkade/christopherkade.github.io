@@ -1,0 +1,162 @@
+---
+title: "Adding internationalization to your Nuxt.js applications"
+description: ""
+date: "2019-06-11"
+slug: "/posts/nuxt-i18n"
+draft: false
+category: "Vue"
+tags:
+  - "Vue"
+  - "Javascript"
+template: "post"
+---
+
+Implementing internationalization (commonly known as `i18n`) is often feared by a lot of Front-End developers. Setting it up, adding new languages on the fly & UX are often main concerns when it comes to it. 
+
+Thankfully, [Nuxt.js](https://nuxtjs.org) makes the whole process extremely easy. In this short post, I'll cover how to set up i18n for a Nuxt application, step by step.
+
+The finished product can be found on Codesandbox [here](https://codesandbox.io/s/nuxt-i18n-example-sppzc).
+
+### Step 1: Installing `vue-i18n` and setting it up
+
+We'll use the well known [vue-i18n](https://github.com/kazupon/vue-i18n) package to handle internationalization.
+
+Start by installing it:
+
+```bash
+# Using npm
+npm install vue-i18n
+
+# Using yarn
+yarn add vue-i18n 
+```
+
+Then, define it as a plugin in our configuration file:
+
+```js
+// nuxt.config.js
+
+export default {
+  // ...
+
+  plugins: ["~/plugins/i18n.js"],
+
+  // ...
+};
+```
+
+We now need to create the aforementioned `i18n.js` file that will configure our plugin:
+
+```js
+// plugins/i18n.js
+
+import Vue from "vue";
+import VueI18n from "vue-i18n";
+
+// Tell Vue to use our plugin
+Vue.use(VueI18n);
+
+export default ({ app }) => {
+  // Set the i18n instance on app
+  // This way we can use it globally in our components through this.$i18n
+  app.i18n = new VueI18n({
+    // Set the initial locale
+    locale: "en",
+
+    // Set the fallback locale in case the current locale can't be found
+    fallbackLocale: "en",
+
+    // Associate each locale to a content file    
+    messages: {
+      en: require("~/static/content-en.json"),
+      fr: require("~/static/content-fr.json")
+    }
+  });
+};
+```
+
+Don't forget to create your `json` files that will contain your textual values for each language. In our case, we could have:
+
+```json
+// static/content-en.json
+{
+  "title": "Hello, how are you?"
+}
+```
+
+and 
+
+```json
+// static/content-fr.json
+{
+  "title": "Bonjour, comment allez-vous?"
+}
+```
+
+We'll be able to access each one of these values in our components like so:
+
+```js
+// Will return the correct string based on the current locale
+this.$t("title")
+```
+
+### Step 2: Changing our locale on the fly
+
+All we have to do is update the `i18n` context object's `locale` attribute when we need to change the language.
+
+Here's a method that takes care of it:
+
+```js
+changeLanguage(lang) {  
+  // Change the i18n context object's locale
+  // This makes it so the correct locale file is used
+  this.$i18n.locale = lang;
+}
+```
+
+And here's this method used in the context of a component:
+
+```html
+<template>
+  <section>
+    <h1>{{ title }}</h1>
+    
+    <div>
+      <button @click="changeLanguage('en')">EN</button>       
+      <button @click="changeLanguage('fr')">FR</button>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  computed: {
+    title() {
+      // this.$t("title") returns the value of our title attribute in our JSON file
+      // The correct file is selected based on the locale value
+      // If it was an object, we could access its attributes like so: this.$t("myObject").myAttribute
+      return this.$t("title");
+    }
+  },
+  methods: {
+    /**
+     * Called when a language button is clicked
+     * Changes the i18n context variable's locale to the one selected
+     */
+    changeLanguage(lang) {  
+      this.$i18n.locale = lang;
+    }
+  }
+};
+</script>
+```
+
+### Step 3: Wait, there's no step 3?
+
+Yeah, that's pretty much all you need to know to handle i18n in a Nuxt application.  
+Of course, there are many ways of customizing your user experience as can be seen in the official [documentation](https://kazupon.github.io/vue-i18n/introduction.html).
+
+I hope this has helped some of you figure our i18n in the context of your Nuxt projects.  
+Feel free to follow me to get a heads up on any future articles I'll write about Javascript, React, Vue & CSS.
+
+[Twitter](https://twitter.com/christo_kade) is definitely the best place to see what I have to share on a daily basis, so feel free to 👋 at me there.

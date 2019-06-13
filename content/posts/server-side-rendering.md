@@ -1,7 +1,7 @@
 ---
 title: "Understanding Server Side Rendering"
 description: "Some pros, cons & useful links."
-date: "2019-07-07"
+date: "2019-06-07"
 slug: "/posts/server-side-rendering"
 draft: false
 category: "Tutorial"
