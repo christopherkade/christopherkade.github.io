@@ -5,7 +5,7 @@ template: "page"
 
 I've done many projects over the years, most of them can be found on [Github](https://github.com/christopherkade).
 
-### DEV banner generator
+### DEV Banner Generator
 
 Easily generate banners for your articles on dev.to. [Link](https://christopherkade.com/banner-generator)   
 🛠 Stack: React
@@ -20,7 +20,7 @@ A CLI to generate .gitignore files. [Link](https://www.npmjs.com/package/gitigno
 ![gitignore-it-screenshot](https://user-images.githubusercontent.com/15229355/60163391-c9d0ca80-97fb-11e9-9301-2e5e71c6f1a3.gif)
 
 
-### Twitter Banner Generator
+### Twitter Thread Generator
 
 Automatically divide your Twitter threads. [Link](https://christopherkade.com/twitter-thread-generator/)  
 🛠 Stack: React
