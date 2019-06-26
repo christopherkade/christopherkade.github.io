@@ -5,19 +5,34 @@ template: "page"
 
 I've done many projects over the years, most of them can be found on [Github](https://github.com/christopherkade).
 
+### DEV banner generator
+
+Easily generate banners for your articles on dev.to. [Link](https://christopherkade.com/banner-generator)   
+🛠 Stack: React
+
+![banner-generator-screenshot](https://user-images.githubusercontent.com/15229355/60163149-47480b00-97fb-11e9-8857-60a4621fd48b.png)
+
+### Gitignore It
+
+A CLI to generate .gitignore files. [Link](https://www.npmjs.com/package/gitignore-it)  
+🛠 Stack: Node
+
+![gitignore-it-screenshot](https://user-images.githubusercontent.com/15229355/60163391-c9d0ca80-97fb-11e9-9301-2e5e71c6f1a3.gif)
+
+
+### Twitter Banner Generator
+
+Automatically divide your Twitter threads. [Link](https://christopherkade.com/twitter-thread-generator/)  
+🛠 Stack: React
+
+![twitter-banner-generator-screenshot](https://user-images.githubusercontent.com/15229355/60136223-e4775500-97a3-11e9-9c9b-bc63201fd601.png)
+
 ### Jammer
 
 Create & share song lists to jam to with your friends. [Link](https://christopherkade.com/Jammer)  
 🛠 Stack: Nuxt.js, Firebase, Travis
 
 ![jammer-screenshot](https://user-images.githubusercontent.com/15229355/58703497-2e3d6d00-83a9-11e9-8cb0-c51ec1302139.png)
-
-### JOBS by Zenika
-
-Recruitment website for Zenika.   
-🛠 Stack: Nuxt.js, Prismic CMS, CircleCI
-
-![jobs-screenshot](https://user-images.githubusercontent.com/15229355/58704160-5f1ea180-83ab-11e9-85be-4e3d5b6a6252.png)
 
 ### Fast food
 
@@ -26,12 +41,12 @@ A fun way to pick what to eat with your colleagues. [Link](http://christopherkad
 
 ![fastfood-screenshot](https://user-images.githubusercontent.com/15229355/58703590-73fa3580-83a9-11e9-88a9-735c0b9878c4.png)
 
-### DEV banner generator
+### JOBS by Zenika
 
-Easily generate banners for your articles on dev.to. [Link](https://christopherkade.com/banner-generator)   
-🛠 Stack: React, Travis
+Recruitment website for Zenika.   
+🛠 Stack: Nuxt.js, Prismic CMS, CircleCI
 
-![banner-generator-screenshot](https://user-images.githubusercontent.com/15229355/58703697-c6d3ed00-83a9-11e9-950f-32148373622a.png)
+![jobs-screenshot](https://user-images.githubusercontent.com/15229355/58704160-5f1ea180-83ab-11e9-85be-4e3d5b6a6252.png)
 
 ### ReactCraft
 
