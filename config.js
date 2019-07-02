@@ -20,11 +20,15 @@ module.exports = {
       label: 'Projects',
       path: '/pages/projects'
     },
+    {
+      label: 'Podcast',
+      path: '/pages/podcast'
+    },
   ],
   author: {
     name: 'Christopher Kade',
     photo: '/photo.jpg',
-    bio: 'Front-end consultant working from Paris, France. I write about the Javascript ecosystem, CSS and best practices in software development.',
+    bio: 'Full-stack consultant working from Paris, France. I write about the Javascript ecosystem, CSS and best practices in software development.',
     contacts: {
       email: 'c.kade96@gmail.com',
       twitter: 'christo_kade',
