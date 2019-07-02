@@ -1,7 +1,7 @@
 ---
 title: "Deep dive into @media queries"
 description: "Practical examples of media queries"
-date: "2019-07-27"
+date: "2019-07-2"
 slug: "/posts/media-queries"
 draft: false
 category: "CSS"
@@ -115,5 +115,4 @@ Additionally, you can use the comma to apply any given styles to multiple querie
 @media (min-height: 680px), screen and (orientation: portrait) { ... }
 ```
 
-I hope you've learned at least a couple of things in this article, if you have, feel free to follow me on Twitter [@christo_kade](twitter.com/christo_kade) 🤗  
-
+I hope you've learned at least a couple of things in this article!
