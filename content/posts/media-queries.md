@@ -1,7 +1,7 @@
 ---
 title: "Deep dive into @media queries"
 description: "Practical examples of media queries"
-date: "2019-07-2"
+date: "2019-07-02"
 slug: "/posts/media-queries"
 draft: false
 category: "CSS"
