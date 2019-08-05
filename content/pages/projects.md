@@ -34,9 +34,9 @@ Create & share song lists to jam to with your friends. [Link](https://christophe
 
 ![jammer-screenshot](https://user-images.githubusercontent.com/15229355/58703497-2e3d6d00-83a9-11e9-8cb0-c51ec1302139.png)
 
-### Fast food
+### Food Picker
 
-A fun way to pick what to eat with your colleagues. [Link](http://christopherkade.com/fastfood)  
+A fun way to pick what to eat with your colleagues. [Link](https://foodpicker.club/)  
 🛠 Stack: React, Express, WebSockets
 
 ![fastfood-screenshot](https://user-images.githubusercontent.com/15229355/58703590-73fa3580-83a9-11e9-88a9-735c0b9878c4.png)
