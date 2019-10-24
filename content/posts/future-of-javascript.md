@@ -132,7 +132,7 @@ This one might be my favorites, bye bye `user && user.name` !
 
 Do you know how Javascript can be weird sometimes? Like how it considers `0` to be a falsy value? Well...
 
-![carbon (10)](https://user-images.githubusercontent.com/52913438/67462069-1e1b7800-f63f-11e9-99f1-ab5875cdfb21.png)
+![Nullish Coalescing snippet](https://user-images.githubusercontent.com/52913438/67473055-57111800-f652-11e9-93d9-6be06c9b1dde.png)
 
 
 <br>
