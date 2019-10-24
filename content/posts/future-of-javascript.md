@@ -1,7 +1,7 @@
 ---
 title: "The future of Javascript - features to keep an eye on"
 description: "Let's discover JS features that should be available in the near future."
-date: "2019-10-24"
+date: "2019-10-24 "
 slug: "/posts/future-of-javascript"
 draft: false
 category: "Javascript"
@@ -120,7 +120,7 @@ I won't mention their browser support tho, as it's not relevant.
 
 <br>
 
-  ### Optional chaining
+### Optional chaining
 
 This one might be my favorites, bye bye `user && user.name` !
 
