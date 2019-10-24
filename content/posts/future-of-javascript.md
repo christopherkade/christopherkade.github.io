@@ -32,7 +32,7 @@ Here's how it's structured:
 
 <img width="867" alt="Screenshot 2019-10-23 at 09 18 17" src="https://user-images.githubusercontent.com/52913438/67367591-180d9480-f576-11e9-8386-2eebf29d748b.png">
 
-The general assembly includes ordinary members of ecma and is its highest authority. It controls its management, secretariat & executive committee. It's currently composed of some of the biggest names in tech, including Apple, AirBnb, Faceboon, Netflix & Google. [Full list of members](https://www.ecma-international.org/memento/members.htm)
+The general assembly includes ordinary members of ecma and is its highest authority. It controls its management, secretariat & executive committee. It's currently composed of some of the biggest names in tech, including Apple, AirBnb, Facebook, Netflix & Google. [Full list of members](https://www.ecma-international.org/memento/members.htm)
 
 It's the secretariat's role to organize and create Technical Committees (TCs) and Technical Groups (TGs) who handle specific aspects of computer science.
 
@@ -116,7 +116,7 @@ The [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Glob
 ## Stage 3 features
 
 Stage 3 features won't get released in the near future, but some of them are so cool that it's worth mentioning them.  
-I won't mention their browser support tho, as it's not relevant.
+I won't mention their browser support though, as it's not relevant.
 
 <br>
 
