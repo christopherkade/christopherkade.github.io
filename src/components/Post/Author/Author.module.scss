@@ -11,7 +11,11 @@
 
   &__bio {
     &-twitter {
-      display: block;
+      text-decoration: underline;
+      color: $color-secondary;
+    }
+
+    &-kofi {
       text-decoration: underline;
       color: $color-secondary;
     }
