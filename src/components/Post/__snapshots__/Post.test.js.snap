@@ -78,7 +78,7 @@ exports[`Post renders correctly 1`] = `
       <p
         className="author__bio"
       >
-        Test bio
+        👋 Stay up to date with me on Twitter 
         <a
           className="author__bio-twitter"
           href="https://www.twitter.com/#"
@@ -89,6 +89,19 @@ exports[`Post renders correctly 1`] = `
             @
             #
           </strong>
+          <br />
+        </a>
+        ☕️ Enjoy my content? Consider supporting me by 
+        <a
+          className="author__bio-kofi"
+          href="https://ko-fi.com/christopherkade"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <strong>
+            buying me a coffee
+          </strong>
+          <br />
         </a>
       </p>
     </div>
