@@ -1,7 +1,7 @@
 ---
 title: "Developer health - taking care of yourself as you code"
 date: "2019-11-20"
-description: "Sitting down all day can have a toll on anyone, here's what you should keep in mind"
+description: "Sitting down all day can have a toll on anyone, here's what you should keep in mind."
 slug: "/posts/developer-health"
 draft: false
 category: "Health"
