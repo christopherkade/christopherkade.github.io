@@ -114,7 +114,7 @@ An easy solution is to trade the `await` with a simple `then` block.
       await this.checkRussianContext(query)
     ])
 
-    this.getBasket(this.$store.state.config.selectedCurrency).then(() => {
+    this.getBasket(this.$store.state.config.selectedCurrency).then(async () => {
       await this.$store.dispatch('options/fetchOptions', {
         basket : this.$store.state.basket,
       });
