@@ -1,8 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-// In mobile: swipe to go from one section to the other
-// Desktop: swipe or click
+const slideIn = keyframes`
+0% {
+  transform: translateY(-1000px) translateX(-1000px);
+}
+100% {
+  transform: translateX(-${props => props.offset}px) translateY(-${props => props.offset}px);
+}
+`;
+
 const Wrapper = styled.div`
   background-color: var(--color-${props => props.color});
   padding: 4px 12px 12px 12px;
@@ -12,6 +19,8 @@ const Wrapper = styled.div`
   z-index: ${props => props.index};
   transform: translateX(-${props => props.mobileOffset.x}px) translateY(-${props => props.mobileOffset.y}px);
   cursor: pointer;
+  box-shadow: 0 25px 60px rgba(59, 43, 91, 0.7);
+  animation: ${slideIn} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
   @media(min-width: 768px) {
     width: auto;
