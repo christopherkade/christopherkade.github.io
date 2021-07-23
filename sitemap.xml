@@ -56,6 +56,7 @@
 <url> <loc>https://christopherkade.com/tag/javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/javascript/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/javascript/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://christopherkade.com/tag/javascript/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/node</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/open-source</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/performance</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -90,4 +91,5 @@
 <url> <loc>https://christopherkade.com/page/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/page/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/page/6</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://christopherkade.com/page/7</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
