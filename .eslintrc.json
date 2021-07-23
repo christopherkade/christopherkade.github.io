@@ -60,7 +60,6 @@
       ],
       "react/jsx-no-undef": 1,
       "react/jsx-uses-react": 1,
-      "react/jsx-uses-vars": 1,
-      "linebreak-style": ["error", "windows"]
+      "react/jsx-uses-vars": 1
     }
 }
