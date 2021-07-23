@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - '10'
+  - "10"
 install:
   - npm install -g codecov
 script:
@@ -8,8 +8,6 @@ script:
   - yarn build
   - yarn flow-typed
   - yarn lint
-  - yarn test:coverage --runInBand --no-cache
-  - yarn test --runInBand --no-cache
 cache:
   directories:
     - node_modules
