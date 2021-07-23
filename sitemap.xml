@@ -3,7 +3,6 @@
 <url> <loc>https://christopherkade.com/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/categories</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/pages/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://christopherkade.com/pages/podcast/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/pages/projects/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/posts/async-await</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/posts/designing-for-devs</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -57,12 +56,10 @@
 <url> <loc>https://christopherkade.com/tag/javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/javascript/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/javascript/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://christopherkade.com/tag/javascript/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/node</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/open-source</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/performance</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/productivity</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://christopherkade.com/tag/productivity/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/react</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/seo</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/ssr</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -71,7 +68,6 @@
 <url> <loc>https://christopherkade.com/tag/tutorial</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/tutorial/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/tutorial/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://christopherkade.com/tag/tutorial/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/vue</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/tag/web</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/category/css</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -86,7 +82,6 @@
 <url> <loc>https://christopherkade.com/category/tutorial</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/category/tutorial/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/category/tutorial/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://christopherkade.com/category/tutorial/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/category/vue</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -95,7 +90,4 @@
 <url> <loc>https://christopherkade.com/page/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/page/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://christopherkade.com/page/6</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://christopherkade.com/page/7</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://christopherkade.com/page/8</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://christopherkade.com/page/9</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
