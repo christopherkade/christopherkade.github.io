@@ -12,13 +12,10 @@ cache:
     - node_modules
 
 deploy:
-  strategy: git
-  provider: pages
-  cleanup: false
-  github-token: $GITHUB_TOKEN
+  provider: pages:git
+  token: $GITHUB_TOKEN
+  edge: true
   local_dir: public
   repo: christopherkade/christopherkade.github.io
   fqdn: christopherkade.com
   target_branch: master
-  on:
-    branch: code
