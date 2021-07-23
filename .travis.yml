@@ -19,3 +19,5 @@ deploy:
   repo: christopherkade/christopherkade.github.io
   fqdn: christopherkade.com
   target_branch: master
+  on:
+    branch: code
