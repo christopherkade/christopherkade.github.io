@@ -6,7 +6,6 @@ install:
 script:
   - yarn install
   - yarn build
-  - yarn flow-typed
   - yarn lint
 cache:
   directories:
