@@ -3,7 +3,7 @@
 module.exports = {
   url: 'https://christopherkade.com',
   title: 'A Tech Blog by Christopher Kade',
-  subtitle: 'Front-end consultant working from Paris, France. I write about the Javascript ecosystem, CSS and best practices in software development.',
+  subtitle: 'Front-end developer working from Paris, France. I write about the Javascript ecosystem, CSS and best practices in software development.',
   disqusShortname: '',
   postsPerPage: 5,
   googleAnalyticsId: 'UA-127876951-1',
