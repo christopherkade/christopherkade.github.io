@@ -24,7 +24,7 @@ module.exports = {
   author: {
     name: 'Christopher Kade',
     photo: '/photo.jpg',
-    bio: 'Full-stack consultant working from Paris, France. I write about the Javascript ecosystem, CSS and best practices in software development.',
+    bio: 'Front-end developer working from Paris, France. I write about the Javascript ecosystem, CSS and best practices in software development.',
     contacts: {
       email: 'c.kade96@gmail.com',
       twitter: 'christo_kade',
