@@ -45,7 +45,7 @@ module.exports = {
             opacity: 0,
           },
           "100%": {
-            transform: "translateY(-60px)",
+            transform: "translateY(-40px)",
             opacity: 1,
           },
         },
@@ -62,6 +62,9 @@ module.exports = {
       addUtilities({
         ".border-translate-y": {
           transform: "translateY(10px)",
+        },
+        ".offset-tooltip": {
+          transform: "translateX(100px)",
         },
       });
     }),

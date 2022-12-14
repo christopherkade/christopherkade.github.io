@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
+import useObserver from "../../hooks/useObserver";
 import gateImg from "./images/gate2.png";
 
 const Durin = () => {
   const [gateHeight, setGateHeight] = useState(280);
+  const [containerRef] = useObserver();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -17,6 +19,7 @@ const Durin = () => {
   return (
     <div className="relative flex flex-col items-center min-h-[645px] mt-28">
       <Image
+        ref={containerRef}
         id="durin"
         width="auto"
         src={gateImg}
