@@ -11,8 +11,12 @@ const Durin = () => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       const durin = window.document.querySelector("#durin");
-      const height = durin.getBoundingClientRect().top - 112 + 280;
-      setGateHeight(height < 170 ? 170 : height);
+      const height = durin.getBoundingClientRect().top - 112 + 280 + 50;
+
+      if (window.scrollY > 50) {
+        // setGateHeight(height < 170 ? 170 : 280 - scrollVariation);
+        setGateHeight(height < 170 ? 170 : height);
+      }
     });
   }, []);
 
@@ -29,7 +33,7 @@ const Durin = () => {
           width: "auto",
         }}
         alt=""
-        className={`animate-fadeIn`}
+        className={`animate-fadeIn durins-gate`}
       />
       <div className="border-l border-black h-[400px] m-x-auto border-translate-y animate-showLine"></div>
     </div>

@@ -13,9 +13,13 @@ const useObserver = (hashName, customOptions = null) => {
     setIsVisible(isIntersecting);
 
     if (hashName && isIntersecting) {
-      router.replace(router.pathname, router.pathname + `#${hashName}`);
+      router.replace(router.pathname, router.pathname + `#${hashName}`, {
+        scroll: false,
+      });
     } else if (isIntersecting && !hashName) {
-      router.replace(router.pathname, router.pathname.split("#")[0]);
+      router.replace(router.pathname, router.pathname.split("#")[0], {
+        scroll: false,
+      });
     }
   };
 
@@ -23,6 +27,7 @@ const useObserver = (hashName, customOptions = null) => {
     let options = {
       root: null,
       rootMargin: "0px",
+      threshold: 0,
     };
 
     options = customOptions ? customOptions : options;

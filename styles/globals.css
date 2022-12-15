@@ -10,7 +10,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   height: 100%;
   width: 100%;
-  background-color: #f5eae6;
+  background-color: #f5f5f4;
   scroll-behavior: smooth;
 }
 
@@ -26,4 +26,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+svg {
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }

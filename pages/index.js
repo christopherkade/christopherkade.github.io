@@ -4,10 +4,14 @@ import Head from "next/head";
 import { Durin } from "../components/Durin";
 import { MainName } from "../components/MainName";
 import { About } from "../components/About";
-// import { Projects } from "../components/Projects";
+import { Projects } from "../components/Projects";
+import { MainDescription } from "../components/MainDescription";
+import { Hero } from "../components/Hero";
+import { Articles } from "../components/Articles";
 
 // TODO:
 // Highlight nav element on view (Observer API)
+//
 export default function Home() {
   return (
     <div className="h-full">
@@ -17,17 +21,23 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="h-full">
-        <div className="relative h-full">
-          <Durin />
+      <main className="h-full pt-28">
+        <div className="h-full">
+          {/* <Durin /> */}
+          <Hero />
 
-          <MainName />
+          {/* <MainName /> */}
+
+          {/* Latest articles */}
+          {/* Projects */}
+          <Articles />
+          <Projects />
         </div>
 
-        <div className="mx-20">
-          <About />
+        <div className="max-w-xs sm:max-w-md md:max-w-6xl mx-auto">
+          {/* <MainDescription /> */}
 
-          {/* <Projects /> */}
+          {/* <About /> */}
         </div>
       </main>
     </div>

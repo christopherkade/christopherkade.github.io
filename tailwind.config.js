@@ -12,7 +12,10 @@ module.exports = {
         "theme-white": "#FEFAE0",
         "theme-text": "#4a060d",
         "theme-select": "#c86358",
-        "theme-background": "#f5eae6",
+        "theme-background": "#f1f2f6",
+
+        "theme-primary": "#f5f5f4",
+        "theme-secondary": "#fff1e6",
       },
       keyframes: {
         fadeIn: {
@@ -49,11 +52,24 @@ module.exports = {
             opacity: 1,
           },
         },
+        addColor: {
+          "0%": {
+            color: "#c86358",
+          },
+          "80%": {
+            color: "#c86358",
+          },
+          "100%": {
+            color: "initial",
+          },
+        },
       },
       animation: {
         fadeIn: "fadeIn 4s",
         showLine: "loadLine 2s",
         offsetTitle: "offsetTitle 4s forwards",
+        rotateStar: "rotate",
+        addColor: "addColor 2s ease-out",
       },
     },
   },
@@ -65,6 +81,27 @@ module.exports = {
         },
         ".offset-tooltip": {
           transform: "translateX(100px)",
+        },
+        ".overflow-clip-margin": {
+          overflowClipMargin: "content-box",
+        },
+        ".about-img-radius": {
+          borderRadius: "400px 400px 0px 0px",
+        },
+        ".rotate-star": {
+          transition: "rotate 1s",
+          rotate: "1turn",
+        },
+        ".durins-gate": {
+          transformStyle: "preserve-3d",
+        },
+        ".project-transition": {
+          // transition: "scale 1s ease",
+          transition: "transform 1s ease",
+          transform: "scale(0.98)",
+        },
+        ".project-scale": {
+          transform: "scale(1)",
         },
       });
     }),
