@@ -1,17 +1,18 @@
-// import { Open_Sans } from "@next/font/google";
-import React, { useEffect } from "react";
+import React from "react";
 import "../styles/globals.css";
 import { Navigation } from "../components/Navigation";
-import { Open_Sans, Inter } from "@next/font/google";
+import { Inter } from "@next/font/google";
 
-// const gildaDisplay = Gilda_Display({ weight: "400" });
-// const openSans = Open_Sans();
+import { useRouter } from "next/router";
+
 const inter = Inter();
 
 function MyApp({ Component, pageProps }) {
+  const { asPath } = useRouter();
+  console.log("865 --- AS ROUTE", asPath);
   return (
     <div className={inter.className}>
-      <Navigation />
+      <Navigation displayNavigation={asPath.includes("post") ? false : true} />
 
       <Component {...pageProps} />
     </div>

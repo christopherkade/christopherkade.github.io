@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import Tippy from "@tippyjs/react/headless";
 import { followCursor } from "tippy.js";
-import useObserver from "../../hooks/useObserver";
 
 import bannerPng from "./images/banner-generator.png";
 import lockdownPng from "./images/lockdown.png";
@@ -13,9 +12,7 @@ import ocPng from "./images/oc.png";
 import snippetPng from "./images/snippet.png";
 import reactcraftPng from "./images/reactcraft.png";
 
-const Projects = () => {
-  const [containerRef] = useObserver("projects");
-
+const Projects = ({ id }) => {
   const projects = [
     {
       title: "OpenClassrooms course page",
@@ -75,16 +72,12 @@ const Projects = () => {
   ];
 
   return (
-    <div
-      ref={containerRef}
-      id="projects"
-      className="h-full p-6 max-w-7xl mx-auto"
-    >
+    <div id={id} className="section h-full p-6 max-w-7xl mx-auto">
       {projects.map(({ title, href, image, description }, index) => {
         const toolTipRef = useRef();
 
         return (
-          <div className="text-center mb-8 last:mb-0">
+          <div className="text-center mb-8 last:mb-0" key={title}>
             <div>
               <h2 className="block sm:hidden">{title}</h2>
               <p className="block sm:hidden font-extralight">{description}</p>
@@ -96,6 +89,7 @@ const Projects = () => {
               className="relative group"
             >
               <Tippy
+                delay={500}
                 followCursor={true}
                 plugins={[followCursor]}
                 render={(attrs) => (

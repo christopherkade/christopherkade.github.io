@@ -3,27 +3,29 @@ import React, { useRef, useEffect } from "react";
 import browserPng from "./images/browser.png";
 import useObserver from "../../hooks/useObserver";
 
-const Hero = () => {
-  const [containerRef] = useObserver();
+const Hero = ({ id }) => {
+  // const [containerRef] = useObserver();
   const heroTextRef = useRef();
 
-  useEffect(() => {
-    if (heroTextRef) {
-      const htmlArray = [];
-      const text = heroTextRef.current.innerHTML;
-      const splittedValues = text.split(" ");
-      splittedValues.forEach((word) => {
-        htmlArray.push(
-          `<span className="hover:animate-addColor">${word}</span>`
-        );
-      });
-      console.log(heroTextRef.current.innerHTML);
-    }
-    // <span className="hover:animate-addColor">
-  }, []);
+  // useEffect(() => {
+  //   if (heroTextRef) {
+  //     const htmlArray = [];
+  //     const text = heroTextRef.current.innerHTML;
+  //     const splittedValues = text.split(" ");
+  //     splittedValues.forEach((word) => {
+  //       htmlArray.push(
+  //         `<span className="hover:animate-addColor">${word}</span>`
+  //       );
+  //     });
+  //   }
+  //   // <span className="hover:animate-addColor">
+  // }, []);
 
   return (
-    <div ref={containerRef} className="w-full md:h-[100vh] h-full md:px-8 px-4">
+    <div
+      id={id}
+      className="section w-full md:h-[100vh] h-full px-4 md:px-8 pb-4 pt-28"
+    >
       {/* <Image src={browserPng} /> */}
       <p
         ref={heroTextRef}

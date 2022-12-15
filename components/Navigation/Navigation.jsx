@@ -4,35 +4,43 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-import starPng from "../../images/star.png";
+import useScrollPosition from "../../hooks/useScrollPosition";
 
 const CustomLink = ({ children, href, scroll }) => {
   const { asPath } = useRouter();
+
+  // console.log("865 --- asPath", asPath);
+  // console.log('865 --- children.split(",")[0]', children.split(",")[0]);
 
   return (
     <Link
       href={href}
       scroll={scroll}
-      className={classNames(
-        "block py-2 px-2 md:px-0 font-extralight hover:text-gray-400",
-        {
-          "text-theme-select":
-            asPath.includes(children.split(",")[0].toLowerCase()) ||
-            (asPath === "/" && children === "About,"),
-          "text-theme-text": !asPath.includes(children.toLowerCase()),
-        }
-      )}
+      className="list__link block py-2 px-2 md:px-0 font-extralight hover:text-gray-400"
     >
       {children}
     </Link>
   );
 };
 
-const Navigation = () => {
+// use dislayNavigation for display outside of main page (hide nav?)
+const Navigation = ({ dislayNavigation }) => {
+  const scrollPosition = useScrollPosition();
+
   return (
-    <nav className="fixed top-0 w-full text-grey-900 px-1 pt-2.5 sm:px-4 bg-theme-primary z-10">
+    <nav
+      className={classNames(
+        "fixed top-0 w-full text-grey-900 px-1 sm:px-4 bg-theme-primary z-10",
+        {
+          shadow: scrollPosition > 0,
+          "shadow-none": scrollPosition === 0,
+        }
+      )}
+    >
       <div className="container flex flex-wrap items-center justify-center mx-auto">
-        <p className="absolute left-7">Christopher Kade</p>
+        <p className="absolute left-7 hidden sm:block tracking-wide">
+          CHRISTOPHER KADE
+        </p>
 
         <div className="block w-auto" id="navbar-default">
           <ul className="flex p-2 flex-row md:space-x-8 mt-0 text-sm font-medium">
@@ -43,12 +51,17 @@ const Navigation = () => {
             </li>
             <li>
               <CustomLink href="#articles" scroll={false}>
-                Articles,
+                articles,
               </CustomLink>
             </li>
             <li>
               <CustomLink href="#projects" scroll={false}>
-                Projects
+                projects,
+              </CustomLink>
+            </li>
+            <li>
+              <CustomLink href="#contact" scroll={false}>
+                contact
               </CustomLink>
             </li>
             {/* <li>

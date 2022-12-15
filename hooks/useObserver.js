@@ -1,51 +1,58 @@
-import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/router";
+import { useEffect } from "react";
 
-const useObserver = (hashName, customOptions = null) => {
-  const containerRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const router = useRouter();
+// TODO: Fix the lack of trigger over Projects
+const useObserver = (customOptions = null) => {
+  const setCurrent = (section) => {
+    document
+      .querySelectorAll(".current")
+      .forEach((el) => el.classList.remove("current"));
+
+    // section.classList.add("current");
+
+    let id = section.id;
+    if (id === "hero") {
+      id = "";
+    } else {
+      id = "#" + id;
+    }
+
+    const currentLink = document.querySelector(`.list__link[href="/${id}"]`);
+    currentLink.classList.add("current");
+  };
 
   const callbackFunction = (entries) => {
-    const [entry] = entries;
-    const isIntersecting = entry.isIntersecting;
-
-    setIsVisible(isIntersecting);
-
-    if (hashName && isIntersecting) {
-      router.replace(router.pathname, router.pathname + `#${hashName}`, {
-        scroll: false,
-      });
-    } else if (isIntersecting && !hashName) {
-      router.replace(router.pathname, router.pathname.split("#")[0], {
-        scroll: false,
-      });
-    }
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        console.log("865 --- CURRENT", entry.target.id);
+        setCurrent(entry.target);
+      }
+    });
   };
 
   useEffect(() => {
+    const sections = document.querySelectorAll(".section");
+    // console.log("865 --- SECTIONS", sections);
     let options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0,
+      threshold: 1,
     };
 
     options = customOptions ? customOptions : options;
 
     const observer = new IntersectionObserver(callbackFunction, options);
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
+    // if (containerRef.current) {
+    //   observer.observe(containerRef.current);
+    // }
+    sections.forEach((section) => observer.observe(section));
 
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
     };
-  }, [containerRef, customOptions]);
-
-  return [containerRef, isVisible];
+  }, []);
 };
 
 export default useObserver;

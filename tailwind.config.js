@@ -18,40 +18,6 @@ module.exports = {
         "theme-secondary": "#fff1e6",
       },
       keyframes: {
-        fadeIn: {
-          "0%": {
-            opacity: 0,
-          },
-          "50%": {
-            opacity: 1,
-          },
-        },
-        loadLine: {
-          "0%": {
-            opacity: 0,
-            height: 0,
-          },
-          "50%": {
-            height: 0,
-            opacity: 0,
-          },
-          "100%": {
-            height: "400px",
-            opacity: 1,
-          },
-        },
-        offsetTitle: {
-          "0%": {
-            opacity: 0,
-          },
-          "50%": {
-            opacity: 0,
-          },
-          "100%": {
-            transform: "translateY(-40px)",
-            opacity: 1,
-          },
-        },
         addColor: {
           "0%": {
             color: "#c86358",
@@ -65,10 +31,6 @@ module.exports = {
         },
       },
       animation: {
-        fadeIn: "fadeIn 4s",
-        showLine: "loadLine 2s",
-        offsetTitle: "offsetTitle 4s forwards",
-        rotateStar: "rotate",
         addColor: "addColor 2s ease-out",
       },
     },
@@ -76,32 +38,15 @@ module.exports = {
   plugins: [
     plugin(function ({ addUtilities }) {
       addUtilities({
-        ".border-translate-y": {
-          transform: "translateY(10px)",
-        },
-        ".offset-tooltip": {
-          transform: "translateX(100px)",
-        },
-        ".overflow-clip-margin": {
-          overflowClipMargin: "content-box",
-        },
-        ".about-img-radius": {
-          borderRadius: "400px 400px 0px 0px",
-        },
-        ".rotate-star": {
-          transition: "rotate 1s",
-          rotate: "1turn",
-        },
-        ".durins-gate": {
-          transformStyle: "preserve-3d",
-        },
         ".project-transition": {
-          // transition: "scale 1s ease",
           transition: "transform 1s ease",
           transform: "scale(0.98)",
         },
         ".project-scale": {
           transform: "scale(1)",
+        },
+        ".current": {
+          color: "#c86358",
         },
       });
     }),

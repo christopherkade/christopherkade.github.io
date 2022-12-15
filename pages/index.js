@@ -1,18 +1,16 @@
 import React from "react";
 import Head from "next/head";
 
-import { Durin } from "../components/Durin";
-import { MainName } from "../components/MainName";
-import { About } from "../components/About";
 import { Projects } from "../components/Projects";
-import { MainDescription } from "../components/MainDescription";
 import { Hero } from "../components/Hero";
 import { Articles } from "../components/Articles";
+import { Contact } from "../components/Contact";
 
-// TODO:
-// Highlight nav element on view (Observer API)
-//
+import useObserver from "../hooks/useObserver";
+
 export default function Home() {
+  useObserver();
+
   return (
     <div className="h-full">
       <Head>
@@ -21,23 +19,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="h-full pt-28">
+      <main className="h-full">
         <div className="h-full">
-          {/* <Durin /> */}
-          <Hero />
-
-          {/* <MainName /> */}
-
-          {/* Latest articles */}
-          {/* Projects */}
-          <Articles />
-          <Projects />
-        </div>
-
-        <div className="max-w-xs sm:max-w-md md:max-w-6xl mx-auto">
-          {/* <MainDescription /> */}
-
-          {/* <About /> */}
+          <Hero id="hero" />
+          <Articles id="articles" />
+          <Projects id="projects" />
+          <Contact id="contact" />
         </div>
       </main>
     </div>
