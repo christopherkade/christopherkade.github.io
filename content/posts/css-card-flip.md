@@ -2,12 +2,8 @@
 title: "Creating a custom CSS loader of a Yu-Gi-Oh card flipping"
 date: "2022-12-07"
 description: "A trip down memory lane with some fun CSS tricks."
-slug: "/posts/css-card-flip"
-draft: false
-category: "CSS"
-tags:
-  - "CSS"
-template: "post"
+slug: "/post/css-card-flip"
+isPublished: true
 ---
 
 You read that right, it's time to bring out your Blue Eyes White Dragon and d-d-d-d-deliver some nice animations to your side projects. Bear with me while I revisit my childhood please, and in the meantime, let's have some fun with CSS 🥰
@@ -19,13 +15,11 @@ You read that right, it's time to bring out your Blue Eyes White Dragon and d-d-
 ## Step 1: Create the wrapper 🎁
 
 ```html
- <div class="card-wrapper">
-     
- </div>
+<div class="card-wrapper"></div>
 ```
 
 ```css
-// Our card flip animation, simply rotates the element on the Y 
+// Our card flip animation, simply rotates the element on the Y
 // axis and then goes back to its original state
 @keyframes cardFlip {
   0% {
@@ -53,10 +47,10 @@ Here `transform-style` defines each children element as 3D. When used in conjunc
 ## Step 2: Create each card face 🎴
 
 ```html
- <div class="card-wrapper">
-    <img class="card" src="front.jpg" alt="" />
-    <img class="card card-back" src="back.jpg" alt="" />
- </div>
+<div class="card-wrapper">
+  <img class="card" src="front.jpg" alt="" />
+  <img class="card card-back" src="back.jpg" alt="" />
+</div>
 ```
 
 ```css
@@ -77,13 +71,12 @@ Here `transform-style` defines each children element as 3D. When used in conjunc
 
 `backface-visibility` defines the back of the card as hidden by default, this way, when it turns, we won't simply see the same face twice.
 
-----
+---
 
 And that's it, short and sweet.  
 I struggled a bit to implement it at first and figured it would be worth documenting !  
 Whether you play Magic: the Gathering, Yu-Gi-Oh!, Flesh and Blood, Vanguard or any other TCG, I'm sure you'll find that animation a bit nostalgic.
 
-----
+---
 
 Feel free to follow me on [Twitter](https://twitter.com/christo_kade) (if it's still around by the time you read this article) - it's always fun chatting with some of you and sharing tips & tricks together 😄
-

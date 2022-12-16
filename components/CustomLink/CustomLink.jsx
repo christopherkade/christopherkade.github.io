@@ -6,6 +6,7 @@ const CustomLink = ({ children, href, newTab }) => {
     <a
       href={href}
       target={newTab ? "_blank" : null}
+      rel="noreferrer"
       className="underline text-theme-text font-bold"
     >
       {children}

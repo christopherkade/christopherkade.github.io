@@ -48,6 +48,16 @@ module.exports = {
         ".current": {
           color: "#c86358",
         },
+        ".modal-transition": {
+          transform: "scaleY(.01) scaleX(0)",
+          animation:
+            "unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards",
+        },
+        ".modal": {
+          transform: "scale(0)",
+          animation:
+            "zoomOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards",
+        },
       });
     }),
   ],

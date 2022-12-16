@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useRef, useEffect } from "react";
 
 import browserPng from "./images/browser.png";
@@ -47,7 +48,7 @@ const Hero = ({ id }) => {
         <span className="hover:animate-addColor">and</span>{" "}
         <span className="hover:animate-addColor">well</span>{" "}
         <span className="hover:animate-addColor">crafted</span>{" "}
-        <span className="hover:animate-addColor">websites.</span>{" "}
+        <span className="hover:animate-addColor">websites.</span> <br />
         <span className="hover:animate-addColor">I</span>{" "}
         <span className="hover:animate-addColor">focus</span>{" "}
         <span className="hover:animate-addColor">on</span>{" "}

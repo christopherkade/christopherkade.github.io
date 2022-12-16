@@ -1,0 +1,44 @@
+.reactMarkDown {
+  /* // some root styles here */
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.reactMarkDown p {
+  padding: 8px 0px;
+}
+
+.reactMarkDown img {
+  margin: 0 auto;
+  padding: 16px 0px;
+}
+
+.reactMarkDown h2 {
+  font-size: 24px;
+  margin: 8px 0px 16px 0px;
+}
+
+.reactMarkDown pre {
+  margin: 8px 0px 16px 0px;
+}
+
+.reactMarkDown ul {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  list-style: disc outside none;
+}
+
+.reactMarkDown ul li {
+  margin-left: 2em;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.reactMarkDown a {
+  color: #c86358;
+  text-decoration: underline;
+}
+
+.reactMarkDown a:hover {
+  opacity: 0.75;
+}

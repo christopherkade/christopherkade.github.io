@@ -2,13 +2,8 @@
 title: "Developer health - taking care of yourself as you code"
 date: "2019-11-20"
 description: "Sitting down all day can have a toll on anyone, here's what you should keep in mind."
-slug: "/posts/developer-health"
-draft: false
-category: "Health"
-tags:
-  - "Health"
-  - "Productivity"
-template: "post"
+slug: "/post/developer-health"
+isPublished: true
 ---
 
 I've recently contracted tendonitis in both of my hands, it's nothing major and can be treated of course, but it made me realize how I have been passive about my health as a developer up until then. I'm not talking about going for a run or hitting the gym multiple times a week, but all the other, seemingly little things that can have a major impact on our careers.  
@@ -35,7 +30,7 @@ Your arms or wrists should **not** be pressing on the hard edge of the desk, it 
 
 As mentioned above, you should be aligned with your desk. This was probably my biggest mistake due to a bad chair I had at home: your arms should not be reaching up or down to your work station.
 
-Additionally, your feet should be resting flat on the ground with your legs at an 90° angle. 
+Additionally, your feet should be resting flat on the ground with your legs at an 90° angle.
 
 ### Position your primary and secondary monitor(s) correctly 🖥
 
@@ -83,8 +78,7 @@ Note the pad with a foam support for my wrist 😄, it's worth keeping in mind t
 
 <img src="https://thepracticaldev.s3.amazonaws.com/i/6nrtvw2t7n9ypb65dg0d.jpg" width="300" height="400">
 
-> My own mouse & pad, 17 & 9 € respectively 
-
+> My own mouse & pad, 17 & 9 € respectively
 
 ### Ergonomic keyboard
 

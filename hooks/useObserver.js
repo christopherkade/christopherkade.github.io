@@ -22,6 +22,7 @@ const useObserver = (customOptions = null) => {
 
   const callbackFunction = (entries) => {
     entries.forEach((entry) => {
+      // console.log("865 --- entry.intersectionRatio", entry.intersectionRatio);
       if (entry.intersectionRatio > 0) {
         console.log("865 --- CURRENT", entry.target.id);
         setCurrent(entry.target);
@@ -35,7 +36,7 @@ const useObserver = (customOptions = null) => {
     let options = {
       root: null,
       rootMargin: "0px",
-      threshold: 1,
+      threshold: 0.9,
     };
 
     options = customOptions ? customOptions : options;

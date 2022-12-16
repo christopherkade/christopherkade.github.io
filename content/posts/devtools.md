@@ -2,12 +2,8 @@
 title: "DevTools for productivity"
 date: "2019-11-05"
 description: "Essential & lesser known tools to make your life easy."
-slug: "/posts/devtools"
-draft: false
-category: "Productivity"
-tags:
-  - "Productivity"
-template: "post"
+slug: "/post/devtools"
+isPublished: true
 ---
 
 This may sound crazy, but developers are lazy. I know, unbelievable. Some of us are, we need to automate lots of our tasks because repetition can be tiring. So let me show you some tools I find extremely useful, either because they make my life easier or because they push me to write more accessible code.
@@ -34,7 +30,7 @@ Looking for a cool color combination for a personal project and you're tired of 
 
 ### Carbon
 
-You'd like to share a code snippet with style for a presentation? 
+You'd like to share a code snippet with style for a presentation?
 
 ➡️ [carbon.now](https://carbon.now.sh/)
 
@@ -69,15 +65,15 @@ Want to check if a feature is supported by a specific browser?
 
 ### headingsMap
 
-Are your headings accessible to screen readers? Do you want to see if your headings are in the wrong place? 
+Are your headings accessible to screen readers? Do you want to see if your headings are in the wrong place?
 
-➡️ [Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi) 
+➡️ [Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi)
 
 ➡️ [Firefox](https://addons.mozilla.org/en-US/firefox/addon/headingsmap/)
 
 ### WCAG Color contrast checker
 
-Looking to avoid contrast problems with your application? Do you want an understanding of which elements of your screen have a bad contrast ratio at a glance? 
+Looking to avoid contrast problems with your application? Do you want an understanding of which elements of your screen have a bad contrast ratio at a glance?
 
 ➡️ [Chrome](https://chrome.google.com/webstore/detail/wcag-color-contrast-check/plnahcmalebffmaghcpcmpaciebdhgdf?hl=en)
 
@@ -85,7 +81,7 @@ Looking to avoid contrast problems with your application? Do you want an underst
 
 ### Screencastify
 
-Want to record your web app for a demo? 
+Want to record your web app for a demo?
 
 ➡️ [Screencastify](https://www.screencastify.com/) (for Chrome only)
 
@@ -95,7 +91,7 @@ Want to execute automated accessibility tests very easily? (Axe won't test every
 
 ➡️ [axe](https://www.deque.com/axe/)
 
-<br>  
+<br>
 
 ## VSCode extensions
 
@@ -129,7 +125,7 @@ Want to live-edit a file collectively in your IDE?
 
 ### ngrok
 
-You're working on a project and want to show your local environment to someone who's not here? 
+You're working on a project and want to show your local environment to someone who's not here?
 
 ➡️️ [ngrok](https://ngrok.com/)
 
@@ -138,7 +134,6 @@ You're working on a project and want to show your local environment to someone w
 Want to optimize your `svg` files and remove all the noise?
 
 ➡️ [svgo](https://github.com/svg/svgo)
-
 
 ### tldr
 
@@ -158,6 +153,5 @@ Want to easily commit something following the gitmoji syntax?
 
 ➡️ [gitmoji CLI](https://github.com/carloscuesta/gitmoji-cli)
 
-
 I hope you've found at least one tool that will make your life easier.
-If you'd like to share one of your own, feel free to share them with me on Twitter [@christo_kade](https://twitter.com/christo_kade)!  
+If you'd like to share one of your own, feel free to share them with me on Twitter [@christo_kade](https://twitter.com/christo_kade)!

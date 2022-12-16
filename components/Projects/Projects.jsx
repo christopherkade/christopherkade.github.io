@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import Tippy from "@tippyjs/react/headless";
 import { followCursor } from "tippy.js";
@@ -74,8 +74,6 @@ const Projects = ({ id }) => {
   return (
     <div id={id} className="section h-full p-6 max-w-7xl mx-auto">
       {projects.map(({ title, href, image, description }, index) => {
-        const toolTipRef = useRef();
-
         return (
           <div className="text-center mb-8 last:mb-0" key={title}>
             <div>
@@ -86,6 +84,7 @@ const Projects = ({ id }) => {
               id={`link-${index}`}
               href={href}
               target="_blank"
+              rel="noreferrer"
               className="relative group"
             >
               <Tippy
@@ -95,7 +94,6 @@ const Projects = ({ id }) => {
                 render={(attrs) => (
                   <div
                     tabIndex="-1"
-                    ref={toolTipRef}
                     className="bg-theme-select text-theme-primary p-2 rounded-md"
                     {...attrs}
                   >
