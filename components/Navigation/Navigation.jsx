@@ -10,7 +10,7 @@ const CustomLink = ({ children, href, scroll }) => {
     <Link
       href={href}
       scroll={scroll}
-      className="list__link block py-2 px-2 md:px-0 font-extralight hover:text-gray-400"
+      className="list__link block py-2 px-2 md:px-0 font-extralight hover:text-gray-400 "
     >
       {children}
     </Link>
