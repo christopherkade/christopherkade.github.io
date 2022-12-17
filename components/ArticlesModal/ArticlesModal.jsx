@@ -15,8 +15,6 @@ const DetailedArticleCard = ({ title, description, slug }) => {
 };
 
 const ArticlesModal = ({ setShowModal, posts }) => {
-  console.log("865 --- posts", posts);
-
   return (
     // <div className="modal-transition">
     <div className="inset-0 z-40 fixed bg-theme-primary m-3 w-auto border border-black overflow-x-hidden overflow-y-scroll">

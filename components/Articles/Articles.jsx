@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import classNames from "classnames";
 import Link from "next/link";
 // import posts from "../../content/posts.json";
 import { ArticlesModal } from "../ArticlesModal";
@@ -17,15 +18,13 @@ const ArticleCard = ({ slug, title, description }) => {
 };
 
 const Articles = ({ id, posts }) => {
-  const [showModal, setShowModal] = useState(false);
+  const [showArticles, setShowArticles] = useState(false);
   // const { files } = posts;
   const firstFourFiles = posts.slice(0, 4);
 
-  const handleArticleModalDisplay = () => {
-    setShowModal(true);
+  const handleArticleModalDisplay = (showArticles) => {
+    setShowArticles(showArticles);
   };
-
-  console.log("865 --- POSTS", posts);
 
   // TODO:
   // 1. Order by date (descending)
@@ -36,30 +35,57 @@ const Articles = ({ id, posts }) => {
     <>
       <div
         id={id}
-        className="section max-w-7xl mx-auto border-t border-b border-black p-6"
+        className={classNames(
+          "modal-transition section max-w-7xl mx-auto border-t border-b border-black p-6 mb-10",
+          {
+            "z-40 my-0 bg-theme-primary w-auto fit-available": showArticles,
+          }
+        )}
       >
-        <h2 className="text-3xl mb-8">My most recent articles</h2>
+        {showArticles ? (
+          <h2 className="text-3xl mb-8">My articles</h2>
+        ) : (
+          <h2 className="text-3xl mb-8">My most recent articles</h2>
+        )}
 
         <div className="grid grid-rows-4 md:grid-cols-4 md:grid-rows-none">
-          {firstFourFiles.map(({ frontmatter }) => (
-            <ArticleCard
-              key={frontmatter.slug}
-              slug={frontmatter.slug}
-              title={frontmatter.title}
-              description={frontmatter.description}
-            />
-          ))}
+          {!showArticles
+            ? firstFourFiles.map(({ frontmatter }) => (
+                <ArticleCard
+                  key={frontmatter.slug}
+                  slug={frontmatter.slug}
+                  title={frontmatter.title}
+                  description={frontmatter.description}
+                />
+              ))
+            : posts.map(({ frontmatter }) => (
+                <ArticleCard
+                  key={frontmatter.slug}
+                  slug={frontmatter.slug}
+                  title={frontmatter.title}
+                  description={frontmatter.description}
+                />
+              ))}
         </div>
 
-        <button
-          className="flex ml-auto text-lg"
-          onClick={handleArticleModalDisplay}
-        >
-          See all article ➡️
-        </button>
-        {showModal && (
-          <ArticlesModal setShowModal={setShowModal} posts={posts} />
+        {showArticles ? (
+          <button
+            className="flex ml-auto text-lg mt-2"
+            onClick={() => handleArticleModalDisplay(false)}
+          >
+            Show less
+          </button>
+        ) : (
+          <button
+            className="flex ml-auto text-lg mt-2"
+            onClick={() => handleArticleModalDisplay(true)}
+          >
+            See all article ➡️
+          </button>
         )}
+        {/* {showArticles && (
+          <ArticlesModal setShowArticles={setShowArticles} posts={posts} />
+        )} */}
       </div>
     </>
   );

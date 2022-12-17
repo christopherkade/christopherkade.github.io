@@ -1,17 +1,11 @@
 import React from "react";
 import classNames from "classnames";
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/router";
 
 import useScrollPosition from "../../hooks/useScrollPosition";
 
 const CustomLink = ({ children, href, scroll }) => {
-  const { asPath } = useRouter();
-
-  // console.log("865 --- asPath", asPath);
-  // console.log('865 --- children.split(",")[0]', children.split(",")[0]);
-
   return (
     <Link
       href={href}
@@ -49,22 +43,22 @@ const Navigation = ({ dislayNavigation }) => {
                 About,
               </CustomLink>
             </li>
-            <li>
+            <li className="ml-0">
               <CustomLink href="#articles" scroll={false}>
                 articles,
               </CustomLink>
             </li>
-            <li>
+            <li className="ml-0">
               <CustomLink href="#projects" scroll={false}>
                 projects,
               </CustomLink>
             </li>
-            <li>
+            <li className="ml-0">
               <CustomLink href="#contact" scroll={false}>
                 contact
               </CustomLink>
             </li>
-            {/* <li>
+            {/* <li className="ml-2">
               <Link
                 href="/blog"
                 className={classNames(

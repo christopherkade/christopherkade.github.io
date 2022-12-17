@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import ReactMarkdown from "react-markdown";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -26,7 +26,6 @@ SyntaxHighlighter.registerLanguage("json", json);
 
 const Post = ({ content, frontmatter }) => {
   const router = useRouter();
-  const { slug } = router.query;
   const syntaxTheme = oneDark;
 
   const MarkdownComponents = {
@@ -69,23 +68,14 @@ const Post = ({ content, frontmatter }) => {
     },
   };
 
-  useEffect(() => {
-    // import(`../../content/posts/${slug}.md`).then((res) =>
-    //   fetch(res.default)
-    //     .then((response) => response.text())
-    //     .then((response) => setPostcontent(response))
-    //     .catch((err) => console.log(err))
-    // );
-  }, []);
-
   return (
     <div className="pt-28 max-w-7xl p-6 mx-auto">
-      <article>
-        {/* <header>
-          <div className="article__cover">
-            <img src={cover} alt="my-cover" />
-          </div>
-        </header> */}
+      <article className="max-w-[60%] mx-auto">
+        <header className="mb-14">
+          <h1 className="text-4xl bg-amber-300 h-6 w-fit">
+            {frontmatter.title}
+          </h1>
+        </header>
         <main>
           <ReactMarkdown
             className={style.reactMarkDown}

@@ -1,81 +1,50 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useRef, useEffect } from "react";
-
-import browserPng from "./images/browser.png";
-import useObserver from "../../hooks/useObserver";
+import React, { useEffect, useState } from "react";
 
 const Hero = ({ id }) => {
-  // const [containerRef] = useObserver();
-  const heroTextRef = useRef();
+  const [formattedSentenceArray, setFormattedSentenceArray] = useState(null);
+  const [helloIndex, setHelloIndex] = useState(0);
+  // const heroSentence =
+  //   "Hello ! I'm Christopher, a front-end engineer with years of experience creating robust, accessible and well crafted websites. I focus on using the latest tools available & collaborate with designers to deliver the best experience possible in terms of performance, design and user experience.";
+  // const hellos = ["Hey ! ", " Bonjour ! ", "! مَرْحَبا "];
+  const heroSentence =
+    "I'm Christopher, a front-end engineers with years of experience building robust, accessible & well crafted UIs.";
 
-  // useEffect(() => {
-  //   if (heroTextRef) {
-  //     const htmlArray = [];
-  //     const text = heroTextRef.current.innerHTML;
-  //     const splittedValues = text.split(" ");
-  //     splittedValues.forEach((word) => {
-  //       htmlArray.push(
-  //         `<span className="hover:animate-addColor">${word}</span>`
-  //       );
-  //     });
-  //   }
-  //   // <span className="hover:animate-addColor">
-  // }, []);
+  useEffect(() => {
+    const split = heroSentence.split(" ");
+    const html = split.map((word) => {
+      return <span className="hover:animate-addColor">{word} </span>;
+    });
+    setFormattedSentenceArray(html);
+  }, []);
 
   return (
     <div
       id={id}
-      className="section w-full md:h-[100vh] h-full px-4 md:px-8 pb-4 pt-28"
+      className="section w-full md:h-[100vh] h-full px-4 md:px-8 pb-4 md:pt-28 pt-20"
     >
-      {/* <Image src={browserPng} /> */}
-      <p
-        ref={heroTextRef}
-        className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl tracking-wide leading-[52px]"
-      >
-        <span className="hover:animate-addColor">Hello !</span>{" "}
-        <span className="hover:animate-addColor">I'm</span>{" "}
-        <span className="hover:animate-addColor">Christopher</span>,{" "}
-        <span className="hover:animate-addColor">a</span>{" "}
-        <span className="hover:animate-addColor">front-end</span>{" "}
-        <span className="hover:animate-addColor">engineer</span>{" "}
-        <span className="hover:animate-addColor">with</span>{" "}
-        <span className="hover:animate-addColor">years</span>{" "}
-        <span className="hover:animate-addColor">of</span>{" "}
-        <span className="hover:animate-addColor">experience</span>{" "}
-        <span className="hover:animate-addColor">creating</span>{" "}
-        <span className="hover:animate-addColor">robust</span>,
-        <span className="hover:animate-addColor"> accessible</span>{" "}
-        <span className="hover:animate-addColor">and</span>{" "}
-        <span className="hover:animate-addColor">well</span>{" "}
-        <span className="hover:animate-addColor">crafted</span>{" "}
-        <span className="hover:animate-addColor">websites.</span> <br />
-        <span className="hover:animate-addColor">I</span>{" "}
-        <span className="hover:animate-addColor">focus</span>{" "}
-        <span className="hover:animate-addColor">on</span>{" "}
-        <span className="hover:animate-addColor">using</span>{" "}
-        <span className="hover:animate-addColor">the</span>{" "}
-        <span className="hover:animate-addColor">latest</span>{" "}
-        <span className="hover:animate-addColor">tools</span>{" "}
-        <span className="hover:animate-addColor">available</span>{" "}
-        <span className="hover:animate-addColor">&</span>{" "}
-        <span className="hover:animate-addColor">collaborate</span>{" "}
-        <span className="hover:animate-addColor">with</span>{" "}
-        <span className="hover:animate-addColor">designers</span>{" "}
-        <span className="hover:animate-addColor">to</span>{" "}
-        <span className="hover:animate-addColor">deliver</span>{" "}
-        <span className="hover:animate-addColor">the</span>{" "}
-        <span className="hover:animate-addColor">best</span>{" "}
-        <span className="hover:animate-addColor">experience</span>{" "}
-        <span className="hover:animate-addColor">possible</span>{" "}
-        <span className="hover:animate-addColor">in</span>{" "}
-        <span className="hover:animate-addColor">terms</span>{" "}
-        <span className="hover:animate-addColor">of</span>{" "}
-        <span className="hover:animate-addColor">performance,</span>{" "}
-        <span className="hover:animate-addColor"> design</span>{" "}
-        <span className="hover:animate-addColor">and</span>{" "}
-        <span className="hover:animate-addColor">user</span>{" "}
-        <span className="hover:animate-addColor">experience.</span>
-      </p>
+      <div className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl tracking-wide md:leading-[52px]">
+        <div className="overflow-hidden h-12 md:h-16 mb-2">
+          <div className="block animate-slideHello">
+            <span className="mb-11 inline-block bg-amber-300 p-2 h-10">
+              Hello
+            </span>
+          </div>
+          <div className="block">
+            <span className="mb-11 inline-block bg-green-300 p-2 h-10">
+              Bonjour
+            </span>
+          </div>
+          <div className="block">
+            <span className="mb-11 inline-block bg-cyan-300 p-2 h-10">
+              مَرْحَبا
+            </span>
+          </div>
+        </div>
+        I'm Christopher, a front-end engineers with years of experience building
+        robust, accessible & well crafted UIs.
+        {/* {formattedSentenceArray && formattedSentenceArray.map((word) => word)} */}
+      </div>
     </div>
   );
 };

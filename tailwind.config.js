@@ -29,9 +29,20 @@ module.exports = {
             color: "initial",
           },
         },
+        slideHello: {
+          "0%": { marginTop: "-270px" },
+          "5%": { marginTop: "-180px" },
+          "33%": { marginTop: "-180px" },
+          "38%": { marginTop: "-90px" },
+          "66%": { marginTop: "-90px" },
+          "71%": { marginTop: "0px" },
+          "99.99%": { marginTop: "0px" },
+          "100%": { marginTop: "-270px" },
+        },
       },
       animation: {
         addColor: "addColor 2s ease-out",
+        slideHello: "slideHello 5s linear infinite",
       },
     },
   },
@@ -45,18 +56,22 @@ module.exports = {
         ".project-scale": {
           transform: "scale(1)",
         },
-        ".current": {
+        ".current-section": {
           color: "#c86358",
         },
         ".modal-transition": {
-          transform: "scaleY(.01) scaleX(0)",
-          animation:
-            "unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards",
+          transition: "max-height 3s ease",
+          maxHeight: "auto",
         },
-        ".modal": {
-          transform: "scale(0)",
-          animation:
-            "zoomOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards",
+        ".fit-available": {
+          maxHeight: "1500px",
+        },
+        ".hello-animation": {
+          animation: "slideHello 5s linear infinite",
+        },
+        ".hello__item": {
+          lineHeight: "40px",
+          margin: 0,
         },
       });
     }),
