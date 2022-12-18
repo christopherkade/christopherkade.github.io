@@ -4,9 +4,9 @@ import Head from "next/head";
 import { getAllPublished } from "../services/md";
 import Link from "next/link";
 
-import { colors } from "../constants/colors";
+import { getRandomStrikeColor } from "../services/getRandomStrikeColor";
 
-const ArticleCard = ({ slug, title, bgColor }) => {
+const ArticleCard = ({ slug, title }) => {
   return (
     <Link
       href={slug}
@@ -14,7 +14,7 @@ const ArticleCard = ({ slug, title, bgColor }) => {
     >
       <>
         <h3
-          className={`text-xl md:text-3xl box-decoration-clone strike-through-${bgColor} inline`}
+          className={`text-xl md:text-3xl box-decoration-clone ${getRandomStrikeColor()} inline`}
         >
           {title}
         </h3>
@@ -35,11 +35,7 @@ const Posts = ({ posts }) => {
       <div className="flex flex-col text-left">
         {posts.map(({ frontmatter }) => {
           return (
-            <ArticleCard
-              slug={frontmatter.slug}
-              title={frontmatter.title}
-              bgColor={colors[Math.floor(Math.random() * colors.length)]}
-            />
+            <ArticleCard slug={frontmatter.slug} title={frontmatter.title} />
           );
         })}
       </div>

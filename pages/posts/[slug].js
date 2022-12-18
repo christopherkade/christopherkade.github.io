@@ -7,6 +7,7 @@ import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 import { getSinglePost } from "../../services/md";
 import style from "../../styles/markdown-styles.module.css";
+import { getRandomStrikeColor } from "../../services/getRandomStrikeColor";
 
 import javascript from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
 import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
@@ -72,7 +73,9 @@ const Post = ({ content, frontmatter }) => {
     <div className="pt-28 max-w-7xl p-6 mx-auto">
       <article className="max-w-[60%] mx-auto">
         <header className="mb-14">
-          <h1 className="text-4xl box-decoration-clone strike-through-yellow inline">
+          <h1
+            className={`text-4xl box-decoration-clone ${getRandomStrikeColor()} inline`}
+          >
             {frontmatter.title}
           </h1>
         </header>
