@@ -12,6 +12,8 @@ import ocPng from "./images/oc.png";
 import snippetPng from "./images/snippet.png";
 import reactcraftPng from "./images/reactcraft.png";
 
+import { getRandomStrikeColor } from "../../services/getRandomStrikeColor";
+
 const Projects = ({ id }) => {
   const projects = [
     {
@@ -72,45 +74,51 @@ const Projects = ({ id }) => {
   ];
 
   return (
-    <div id={id} className="section h-full p-6 max-w-7xl mx-auto">
-      {projects.map(({ title, href, image, description }, index) => {
-        return (
-          <div className="text-center mb-8 last:mb-0" key={title}>
-            <div>
-              <h2 className="block sm:hidden">{title}</h2>
-              <p className="block sm:hidden font-extralight">{description}</p>
-            </div>
-            <a
-              id={`link-${index}`}
-              href={href}
-              target="_blank"
-              rel="noreferrer"
-              className="relative group"
-            >
-              <Tippy
-                delay={500}
-                followCursor={true}
-                plugins={[followCursor]}
-                render={(attrs) => (
-                  <div
-                    tabIndex="-1"
-                    className="bg-violet-300 text-theme-primary p-2 rounded-md"
-                    {...attrs}
-                  >
-                    {description}
-                  </div>
-                )}
+    <div id={id} className="pt-12 section">
+      <div className="h-full p-6 max-w-7xl mx-auto">
+        {projects.map(({ title, href, image, description }, index) => {
+          return (
+            <div className="text-center mb-8 last:mb-0" key={title}>
+              <div>
+                <h2
+                  className={`w-fit mx-auto block sm:hidden ${getRandomStrikeColor()}`}
+                >
+                  {title}
+                </h2>
+                <p className="block sm:hidden font-extralight">{description}</p>
+              </div>
+              <a
+                id={`link-${index}`}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                className="relative group"
               >
-                <Image
-                  src={image}
-                  className="w-full h-fit mt-3 project-transition hover:project-scale"
-                  alt={description}
-                />
-              </Tippy>
-            </a>
-          </div>
-        );
-      })}
+                <Tippy
+                  delay={500}
+                  followCursor={true}
+                  plugins={[followCursor]}
+                  render={(attrs) => (
+                    <div
+                      tabIndex="-1"
+                      className="bg-violet-300 text-theme-primary p-2 rounded-md"
+                      {...attrs}
+                    >
+                      {description}
+                    </div>
+                  )}
+                >
+                  <Image
+                    src={image}
+                    className="w-full h-fit mt-3 project-transition hover:project-scale"
+                    alt={description}
+                  />
+                </Tippy>
+              </a>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

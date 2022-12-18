@@ -1,5 +1,4 @@
 import React from "react";
-import { useRouter } from "next/router";
 import ReactMarkdown from "react-markdown";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import rangeParser from "parse-numeric-range";
@@ -26,7 +25,6 @@ SyntaxHighlighter.registerLanguage("markdown", markdown);
 SyntaxHighlighter.registerLanguage("json", json);
 
 const Post = ({ content, frontmatter }) => {
-  const router = useRouter();
   const syntaxTheme = oneDark;
 
   const MarkdownComponents = {

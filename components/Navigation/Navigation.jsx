@@ -10,7 +10,7 @@ const CustomLink = ({ children, href, scroll, scrollToTop }) => {
       href={href}
       scroll={scroll}
       onClick={() => (scrollToTop ? window.scroll(0, 0) : null)}
-      className="strike-through-animation hover:strike-through-yellow list__link block py-2 px-2 md:px-0 font-extralight"
+      className="list__link strike-through-animation hover:strike-through-yellow block py-2 px-2 md:px-0 font-extralight"
     >
       {children}
     </Link>
@@ -26,7 +26,7 @@ const Navigation = ({ dislayNavigation }) => {
       className={classNames(
         "fixed top-0 w-full text-grey-900 px-1 sm:px-4 bg-theme-primary z-10",
         {
-          shadow: scrollPosition > 0,
+          shadow: scrollPosition > 10,
           "shadow-none": scrollPosition === 0,
         }
       )}

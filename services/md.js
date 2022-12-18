@@ -10,11 +10,18 @@ export const getPath = (folder) => {
 };
 
 export const getAllPublished = (folder) => {
-  const posts = getAllPosts(folder);
-  //   console.log("865 --- ALL POSTS", posts);
+  let posts = getAllPosts(folder);
+
+  posts = posts.sort(
+    (a, b) =>
+      Date.parse(new Date(b.frontmatter.date)) -
+      Date.parse(new Date(a.frontmatter.date))
+  );
+
   const published = posts.filter((post) => {
     return post.frontmatter.isPublished === true;
   });
+
   return published;
 };
 
