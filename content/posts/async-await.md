@@ -2,7 +2,7 @@
 title: "The dangers of async/await "
 date: "2020-01-16"
 description: "Pretty, but dangerous."
-slug: "/posts/async-await"
+slug: "/post/async-await"
 isPublished: true
 ---
 

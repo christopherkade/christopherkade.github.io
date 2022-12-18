@@ -2,7 +2,7 @@
 title: "Creating a custom CSS loader of a Yu-Gi-Oh card flipping"
 date: "2022-12-07"
 description: "A trip down memory lane with some fun CSS tricks."
-slug: "/posts/css-card-flip"
+slug: "/post/css-card-flip"
 isPublished: true
 ---
 

@@ -33,13 +33,6 @@ const Posts = ({ posts }) => {
       </Head>
 
       <div className="flex flex-col text-left">
-        {/* <Link
-          href="/#articles"
-          className="flex justify-start text-2xl hover:strike-through-violet mr-auto w-fit mb-8"
-        >
-          Back home
-        </Link> */}
-
         {posts.map(({ frontmatter }) => {
           return (
             <ArticleCard
