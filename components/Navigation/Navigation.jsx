@@ -25,8 +25,6 @@ const Navigation = () => {
   // const displayNav = asPath.includes("posts") ? false : true;
   const displayNav = true;
 
-  console.log("865 --- displayNav", displayNav);
-
   return (
     <nav
       className={classNames(
