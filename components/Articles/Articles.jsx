@@ -1,6 +1,7 @@
 import React from "react";
-import classNames from "classnames";
 import Link from "next/link";
+
+import { colors } from "../../constants/colors";
 
 const ArticleCard = ({ slug, title, bgColor }) => {
   return (
@@ -20,7 +21,6 @@ const ArticleCard = ({ slug, title, bgColor }) => {
 };
 
 const Articles = ({ id, posts }) => {
-  const colors = ["yellow", "green", "cyan", "violet"];
   const firstFourFiles = posts.slice(0, 4);
 
   // TODO:

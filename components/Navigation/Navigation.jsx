@@ -1,7 +1,6 @@
 import React from "react";
 import classNames from "classnames";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 import useScrollPosition from "../../hooks/useScrollPosition";
 
@@ -49,17 +48,17 @@ const Navigation = ({ dislayNavigation }) => {
               </CustomLink>
             </li>
             <li className="ml-0">
-              <CustomLink href="#articles" scroll={false}>
+              <CustomLink href="/#articles" scroll={false}>
                 articles,
               </CustomLink>
             </li>
             <li className="ml-0">
-              <CustomLink href="#projects" scroll={false}>
+              <CustomLink href="/#projects" scroll={false}>
                 projects,
               </CustomLink>
             </li>
             <li className="ml-0">
-              <CustomLink href="#contact" scroll={false}>
+              <CustomLink href="/#contact" scroll={false}>
                 contact
               </CustomLink>
             </li>

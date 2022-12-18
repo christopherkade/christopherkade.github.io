@@ -4,6 +4,8 @@ import Head from "next/head";
 import { getAllPublished } from "../services/md";
 import Link from "next/link";
 
+import { colors } from "../constants/colors";
+
 const ArticleCard = ({ slug, title, bgColor }) => {
   return (
     <Link
@@ -22,8 +24,6 @@ const ArticleCard = ({ slug, title, bgColor }) => {
 };
 
 const Posts = ({ posts }) => {
-  const colors = ["yellow", "green", "cyan", "violet"];
-
   return (
     <div className="h-full md:pt-28 pt-20 px-4 md:px-8">
       <Head>

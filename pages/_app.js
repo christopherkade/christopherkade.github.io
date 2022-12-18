@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div className={inter.className}>
-      <Navigation displayNavigation={asPath.includes("post") ? false : true} />
+      <Navigation displayNavigation={asPath.includes("posts") ? false : true} />
 
       <Component {...pageProps} />
     </div>
