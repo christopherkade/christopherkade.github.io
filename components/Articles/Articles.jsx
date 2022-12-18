@@ -58,6 +58,7 @@ const Articles = ({ id, posts }) => {
             width={15}
             height={15}
             className="ml-2 rotate-180"
+            alt=""
           />
         </Link>
       </div>

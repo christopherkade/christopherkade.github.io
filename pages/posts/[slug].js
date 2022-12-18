@@ -82,7 +82,13 @@ const Post = ({ content, frontmatter }) => {
       <article className="md:max-w-[60%] mx-auto">
         <header className="mb-14">
           <Link className="flex w-fit mb-8 text-lg group" href="/posts">
-            <Image src={backArrowSvg} width={15} height={15} className="mr-2" />
+            <Image
+              src={backArrowSvg}
+              width={15}
+              height={15}
+              className="mr-2"
+              alt="Back button to all articles"
+            />
             <span className="group-hover:strike-through-yellow">
               All articles
             </span>

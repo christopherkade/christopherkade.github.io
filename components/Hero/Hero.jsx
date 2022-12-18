@@ -13,7 +13,11 @@ const Hero = ({ id }) => {
   useEffect(() => {
     const split = heroSentence.split(" ");
     const html = split.map((word) => {
-      return <span className="hover:animate-addColor">{word} </span>;
+      return (
+        <span className="hover:animate-addColor" key={word}>
+          {word}{" "}
+        </span>
+      );
     });
     setFormattedSentenceArray(html);
   }, []);
