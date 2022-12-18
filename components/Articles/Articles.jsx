@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { colors } from "../../constants/colors";
+import backArrowSvg from "../../images/back-arrow.svg";
 
 const ArticleCard = ({ slug, title, bgColor }) => {
   return (
@@ -46,9 +48,17 @@ const Articles = ({ id, posts }) => {
 
         <Link
           href="/posts"
-          className="flex justify-end text-lg mt-2 hover:strike-through-violet ml-auto w-fit"
+          className="flex justify-end text-lg mt-2 ml-auto w-fit group"
         >
-          View all articles
+          <span className="group-hover:strike-through-yellow">
+            View all articles
+          </span>
+          <Image
+            src={backArrowSvg}
+            width={15}
+            height={15}
+            className="ml-2 rotate-180"
+          />
         </Link>
       </div>
     </div>

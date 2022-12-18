@@ -4,12 +4,6 @@ description: "It's free and easy to set up."
 date: "2017-12-28"
 slug: "/posts/heroku-api"
 isPublished: true
-category: "Node"
-tags:
-  - "Node"
-  - "Javascript"
-  - "API"
-template: "post"
 ---
 
 Anyone that has met me knows that I love theme parks, that's why I recently deployed [Parks](https://christopherkade.com/parks/), a platform to retrieve wait times at most Disneyland Park around the world.

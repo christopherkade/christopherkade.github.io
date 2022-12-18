@@ -4,10 +4,6 @@ date: "2022-12-07"
 description: "A trip down memory lane with some fun CSS tricks."
 slug: "/posts/css-card-flip"
 isPublished: true
-category: "CSS"
-tags:
-  - "CSS"
-template: "post"
 ---
 
 You read that right, it's time to bring out your Blue Eyes White Dragon and d-d-d-d-deliver some nice animations to your side projects. Bear with me while I revisit my childhood please, and in the meantime, let's have some fun with CSS 🥰

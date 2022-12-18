@@ -4,11 +4,6 @@ date: "2019-08-12"
 description: "Naming conventions, labels, code reviews and more."
 slug: "/posts/git-workflow"
 isPublished: true
-category: "Productivity"
-tags:
-  - "Productivity"
-  - "Git"
-template: "post"
 ---
 
 Whether you are on your own or with a team, having an efficient Git workflow can go a long way to boost your productivity.  

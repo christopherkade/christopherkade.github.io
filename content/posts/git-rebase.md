@@ -4,11 +4,6 @@ description: "Rebase & a few tricks"
 date: "2019-06-18"
 slug: "/posts/git-rebase"
 isPublished: true
-category: "Tutorial"
-tags:
-  - "Tutorial"
-  - "Git"
-template: "post"
 ---
 
 <br>

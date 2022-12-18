@@ -4,10 +4,6 @@ description: "This TC39 proposal might add a long awaited feature to our favorit
 date: "2022-11-30"
 slug: "/posts/javascript-typing"
 isPublished: true
-category: "Javascript"
-tags:
-  - "Javascript"
-template: "post"
 ---
 
 Typing. Love it or hate it, it has many advantages: better DX (through intellisense auto-completion), better code documentation, less time consuming errors. Its benefits greatly outweigh its cost, so why do some people still avoid it? One word: **Typescript**. You have to set it up and make sure your tooling is working correctly which can add a layer of frustration to any project.

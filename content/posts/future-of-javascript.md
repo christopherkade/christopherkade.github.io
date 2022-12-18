@@ -4,10 +4,6 @@ description: "Let's discover JS features that should be available in the near fu
 date: "2019-10-24"
 slug: "/posts/future-of-javascript"
 isPublished: true
-category: "Javascript"
-tags:
-  - "Javascript"
-template: "post"
 ---
 
 We take a lot of Javascript features for granted, `map`, `filter`, `reduce`, `const`/`let`, ternaries... each one of these had a major impact on our code bases when they were introduced & allow for us to write cleaner and often times more performant code.

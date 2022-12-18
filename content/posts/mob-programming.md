@@ -4,10 +4,6 @@ description: "Trust me, it's fun."
 date: "2018-10-25"
 slug: "/posts/mob-programming"
 isPublished: true
-category: "Productivity"
-tags:
-  - "Productivity"
-template: "post"
 ---
 
 I'm currently interning at a consulting firm "specialized in software architecture and Agile methods with a threefold-expertise in consulting, realization and training" called [Zenika](https://www.zenika.com/).  

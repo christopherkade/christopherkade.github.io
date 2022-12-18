@@ -4,11 +4,6 @@ description: "From class to functional components."
 date: "2019-05-04"
 slug: "/posts/react-hooks"
 isPublished: true
-category: "React"
-tags:
-  - "React"
-  - "Javascript"
-template: "post"
 ---
 
 React Hooks have been on everyone's mind for a while now, and now that the hype has died down, I thought it would be nice to write a short introduction on them and go through concrete use-cases.

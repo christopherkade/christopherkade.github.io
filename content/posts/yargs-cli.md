@@ -4,11 +4,6 @@ description: "YAAARG(S) MATEY!"
 date: "2019-02-07"
 slug: "/posts/yargs-cli"
 isPublished: true
-category: "Tutorial"
-tags:
-  - "Tutorial"
-  - "Javascript"
-template: "post"
 ---
 
 [Yargs](http://yargs.js.org/) is a great library to build command line apps, simply put, it will make the process of creating an application that runs in the console a breeze. What could make it even better? It's PIRATE themed (it's called YARgs you guys), making it officially the best tool ever.

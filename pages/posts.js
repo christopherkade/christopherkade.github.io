@@ -27,7 +27,7 @@ const Posts = ({ posts }) => {
   return (
     <div className="h-full md:pt-28 pt-20 px-4 md:px-8">
       <Head>
-        <title>Site seeing - Blog</title>
+        <title>Site Seeing - A Technical Blog</title>
         <meta name="description" content="Christopher Kade's technical blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

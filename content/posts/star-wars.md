@@ -4,10 +4,6 @@ description: "I have a bad feeling about this."
 date: "2018-01-15"
 slug: "/posts/star-wars"
 isPublished: true
-category: "Tutorial"
-tags:
-  - "Tutorial"
-template: "post"
 ---
 
 To celebrate **Star Wars: The Last Jedi** coming to theaters I decided to implement a fun easter egg on my [personal website](https://christopherkade.com/).

@@ -4,11 +4,6 @@ date: "2019-11-20"
 description: "Sitting down all day can have a toll on anyone, here's what you should keep in mind."
 slug: "/posts/developer-health"
 isPublished: true
-category: "Health"
-tags:
-  - "Health"
-  - "Productivity"
-template: "post"
 ---
 
 I've recently contracted tendonitis in both of my hands, it's nothing major and can be treated of course, but it made me realize how I have been passive about my health as a developer up until then. I'm not talking about going for a run or hitting the gym multiple times a week, but all the other, seemingly little things that can have a major impact on our careers.  

@@ -4,10 +4,6 @@ description: "I was this close to making a Vue pun."
 date: "2018-05-20"
 slug: "/posts/website-vue"
 isPublished: true
-category: "Vue"
-tags:
-  - "Vue"
-template: "post"
 ---
 
 I finally started fiddling with [Vue](https://vuejs.org/) in my free time and I'm happy to say I've fallen in love with this framework.

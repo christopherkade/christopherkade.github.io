@@ -4,11 +4,6 @@ description: "Nuxt.js development made easier."
 date: "2019-05-21"
 slug: "/posts/nuxt-cheat-sheet"
 isPublished: true
-category: "Vue"
-tags:
-  - "Vue"
-  - "Javascript"
-template: "post"
 ---
 
 <br>

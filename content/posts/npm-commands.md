@@ -4,10 +4,6 @@ description: "npm pack, view, dedupe & much more."
 date: "2019-07-09"
 slug: "/posts/npm-commands"
 isPublished: true
-category: "Javascript"
-tags:
-  - "Javascript"
-template: "post"
 ---
 
 We all know and use `npm start`, `npm audit`, `npm init` and many more `npm` commands on a daily basis, but there are quite a few of them that are underutilized ! This article is here to show you some awesome things you can do with the `npm` CLI.

@@ -4,11 +4,6 @@ description: "Easy, responsive and elegant."
 date: "2019-05-10"
 slug: "/posts/flexbox"
 isPublished: true
-category: "CSS"
-tags:
-  - "CSS"
-  - "Design"
-template: "post"
 ---
 
 Flexbox is a must in today's UI development world as it lets you create responsive and elegant layouts in record time 🙆‍♂️

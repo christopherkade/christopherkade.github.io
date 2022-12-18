@@ -4,11 +4,6 @@ description: ""
 date: "2019-06-11"
 slug: "/posts/nuxt-i18n"
 isPublished: true
-category: "Vue"
-tags:
-  - "Vue"
-  - "Javascript"
-template: "post"
 ---
 
 Implementing internationalization (commonly known as `i18n`) is often feared by a lot of Front-End developers. Setting it up, adding new languages on the fly & UX are often main concerns when it comes to it.

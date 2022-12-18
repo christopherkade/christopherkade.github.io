@@ -4,12 +4,6 @@ description: "Lots of apps you might use on a daily basis use Electron."
 date: "2017-12-20"
 slug: "/posts/intro-electron"
 isPublished: true
-category: "Javascript"
-tags:
-  - "Javascript"
-  - "Angular"
-  - "Electron"
-template: "post"
 ---
 
 Everybody knows about [Electron](https://electronjs.org/), it's one of those open-source tools that the community is really grateful for as it gives us the liberty to develop amazing things such as the text editor I'm currently using: [Atom](https://atom.io/).

@@ -4,11 +4,6 @@ description: "A good start to your testing journey."
 date: "2019-04-01"
 slug: "/posts/intro-to-testing"
 isPublished: true
-category: "Testing"
-tags:
-  - "Testing"
-  - "Javascript"
-template: "post"
 ---
 
 Alright, you've dabbled with web developments, made a few projects here and there, deployed a few applications that helped you grasp essential concepts of Front-End development, from routing, server-side rendering, state-management to asynchronous queries etc.

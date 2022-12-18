@@ -4,12 +4,6 @@ description: "Some pros, cons & useful links."
 date: "2019-06-07"
 slug: "/posts/server-side-rendering"
 isPublished: true
-category: "Tutorial"
-tags:
-  - "Tutorial"
-  - "SSR"
-  - "SEO"
-template: "post"
 ---
 
 > What is Server Side Rendering (SSR) ?

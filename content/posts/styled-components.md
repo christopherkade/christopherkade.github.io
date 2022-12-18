@@ -2,23 +2,8 @@
 title: "Styled components: what, why and how?"
 description: "A great way of styling your React projects."
 date: "2019-05-14"
-path: "/styled-components"
----
-
----
-
-title: "Styled components: what, why and how?"
-description: "A great way of styling your React projects."
-date: "2019-05-14"
-slug: "/posts/styled-components"
+slug: "/styled-components"
 isPublished: true
-category: "React"
-tags:
-
-- "React"
-- "Javascript"
-  template: "post"
-
 ---
 
 [Styled Components](https://www.styled-components.com/) are a way of styling your React components using CSS **and** the advantages offered by ES6, they are best explained by the official docs:

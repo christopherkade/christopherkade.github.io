@@ -4,10 +4,6 @@ description: "Reflecting on five years of studying."
 date: "2019-02-11"
 slug: "/posts/student-tips"
 isPublished: true
-category: "Productivity"
-tags:
-  - "Productivity"
-template: "post"
 ---
 
 Computer programming overall is an odd field, isn't it? We can improve ourselves on so many fronts and yet, students tend to overlook important skills that will be game-changers in their early career.

@@ -4,12 +4,6 @@ description: "Finally getting my hands dirty and learning the essentials."
 date: "2017-11-25"
 slug: "/posts/intro-reactjs"
 isPublished: true
-category: "React"
-tags:
-  - "React"
-  - "Javascript"
-  - "Tutorial"
-template: "post"
 ---
 
 As much as I love the ever-evolving world of web development, I have not taken full advantage of it by discovering two major libraries/frameworks, namely [ReactJS](https://reactjs.org/) and [VueJS](https://vuejs.org/).

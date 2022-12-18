@@ -16,7 +16,10 @@ const Home = ({ posts }) => {
     <div className="h-full">
       <Head>
         <title>Christopher Kade</title>
-        <meta name="description" content="Christopher Kade's home base" />
+        <meta
+          name="description"
+          content="Christopher Kade's portfolio website"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

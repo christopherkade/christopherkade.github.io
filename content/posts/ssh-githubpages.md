@@ -4,10 +4,6 @@ description: "The green lock of trust is vital from now on."
 date: "2017-12-06"
 slug: "/posts/ssh-githubpages"
 isPublished: true
-category: "Tutorial"
-tags:
-  - "Tutorial"
-template: "post"
 ---
 
 After deploying my new web-tool (namely [Snippet](https://snippet.christopherkade.com/)) I figured it would be time to finally add SSL to my domain. Even though no data leaves or enters my website, I find the green lock of trust to be reassuring and a norm on the web, and so do most users today.

@@ -4,10 +4,6 @@ description: "A talk for both mentors and mentees."
 date: "2019-04-05"
 slug: "/posts/mentoring"
 isPublished: true
-category: "Talks"
-tags:
-  - "Talks"
-template: "post"
 ---
 
 Once more, I managed to attend one of Algolia's TechLunch. This time the subject was mentoring, more specifically: why mentor, the difference between a mentor, a coach and a sponsor and how to find a mentor were all questions that were covered by three wonderful speakers:

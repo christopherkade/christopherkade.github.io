@@ -4,11 +4,6 @@ description: "Contributing isn't as hard as it looks."
 date: "2018-08-02"
 slug: "/posts/open-source"
 isPublished: true
-category: "Tutorial"
-tags:
-  - "Tutorial"
-  - "Open-source"
-template: "post"
 ---
 
 From my experience, the hardest step to contributing to the open-source ecosystem is actually jumping in and getting started. Although many tools and platforms are available to help developers with doing just that, I wanted to give a condensed list of steps **and** tools to make that experience as easy as possible.

@@ -4,11 +4,6 @@ description: "Practical examples of media queries"
 date: "2019-07-02"
 slug: "/posts/media-queries"
 isPublished: true
-category: "CSS"
-tags:
-  - "CSS"
-  - "Tutorial"
-template: "post"
 ---
 
 Media queries are a huge part of our daily life as web developers, and yet, most of us have only touched the surface when it comes to what they can do.

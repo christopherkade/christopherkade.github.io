@@ -4,10 +4,6 @@ description: "Using AWS Route 53 and Github pages."
 date: "2017-10-02"
 slug: "/posts/subdomain-githubpages"
 isPublished: true
-category: "Tutorial"
-tags:
-  - "Tutorial"
-template: "post"
 ---
 
 Have you noticed the URL of this blog?

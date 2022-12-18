@@ -4,11 +4,6 @@ description: "Nobody will play it but hey, it was fun."
 date: "2017-11-17"
 slug: "/posts/intro-phaser"
 isPublished: true
-category: "Javascript"
-tags:
-  - "Javascript"
-  - "HTML5"
-template: "post"
 ---
 
 This blog post sums up my journey of learning how to use the famous (and free) HTML5 game framework Phaser.

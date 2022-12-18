@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import useScrollPosition from "../../hooks/useScrollPosition";
 
@@ -18,8 +19,13 @@ const CustomLink = ({ children, href, scroll, scrollToTop }) => {
 };
 
 // use dislayNavigation for display outside of main page (hide nav?)
-const Navigation = ({ dislayNavigation }) => {
+const Navigation = () => {
   const scrollPosition = useScrollPosition();
+  const { asPath } = useRouter();
+  // const displayNav = asPath.includes("posts") ? false : true;
+  const displayNav = true;
+
+  console.log("865 --- displayNav", displayNav);
 
   return (
     <nav
@@ -28,6 +34,7 @@ const Navigation = ({ dislayNavigation }) => {
         {
           shadow: scrollPosition > 10,
           "shadow-none": scrollPosition === 0,
+          "hidden md:block": asPath.includes("/posts/"),
         }
       )}
     >
@@ -40,30 +47,32 @@ const Navigation = ({ dislayNavigation }) => {
           CHRISTOPHER KADE
         </Link>
 
-        <div className="block w-auto" id="navbar-default">
-          <ul className="flex p-2 flex-row md:space-x-8 mt-0 text-sm font-medium">
-            <li>
-              <CustomLink href="/" scroll={false} scrollToTop={true}>
-                About,
-              </CustomLink>
-            </li>
-            <li className="ml-0">
-              <CustomLink href="/#articles" scroll={false}>
-                articles,
-              </CustomLink>
-            </li>
-            <li className="ml-0">
-              <CustomLink href="/#projects" scroll={false}>
-                projects,
-              </CustomLink>
-            </li>
-            <li className="ml-0">
-              <CustomLink href="/#contact" scroll={false}>
-                contact
-              </CustomLink>
-            </li>
-          </ul>
-        </div>
+        {displayNav && (
+          <div className="block w-auto" id="navbar-default">
+            <ul className="flex p-2 flex-row md:space-x-8 mt-0 text-sm font-medium">
+              <li>
+                <CustomLink href="/" scroll={false} scrollToTop={true}>
+                  About,
+                </CustomLink>
+              </li>
+              <li className="ml-0">
+                <CustomLink href="/#articles" scroll={false}>
+                  articles,
+                </CustomLink>
+              </li>
+              <li className="ml-0">
+                <CustomLink href="/#projects" scroll={false}>
+                  projects,
+                </CustomLink>
+              </li>
+              <li className="ml-0">
+                <CustomLink href="/#contact" scroll={false}>
+                  contact
+                </CustomLink>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </nav>
   );

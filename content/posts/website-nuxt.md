@@ -4,10 +4,6 @@ description: "What it is, why it rocks, how I did it."
 date: "2018-10-10"
 slug: "/posts/website-nuxt"
 isPublished: true
-category: "Vue"
-tags:
-  - "Vue"
-template: "post"
 ---
 
 A few days ago I published the latest version of my website, completely redone using [NuxtJS](https://nuxtjs.org/).

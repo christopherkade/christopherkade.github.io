@@ -4,10 +4,6 @@ description: "Set up a deployment pipeline in a few lines of configuration."
 date: "2018-10-15"
 slug: "/posts/travis-githubpages"
 isPublished: true
-category: "Tutorial"
-tags:
-  - "Tutorial"
-template: "post"
 ---
 
 **Travis CI** is a continuous integration service used to build and test software hosted on Github.  

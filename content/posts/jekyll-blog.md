@@ -4,10 +4,6 @@ description: "Obligatory 'here is how I made this blog' first post."
 date: "2017-09-20"
 slug: "/posts/jekyll-blog"
 isPublished: true
-category: "Tutorial"
-tags:
-  - "Tutorial"
-template: "post"
 ---
 
 What better way to inaugurate my blog than to explain how to set up something similar?
