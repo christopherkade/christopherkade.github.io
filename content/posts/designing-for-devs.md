@@ -3,7 +3,7 @@ title: "Designing for Developers - a discussion at Algolia"
 date: "2019-01-23"
 description: "What are the differences between designing for developers VS for end consumers? How do developers perceive design?"
 slug: "/posts/designing-for-devs"
-draft: false
+isPublished: true
 category: "Talks"
 tags:
   - "Talks"

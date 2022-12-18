@@ -94,7 +94,7 @@ const Projects = ({ id }) => {
                 render={(attrs) => (
                   <div
                     tabIndex="-1"
-                    className="bg-theme-select text-theme-primary p-2 rounded-md"
+                    className="bg-violet-300 text-theme-primary p-2 rounded-md"
                     {...attrs}
                   >
                     {description}

@@ -2,8 +2,14 @@
 title: "Writing elegant and resilient UI components"
 date: "2019-08-06"
 description: ""
-slug: "/post/elegant-components"
+slug: "/posts/elegant-components"
 isPublished: true
+category: "Tutorial"
+tags:
+  - "Tutorial"
+  - "Javascript"
+  - "Web"
+template: "post"
 ---
 
 As a Front-end developer, building resilient and reusable components is a top priority of mine, and there are so many arguments in favor of well thought out components.

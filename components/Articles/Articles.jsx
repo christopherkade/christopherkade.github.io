@@ -1,30 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import classNames from "classnames";
 import Link from "next/link";
-// import posts from "../../content/posts.json";
-import { ArticlesModal } from "../ArticlesModal";
 
-const ArticleCard = ({ slug, title, description }) => {
+const ArticleCard = ({ slug, title, bgColor }) => {
   return (
     <Link
       href={slug}
-      className="border-2 border-black p-6 hover:project-scale project-transition mb-2 md:mr-2"
+      className="hover:project-scale project-transition mb-2 md:mr-2"
     >
       <>
-        <h3 className="text-xl mb-4">{title}</h3>
+        <h3
+          className={`text-xl mb-4 box-decoration-clone strike-through-${bgColor} inline`}
+        >
+          {title}
+        </h3>
       </>
     </Link>
   );
 };
 
 const Articles = ({ id, posts }) => {
-  const [showArticles, setShowArticles] = useState(false);
-  // const { files } = posts;
+  const colors = ["yellow", "green", "cyan", "violet"];
   const firstFourFiles = posts.slice(0, 4);
-
-  const handleArticleModalDisplay = (showArticles) => {
-    setShowArticles(showArticles);
-  };
 
   // TODO:
   // 1. Order by date (descending)
@@ -35,57 +32,27 @@ const Articles = ({ id, posts }) => {
     <>
       <div
         id={id}
-        className={classNames(
-          "modal-transition section max-w-7xl mx-auto border-t border-b border-black p-6 mb-10",
-          {
-            "z-40 my-0 bg-theme-primary w-auto fit-available": showArticles,
-          }
-        )}
+        className={
+          "modal-transition section max-w-7xl mx-auto border-t border-b border-black p-6 mb-10"
+        }
       >
-        {showArticles ? (
-          <h2 className="text-3xl mb-8">My articles</h2>
-        ) : (
-          <h2 className="text-3xl mb-8">My most recent articles</h2>
-        )}
+        <h2 className="text-3xl mb-8">My most recent articles</h2>
 
         <div className="grid grid-rows-4 md:grid-cols-4 md:grid-rows-none">
-          {!showArticles
-            ? firstFourFiles.map(({ frontmatter }) => (
-                <ArticleCard
-                  key={frontmatter.slug}
-                  slug={frontmatter.slug}
-                  title={frontmatter.title}
-                  description={frontmatter.description}
-                />
-              ))
-            : posts.map(({ frontmatter }) => (
-                <ArticleCard
-                  key={frontmatter.slug}
-                  slug={frontmatter.slug}
-                  title={frontmatter.title}
-                  description={frontmatter.description}
-                />
-              ))}
+          {firstFourFiles.map(({ frontmatter }, index) => (
+            <ArticleCard
+              key={frontmatter.slug}
+              slug={frontmatter.slug}
+              title={frontmatter.title}
+              description={frontmatter.description}
+              bgColor={colors[index]}
+            />
+          ))}
         </div>
 
-        {showArticles ? (
-          <button
-            className="flex ml-auto text-lg mt-2"
-            onClick={() => handleArticleModalDisplay(false)}
-          >
-            Show less
-          </button>
-        ) : (
-          <button
-            className="flex ml-auto text-lg mt-2"
-            onClick={() => handleArticleModalDisplay(true)}
-          >
-            See all article ➡️
-          </button>
-        )}
-        {/* {showArticles && (
-          <ArticlesModal setShowArticles={setShowArticles} posts={posts} />
-        )} */}
+        <Link href="/posts" className="flex justify-end text-lg mt-2">
+          Show me all of them
+        </Link>
       </div>
     </>
   );

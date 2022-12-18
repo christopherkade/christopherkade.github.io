@@ -1,9 +1,14 @@
 ---
-title: "The dangers of async/await"
+title: "The dangers of async/await "
 date: "2020-01-16"
 description: "Pretty, but dangerous."
-slug: "/post/async-await"
+slug: "/posts/async-await"
 isPublished: true
+category: "Javascript"
+tags:
+  - "Javascript"
+  - "Performance"
+template: "post"
 ---
 
 After a few months consulting on the rewriting of a large-scale application, I've come to realize that `async`/`await` was used de facto for most asynchronous operation. For example, consider this Vue code snippet:

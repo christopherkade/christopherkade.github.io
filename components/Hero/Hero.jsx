@@ -21,28 +21,32 @@ const Hero = ({ id }) => {
   return (
     <div
       id={id}
-      className="section w-full md:h-[100vh] h-full px-4 md:px-8 pb-4 md:pt-28 pt-20"
+      className="section w-full h-[100vh] px-4 md:px-8 pb-4 md:pt-28 pt-20"
     >
-      <div className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl tracking-wide md:leading-[52px]">
+      <div className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl tracking-wide md:leading-[60px]">
         <div className="overflow-hidden h-12 md:h-16 mb-2">
-          <div className="block animate-slideHello">
-            <span className="mb-11 inline-block bg-amber-300 p-2 h-10">
+          <div className="block animate-slideHelloMobile md:animate-slideHello">
+            <span className="mb-11 inline-block strike-through-yellow">
               Hello
             </span>
           </div>
           <div className="block">
-            <span className="mb-11 inline-block bg-green-300 p-2 h-10">
+            <span className="mb-11 inline-block strike-through-green">
               Bonjour
             </span>
           </div>
           <div className="block">
-            <span className="mb-11 inline-block bg-cyan-300 p-2 h-10">
+            <span className="mb-11 inline-block strike-through-cyan">
               مَرْحَبا
             </span>
           </div>
         </div>
-        I'm Christopher, a front-end engineers with years of experience building
-        robust, accessible & well crafted UIs.
+        I'm Christopher, a{" "}
+        <span className="strike-through-green">front-end engineer</span> with
+        years of experience building{" "}
+        <span className="strike-through-cyan">robust</span>,{" "}
+        <span className="strike-through-violet">accessible</span> &{" "}
+        <span className="strike-through-yellow">well crafted</span> UIs.
         {/* {formattedSentenceArray && formattedSentenceArray.map((word) => word)} */}
       </div>
     </div>

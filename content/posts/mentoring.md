@@ -1,0 +1,129 @@
+---
+title: "Mentoring - A discussion at Algolia"
+description: "A talk for both mentors and mentees."
+date: "2019-04-05"
+slug: "/posts/mentoring"
+isPublished: true
+category: "Talks"
+tags:
+  - "Talks"
+template: "post"
+---
+
+Once more, I managed to attend one of Algolia's TechLunch. This time the subject was mentoring, more specifically: why mentor, the difference between a mentor, a coach and a sponsor and how to find a mentor were all questions that were covered by three wonderful speakers:
+
+<br>
+
+<img style="max-width: 100%" alt="Presenter slide" src="https://user-images.githubusercontent.com/15229355/55624543-948d8100-57a6-11e9-8a4b-0b25af645d58.png">
+
+<br>
+
+Events like these always make me remember how nice other software engineers can be and are a great opportunity to share some food and knowledge between one another.
+
+> This short blog post will cover what I learned from these presentations. You may also watch the whole live-stream [here](https://www.youtube.com/watch?v=INy50NaVNPs).
+
+<br>
+<br>
+
+## Mentoring
+
+<br>
+
+### Why be a mentor?
+
+There are many perks to being a mentor, some intrinsic others extrinsic:
+
+- **Consolidating your skills**: being a mentor will put you in many situations where you will have to explain concepts and therefore improve your knowledge on a more precise level.
+
+- **Continue to learn**: by consolidating your skills, you will also continue to learn knew things as you discover them with your mentee.
+
+- **Transmit knowledge**: as obvious as it is, knowledge transmission is extremely important in any profession. Creating value and sharing what you know creates a very positive cycle and can be transcribed through mentoring but also through presentations like the one I attended, BBLs, Katas etc.
+
+- **Create different connections**: by becoming a mentor, you will eventually get to meet new people, either because they are mentors themselves or because they are openly looking for advice. These connections can be life changing in some cases, so get out there.
+
+- **Enrich the community's diversity**: Mentoring can also be a great opportunity to diversify a field that is in great need of it. By mentoring people you participate in removing what is sometimes known as gate-keeping and help a larger amount of people start or continue their journey.
+
+- **Give another sense to your work**: mentoring means putting the human back at the center of your professional environment, by taking into account many aspects of their personality and adapting. It's a great way to motivate your work on a daily basis, by seeing the impact your advice has on someone.
+
+<br>
+
+### How can you be a good mentor?
+
+Being a good mentor involves working on both your soft and hard skills (as much as I don't like these terms).
+
+Here are some qualities that can be found in great mentors:
+
+- **Be a good listener**: probably one of the most important skills to have. Being able to listen what the person has to say can go a long way in adapting to their needs.
+
+- **Provide a safe environment**: let the person in front of you know they can ask questions without being judged, and that conversations between you two are private and for their own education. One of the hardest things to achieve as a mentee is to ask questions freely.
+
+- **Be patient**: as hard as it may be at first, being patient goes a long way in creating a long lasting mentoring relationship.
+
+- **Be available**: you don't have to be constantly present or reachable, but answering messages in a timely fashion and letting the other person know if you're not available at the moment is essential.
+
+- **Let go**: one of the worst things a mentor can do (from my experience as a mentee) is pushing you aside to solve a problem instead of letting you go through the thinking process. So let go off the keyboard, and try to understand the thought process of the person next to you for their own sake.
+
+- **Ask questions**: mentor/mentee relationships aren't one-sided, both can ask questions in order to make the experience more pleasant.
+
+- **Encourage**: recalling the progress made can encourage the mentee and have them learn even more efficiently.
+
+- **Adapt**: each person has a different approach to learning, so by listening (tip n°1) and asking questions (tip n°6) you can adapt your knowledge sharing.
+
+<br>
+
+### What initiatives can be taken to promote a mentoring environment?
+
+Algolia has been taking some initiatives that are a great start in my opinion.
+
+- TechLunch: these are a great opportunity to meet people who came specifically to learn something. Both mentors and mentee have something to gain during these BBL-like events.
+
+- Show & tell: These are less formal than TechLunches and allow employees to cover a subject they are passionate about.
+
+- Buddy system: Whenever a new employee arrives at Algolia, the buddy system allows them to always have someone to rely on in case they have any questions or need any help. It's a great way to introduce new employees (who tend to be under a large amount of stress at first) and make them feel at ease.
+
+Lots of other initiatives can be taken, such as having an education team or a mentoring program in place.
+
+<br>
+<br>
+
+## Being a mentee
+
+<br>
+
+The subject of being a mentee felt very personal as I am still at the beginning of my career and have had great experiences with mentors in the past. It's a shorter subject as 2 out of the 3 people on stage were mentors, but Nicola-Marie O'Donovan had some great things to say about being a mentee.
+
+<br>
+
+### What do mentees usually want?
+
+From my experience, certain things made being a mentee a great experience, some of which were covered during the talks. Mentees tend to want the following:
+
+- **To improve on their skills**: probably the number one reason why people seek mentors is to learn and improve on their professional skills. Specifically to software engineering, that involves learning good code practices, design patterns, good habits when collaborating, how to do pair programming and so on.
+
+- **To deliver concrete value**: it may not be necessary in all cases, but helping the mentee participate in producing actual added value can be helpful.
+
+- **To shine and be in the spotlight**: by having their (good) work shown and encouraged, mentees will always strive to do better. It goes hand in hand with the previous need, where having their work matter makes a lot of difference.
+
+<br>
+
+### How to find a mentor?
+
+Finding a mentor can be intimidating, especially if it's not in the usual context of being in a new job. But it can be done in many other ways, just as Ms. O'Donovan showed by reaching out directly to her new mentor.
+
+There are multiple steps that can be don to find a mentor:
+
+1. **Identify skills you wish to develop**: the more specific, the better. Trying to cover broad topics can decrease your luck in finding a mentor.
+2. **Search your network**: for example, searching your LinkedIn contacts can be a great entry point. Attending events and conferences can also help.
+3. **Reach out and be brave**: probably the hardest step for any mentee out there. Having the strength and will to reach out to someone you may not know to ask for guidance and help requires a lot of courage. Pride has no place in mentoring, so go for it.
+4. **Connect**: the final step, send your message, be polite and straight to the point. Explain where you're coming from and most of the time you will have good surprises.
+
+<br>
+<br>
+
+## Final thoughts
+
+This TechLunch was more inspiring than the last as it covered a subject that is very personal to me. Finding the right mentors has been extremely fulfilling in the past 5 years and is the reason why I had to write everything down for others to see.
+
+Thank you for reading, if you are or wish to be a mentor I hope you have gained some perspective on how to do so. And if you're a mentee or mentee-to-be, I wish you the best.
+
+If you have any questions, feel free to reach out on my Twitter [@christo_kade](https://twitter.com/christo_kade).

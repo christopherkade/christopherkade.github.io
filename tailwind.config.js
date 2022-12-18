@@ -31,10 +31,20 @@ module.exports = {
         },
         slideHello: {
           "0%": { marginTop: "-270px" },
-          "5%": { marginTop: "-180px" },
-          "33%": { marginTop: "-180px" },
-          "38%": { marginTop: "-90px" },
-          "66%": { marginTop: "-90px" },
+          "5%": { marginTop: "-210px" },
+          "33%": { marginTop: "-210px" },
+          "38%": { marginTop: "-100px" },
+          "66%": { marginTop: "-100px" },
+          "71%": { marginTop: "0px" },
+          "99.99%": { marginTop: "0px" },
+          "100%": { marginTop: "-270px" },
+        },
+        slideHelloMobile: {
+          "0%": { marginTop: "-270px" },
+          "5%": { marginTop: "-150px" },
+          "33%": { marginTop: "-150px" },
+          "38%": { marginTop: "-70px" },
+          "66%": { marginTop: "-70px" },
           "71%": { marginTop: "0px" },
           "99.99%": { marginTop: "0px" },
           "100%": { marginTop: "-270px" },
@@ -42,7 +52,8 @@ module.exports = {
       },
       animation: {
         addColor: "addColor 2s ease-out",
-        slideHello: "slideHello 5s linear infinite",
+        slideHello: "slideHello 5s linear 1",
+        slideHelloMobile: "slideHelloMobile 5s linear 1",
       },
     },
   },
@@ -72,6 +83,26 @@ module.exports = {
         ".hello__item": {
           lineHeight: "40px",
           margin: 0,
+        },
+        ".strike-through-yellow": {
+          background:
+            "linear-gradient(to top, transparent 0%, transparent 50%, rgb(252 211 77 / 1) 50%, rgb(252 211 77 / 1) 100%)",
+        },
+        ".strike-through-green": {
+          background:
+            "linear-gradient(to top, transparent 0%, transparent 50%, rgb(134 239 172 / 1) 50%, rgb(134 239 172 / 1) 100%)",
+        },
+        ".strike-through-cyan": {
+          background:
+            "linear-gradient(to top, transparent 0%, transparent 50%, rgb(103 232 249 / 1) 50%, rgb(103 232 249 / 1) 100%)",
+        },
+        ".strike-through-violet": {
+          background:
+            "linear-gradient(to top, transparent 0%, transparent 50%, rgb(196 181 253 / 1) 50%, rgb(196 181 253 / 1) 100%)",
+        },
+        ".strike-through-animation": {
+          transition: "background-color 2s",
+          backgroundColor: "transpanrent",
         },
       });
     }),

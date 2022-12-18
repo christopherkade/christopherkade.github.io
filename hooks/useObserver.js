@@ -5,7 +5,9 @@ const useObserver = (customOptions = null) => {
   const setCurrent = (section) => {
     document
       .querySelectorAll(".current-section")
-      .forEach((el) => el.classList.remove("current-section"));
+      .forEach((el) =>
+        el.classList.remove("current-section", "strike-through-yellow")
+      );
 
     // section.classList.add("current");
 
@@ -17,7 +19,7 @@ const useObserver = (customOptions = null) => {
     }
 
     const currentLink = document.querySelector(`.list__link[href="/${id}"]`);
-    currentLink.classList.add("current-section");
+    currentLink.classList.add("current-section", "strike-through-yellow");
   };
 
   const callbackFunction = (entries) => {

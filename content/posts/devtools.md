@@ -2,8 +2,12 @@
 title: "DevTools for productivity"
 date: "2019-11-05"
 description: "Essential & lesser known tools to make your life easy."
-slug: "/post/devtools"
+slug: "/posts/devtools"
 isPublished: true
+category: "Productivity"
+tags:
+  - "Productivity"
+template: "post"
 ---
 
 This may sound crazy, but developers are lazy. I know, unbelievable. Some of us are, we need to automate lots of our tasks because repetition can be tiring. So let me show you some tools I find extremely useful, either because they make my life easier or because they push me to write more accessible code.

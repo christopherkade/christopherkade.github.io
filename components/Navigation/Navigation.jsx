@@ -5,12 +5,13 @@ import { useRouter } from "next/router";
 
 import useScrollPosition from "../../hooks/useScrollPosition";
 
-const CustomLink = ({ children, href, scroll }) => {
+const CustomLink = ({ children, href, scroll, scrollToTop }) => {
   return (
     <Link
       href={href}
       scroll={scroll}
-      className="list__link block py-2 px-2 md:px-0 font-extralight hover:text-gray-400 "
+      onClick={() => (scrollToTop ? window.scroll(0, 0) : null)}
+      className="strike-through-animation hover:strike-through-yellow list__link block py-2 px-2 md:px-0 font-extralight"
     >
       {children}
     </Link>
@@ -32,14 +33,18 @@ const Navigation = ({ dislayNavigation }) => {
       )}
     >
       <div className="container flex flex-wrap items-center justify-center mx-auto">
-        <p className="absolute left-7 hidden sm:block tracking-wide">
+        <Link
+          href="/"
+          onClick={() => window.scroll(0, 0)}
+          className="absolute my-auto left-7 hidden sm:block tracking-wide strike-through-violet"
+        >
           CHRISTOPHER KADE
-        </p>
+        </Link>
 
         <div className="block w-auto" id="navbar-default">
           <ul className="flex p-2 flex-row md:space-x-8 mt-0 text-sm font-medium">
             <li>
-              <CustomLink href="/" scroll={false}>
+              <CustomLink href="/" scroll={false} scrollToTop={true}>
                 About,
               </CustomLink>
             </li>
@@ -58,20 +63,6 @@ const Navigation = ({ dislayNavigation }) => {
                 contact
               </CustomLink>
             </li>
-            {/* <li className="ml-2">
-              <Link
-                href="/blog"
-                className={classNames(
-                  "block py-2 pl-3 pr-4 hover:text-gray-400 p-0",
-                  {
-                    "text-theme-brown-dark": router.pathname === "/blog",
-                    "text-gray-700": router.pathname !== "/blog",
-                  }
-                )}
-              >
-                BLOG
-              </Link>
-            </li> */}
           </ul>
         </div>
       </div>
