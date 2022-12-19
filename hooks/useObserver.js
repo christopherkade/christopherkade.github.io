@@ -15,9 +15,7 @@ const useObserver = (customOptions = null) => {
       id = "#" + id;
     }
 
-    const currentLink = document.querySelector(
-      `.list__link[href="/personal-website-next${id}"]`
-    );
+    const currentLink = document.querySelector(`.list__link[href="/${id}"]`);
     currentLink.classList.add("current-section", "strike-through-yellow");
   };
 
