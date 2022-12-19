@@ -21,7 +21,7 @@ const Projects = ({ id }) => {
 
   const projects = [
     {
-      title: "OpenClassrooms course page",
+      title: "OpenClassroom's course page",
       href: "https://openclassrooms.com/fr/courses/7168871-apprenez-les-bases-du-langage-python",
       image: ocPng,
       description:
@@ -29,10 +29,10 @@ const Projects = ({ id }) => {
       color: "yellow",
     },
     {
-      title: "Accor hotels",
+      title: "Accor hotel's reservation funnel",
       href: "https://all.accor.com/",
       image: accorPng,
-      description: "The Accor hotels website to book hotel reservations.",
+      description: "Consulted on the rework of their website",
       color: "violet",
     },
     {
@@ -40,7 +40,7 @@ const Projects = ({ id }) => {
       href: "https://christopherkade.com/banner-generator/",
       image: bannerPng,
       description:
-        "A banner generator, allowing the user to generate a png file to use as a banner for your articles on Dev.to.",
+        "A banner generator, allowing the user to generate a png file to use as a banner for your articles on Dev.to",
       color: "cyan",
     },
     {
@@ -56,7 +56,7 @@ const Projects = ({ id }) => {
       href: "https://www.npmjs.com/package/gitignore-it",
       image: gitignorePng,
       description:
-        "An npm package used to generate relevant gitignore files for your projects.",
+        "An npm package used to generate relevant gitignore files for your projects",
       color: "yellow",
     },
     {
@@ -64,7 +64,7 @@ const Projects = ({ id }) => {
       href: null,
       image: foodpickerPng,
       description:
-        "A website to chose where to eat with your colleagues using a realtime websocket voting system.",
+        "A website to chose where to eat with your colleagues using a realtime websocket voting system",
       color: "violet",
     },
     {
@@ -72,7 +72,7 @@ const Projects = ({ id }) => {
       href: "https://christopherkade.com/snippet/",
       image: snippetPng,
       description:
-        "Generate code snippets to easily share with your colleagues.",
+        "Generate code snippets to easily share with your colleagues",
       color: "cyan",
     },
     {
@@ -80,7 +80,7 @@ const Projects = ({ id }) => {
       href: "https://christopherkade.com/twitter-thread-generator/",
       image: twitterPng,
       description:
-        "Automatically divide your rants into Tweet-sized copyable boxes.",
+        "Automatically divide your rants into Tweet-sized copyable boxes",
       color: "green",
     },
     {
@@ -88,7 +88,7 @@ const Projects = ({ id }) => {
       href: "https://christopherkade.com/Jammer",
       image: jammerPng,
       description:
-        "Find which songs to jam to by comparing them to your bandmate's.",
+        "Find which songs to jam to by comparing them to your bandmate's",
       color: "yellow",
     },
     {
@@ -96,7 +96,7 @@ const Projects = ({ id }) => {
       href: "https://christopherkade.com/ReactCraft/?path=/story/button--with-text",
       image: reactcraftPng,
       description:
-        "A small Design System based on World of Warcraft's UI identity.",
+        "A small Design System based on World of Warcraft's UI identity",
       color: "violet",
     },
   ];
