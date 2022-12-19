@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 const Hero = ({ id }) => {
   const textRef = useRef();
   const helloes = ["Hey !", "Bonjour !", "! مَرْحَبا"];
-  const [hello, setHello] = useState(helloes);
+  const [hello, setHello] = useState(helloes[0]);
 
   useEffect(() => {
     setHello(helloes[Math.floor(Math.random() * helloes.length)]);
