@@ -2,13 +2,13 @@ const isGithubActions = process.env.GITHUB_ACTIONS || false;
 
 let basePath = "";
 
-if (isGithubActions) {
-  // const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
+// if (isGithubActions) {
+//   // const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
 
-  basePath = `/`;
+//   // basePath = `/`;
 
-  console.log("865 --- BASE PATH", basePath);
-}
+//   console.log("865 --- BASE PATH", basePath);
+// }
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
