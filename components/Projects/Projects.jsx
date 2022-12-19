@@ -102,7 +102,7 @@ const Projects = ({ id }) => {
   ];
 
   return (
-    <div id={id} className="pt-12 section">
+    <div id={id} className="pt-12 section overflow-hidden">
       <div className="h-full p-6 max-w-7xl mx-auto">
         {projects.map(({ title, href, image, description, color }, index) => {
           return (
