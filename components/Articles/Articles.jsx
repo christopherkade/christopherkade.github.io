@@ -32,7 +32,13 @@ const Articles = ({ id, posts }) => {
           "modal-transition max-w-7xl mx-auto border-t border-b border-black p-6 mb-10"
         }
       >
-        <h2 className="text-3xl mb-8">My most recent articles</h2>
+        <div className="mb-8">
+          <h2 className="text-3xl mb-2">Recent articles</h2>
+          <p>
+            I write about Javascript, CSS & best practices in software
+            engineering.
+          </p>
+        </div>
 
         <div className="grid grid-rows-4 md:grid-cols-4 md:grid-rows-none mb-8">
           {firstFourFiles.map(({ frontmatter }, index) => (

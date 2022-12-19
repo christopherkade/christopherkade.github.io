@@ -9,7 +9,7 @@ const Hero = ({ id }) => {
   useEffect(() => {
     setHello(helloes[Math.floor(Math.random() * helloes.length)]);
     window.addEventListener("scroll", () => {
-      if (!textRef) return;
+      if (!textRef || !textRef.current) return;
       textRef.current.style.transform = `translateX(${window.scrollY / 8}px)`;
     });
   }, [helloes]);
