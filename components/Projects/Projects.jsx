@@ -10,6 +10,7 @@ import foodpickerPng from "../../public/images/foodpicker.png";
 import accorPng from "../../public/images/accor.png";
 import ocPng from "../../public/images/oc.png";
 import snippetPng from "../../public/images/snippet.png";
+import twitterPng from "../../public/images/twitter-thread-generator.png";
 import jammerPng from "../../public/images/jammer.png";
 import reactcraftPng from "../../public/images/reactcraft.png";
 
@@ -64,6 +65,13 @@ const Projects = ({ id }) => {
       image: snippetPng,
       description:
         "Generate code snippets to easily share with your colleagues.",
+    },
+    {
+      title: "Twitter thread generator",
+      href: "https://christopherkade.com/twitter-thread-generator/",
+      image: twitterPng,
+      description:
+        "Automatically divide your rants into Tweet-sized copyable boxes.",
     },
     {
       title: "Jammer",
