@@ -2,7 +2,6 @@ const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  important: true,
   theme: {
     extend: {
       colors: {
@@ -46,11 +45,16 @@ module.exports = {
           "99.99%": { marginTop: "0px" },
           "100%": { marginTop: "-270px" },
         },
+        textAppear: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
         addColor: "addColor 2s ease-out",
-        slideHello: "slideHello 5s linear 1",
-        slideHelloMobile: "slideHelloMobile 5s linear 1",
+        slideHello: "5s slideHello 2s linear 1",
+        slideHelloMobile: "5s slideHelloMobile 2s linear 1",
+        textAppear: "textAppear 1s ease-in",
       },
     },
   },

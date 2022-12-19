@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
-import Tippy from "@tippyjs/react/headless";
-import { followCursor } from "tippy.js";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import bannerPng from "../../public/images/banner-generator.png";
 import lockdownPng from "../../public/images/lockdown.png";
@@ -14,9 +14,11 @@ import twitterPng from "../../public/images/twitter-thread-generator.png";
 import jammerPng from "../../public/images/jammer.png";
 import reactcraftPng from "../../public/images/reactcraft.png";
 
-import { getRandomStrikeColor } from "../../services/getRandomStrikeColor";
-
 const Projects = ({ id }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const projects = [
     {
       title: "OpenClassrooms course page",
@@ -24,12 +26,14 @@ const Projects = ({ id }) => {
       image: ocPng,
       description:
         "The new OpenClassrooms course page, including the chapter & quiz layouts !",
+      color: "yellow",
     },
     {
       title: "Accor hotels",
       href: "https://all.accor.com/",
       image: accorPng,
       description: "The Accor hotels website to book hotel reservations.",
+      color: "violet",
     },
     {
       title: "Banner generator",
@@ -37,6 +41,7 @@ const Projects = ({ id }) => {
       image: bannerPng,
       description:
         "A banner generator, allowing the user to generate a png file to use as a banner for your articles on Dev.to.",
+      color: "cyan",
     },
     {
       title: "Lockdown center",
@@ -44,6 +49,7 @@ const Projects = ({ id }) => {
       image: lockdownPng,
       description:
         "A website to find ways to stimulate your mind during the lockdown: presentations, talks, hobbies etc.",
+      color: "green",
     },
     {
       title: "Gitignore it",
@@ -51,6 +57,7 @@ const Projects = ({ id }) => {
       image: gitignorePng,
       description:
         "An npm package used to generate relevant gitignore files for your projects.",
+      color: "yellow",
     },
     {
       title: "Foodpicker",
@@ -58,6 +65,7 @@ const Projects = ({ id }) => {
       image: foodpickerPng,
       description:
         "A website to chose where to eat with your colleagues using a realtime websocket voting system.",
+      color: "violet",
     },
     {
       title: "Snippet",
@@ -65,6 +73,7 @@ const Projects = ({ id }) => {
       image: snippetPng,
       description:
         "Generate code snippets to easily share with your colleagues.",
+      color: "cyan",
     },
     {
       title: "Twitter thread generator",
@@ -72,6 +81,7 @@ const Projects = ({ id }) => {
       image: twitterPng,
       description:
         "Automatically divide your rants into Tweet-sized copyable boxes.",
+      color: "green",
     },
     {
       title: "Jammer",
@@ -79,6 +89,7 @@ const Projects = ({ id }) => {
       image: jammerPng,
       description:
         "Find which songs to jam to by comparing them to your bandmate's.",
+      color: "yellow",
     },
     {
       title: "ReactCraft",
@@ -86,69 +97,35 @@ const Projects = ({ id }) => {
       image: reactcraftPng,
       description:
         "A small Design System based on World of Warcraft's UI identity.",
+      color: "violet",
     },
   ];
 
   return (
     <div id={id} className="pt-12 section">
       <div className="h-full p-6 max-w-7xl mx-auto">
-        {projects.map(({ title, href, image, description }, index) => {
+        {projects.map(({ title, href, image, description, color }, index) => {
           return (
-            <div className="text-center mb-8 last:mb-0" key={title}>
-              <div>
+            <div
+              data-aos={`fade-${index % 2 === 0 ? "right" : "left"}`}
+              data-aos-duration="1000"
+            >
+              <div className="mb-2 text-center">
                 <a
                   href={href}
                   target="_blank"
                   rel="noreferrer"
-                  className={`w-fit mx-auto block sm:hidden ${getRandomStrikeColor()}`}
+                  className={`w-fit mx-auto block strike-through-${color}`}
                 >
                   {title}
                 </a>
-                <p className="block sm:hidden font-extralight text-sm">
-                  {description}
-                </p>
+                <p className="block font-extralight text-sm">{description}</p>
               </div>
-              <a
-                id={`link-${index}`}
-                href={href}
-                target="_blank"
-                rel="noreferrer"
-                className="relative group hidden sm:block"
-              >
-                <Tippy
-                  delay={500}
-                  followCursor={true}
-                  plugins={[followCursor]}
-                  render={(attrs) => (
-                    <div
-                      tabIndex="-1"
-                      className="bg-violet-300 text-theme-primary p-2 rounded-md"
-                      {...attrs}
-                    >
-                      {description}
-                    </div>
-                  )}
-                >
-                  <Image
-                    src={image}
-                    className="w-full h-fit mt-3 project-transition hover:project-scale"
-                    alt={description}
-                  />
-                </Tippy>
-              </a>
-
-              <a
-                href={href}
-                target="_blank"
-                rel="noreferrer"
-                className="relative group block sm:hidden"
-              >
-                <Image
-                  src={image}
-                  className="w-full h-fit mt-3 project-transition hover:project-scale"
-                  alt={description}
-                />
-              </a>
+              <div className="h-full">
+                <a key={title} href={href} target="_blank" rel="noreferrer">
+                  <Image src={image} className="mb-8" alt={description} />
+                </a>
+              </div>
             </div>
           );
         })}
