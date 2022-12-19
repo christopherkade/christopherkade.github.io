@@ -10,6 +10,7 @@ import foodpickerPng from "../../public/images/foodpicker.png";
 import accorPng from "../../public/images/accor.png";
 import ocPng from "../../public/images/oc.png";
 import snippetPng from "../../public/images/snippet.png";
+import jammerPng from "../../public/images/jammer.png";
 import reactcraftPng from "../../public/images/reactcraft.png";
 
 import { getRandomStrikeColor } from "../../services/getRandomStrikeColor";
@@ -63,6 +64,13 @@ const Projects = ({ id }) => {
       image: snippetPng,
       description:
         "Generate code snippets to easily share with your colleagues.",
+    },
+    {
+      title: "Jammer",
+      href: "https://christopherkade.com/Jammer",
+      image: jammerPng,
+      description:
+        "Find which songs to jam to by comparing them to your bandmate's.",
     },
     {
       title: "ReactCraft",
