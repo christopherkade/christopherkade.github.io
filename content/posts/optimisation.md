@@ -1,0 +1,65 @@
+---
+title: "Optimizing the performance of my personal website"
+description: "Incremental changes for a faster first meaningful paint."
+date: "2018-01-24"
+slug: "/posts/optimisation"
+isPublished: true
+---
+
+My [personal website](https://christopherkade.com) has gone through **many** iterations of its front-end, more or less 4 of them so far (in less than a year). I find that rebuilding my website gives me a project outside of work to constantly work on, and allows me to apply acquired knowledge in a concrete manner. I'm also pretty picky when it comes to design, and I often get bored of the ones I've built in the past.
+
+But one of the things I haven't truly tackled is performance. Why? Because I've always perceived my website as something that has very little information and that therefore should not require optimization of that sort. But the more I try to push the website's style, the more I realize that performance should be a priority for every project I work on.
+
+This post goes over every aspect of performance I have considered while going through what I've learned and applied.
+
+<br><br>
+
+## Minifying my stylesheets
+
+In order to remove some bytes from my file sizes, minifying my stylesheets seemed like an obvious first thing to do.
+
+The great thing about **Angular CLI** is that when building my project for production, it automatically minifies my stylesheets for me.
+
+`ng build --env=prod`
+
+The effects of the minification can be seen in the `styles.bundle.js` file generated in the `dist` folder.
+
+In any case where this process would not be automatic, and when using a pre-processor like **Sass**, it is possible to configure it to automatically minify compiled CSS.
+
+<br><br>
+
+## Images
+
+<br>
+
+### Reducing image file sizes
+
+By compressing the pictures of my [projects](https://christopherkade.com/projects) I was able to bring some images from 1.4 MB down to 50kB.
+
+I had to compress them at the cost of visual quality, but my images being divided by rows, this would not affect the user's experience. Many tools are available online such as [this](http://compressimage.toolur.com/) one.  
+When exporting and selecting the quality level, I have chosen the lowest level possible while keeping an acceptable quality.
+
+<br>
+
+### Using progressive JPEG
+
+Progressive JPEG are simple to create and have little to no performance penalty, the upside is that they appear sooner on the page itself.  
+In order to change a JPEG to its progressive counterpart many tools are available [online](https://www.imgonline.com.ua/eng/make-jpeg-progressive-without-compression.php).
+
+The difference is astonishing, dropping the fetching of the images down to [27ms - 101ms] coming from upwards of [361ms - 510ms].
+
+<br><br>
+
+## What else could be done?
+
+Many other forms of performance optimization could be applied, but some of them aren't relevant to this website:
+
+- Using async to load scripts
+- Avoiding inline / embedded code
+- Avoiding unnecessary dom manipulations
+- And many other little tweaks that influence a website's performance
+
+I hope this post will be a call to action for some of you to consider performance in your development choices, it's very rewarding to be able to see improvements on your projects and is an incremental task that must be considered at the beginning of every project.
+
+Thanks for reading,  
+[@christo_kade](https://twitter.com/christo_kade)
