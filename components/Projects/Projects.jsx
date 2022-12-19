@@ -107,6 +107,7 @@ const Projects = ({ id }) => {
         {projects.map(({ title, href, image, description, color }, index) => {
           return (
             <div
+              key={title}
               data-aos={`fade-${index % 2 === 0 ? "right" : "left"}`}
               data-aos-duration="1000"
             >
@@ -122,7 +123,7 @@ const Projects = ({ id }) => {
                 <p className="block font-extralight text-sm">{description}</p>
               </div>
               <div className="h-full">
-                <a key={title} href={href} target="_blank" rel="noreferrer">
+                <a href={href} target="_blank" rel="noreferrer">
                   <Image src={image} className="mb-8" alt={description} />
                 </a>
               </div>

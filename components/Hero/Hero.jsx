@@ -12,7 +12,7 @@ const Hero = ({ id }) => {
       if (!textRef) return;
       textRef.current.style.transform = `translateX(${window.scrollY / 8}px)`;
     });
-  }, []);
+  }, [helloes]);
 
   return (
     <div
