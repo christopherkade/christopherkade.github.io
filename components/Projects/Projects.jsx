@@ -85,7 +85,9 @@ const Projects = ({ id }) => {
                 >
                   {title}
                 </h2>
-                <p className="block sm:hidden font-extralight">{description}</p>
+                <p className="block sm:hidden font-extralight text-sm">
+                  {description}
+                </p>
               </div>
               <a
                 id={`link-${index}`}

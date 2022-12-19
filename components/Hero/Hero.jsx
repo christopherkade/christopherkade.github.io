@@ -5,9 +5,9 @@ const Hero = ({ id }) => {
   return (
     <div
       id={id}
-      className="section w-full h-[100vh] px-4 md:px-8 pb-4 md:pt-28 pt-20 2xl:pt-48"
+      className="section w-full h-[100vh] px-4 md:px-8 pb-4 pt-36 md:pt-28 2xl:pt-48"
     >
-      <div className="text-3xl sm:text-4xl md:text-5xl 2xl:text-8xl tracking-wide md:leading-[60px] 2xl:leading-[1.2rem]">
+      <div className="text-4xl md:text-5xl 2xl:text-8xl tracking-wide md:leading-[60px] 2xl:leading-[1.2rem]">
         <div className="overflow-hidden h-12 md:h-16 2xl:h-24 mb-2">
           <div className="block animate-slideHelloMobile md:animate-slideHello 2xl:animate-none">
             <span className="mb-11 inline-block strike-through-yellow">
