@@ -15,7 +15,7 @@ const Home = ({ posts }) => {
   return (
     <div className="h-full">
       <Head>
-        <title>Christopher Kade</title>
+        <title>Christopher Kade - Frontend Engineer</title>
         <meta
           name="description"
           content="Christopher Kade's portfolio website"
