@@ -30,6 +30,7 @@
 .reactMarkDown h3 {
   font-size: 16px;
   margin: 24px 0px 16px 0px;
+  text-decoration: underline;
 }
 
 .reactMarkDown pre {

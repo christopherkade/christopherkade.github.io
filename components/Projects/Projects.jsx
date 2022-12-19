@@ -80,11 +80,14 @@ const Projects = ({ id }) => {
           return (
             <div className="text-center mb-8 last:mb-0" key={title}>
               <div>
-                <h2
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
                   className={`w-fit mx-auto block sm:hidden ${getRandomStrikeColor()}`}
                 >
                   {title}
-                </h2>
+                </a>
                 <p className="block sm:hidden font-extralight text-sm">
                   {description}
                 </p>
@@ -94,7 +97,7 @@ const Projects = ({ id }) => {
                 href={href}
                 target="_blank"
                 rel="noreferrer"
-                className="relative group"
+                className="relative group hidden sm:block"
               >
                 <Tippy
                   delay={500}
@@ -116,6 +119,19 @@ const Projects = ({ id }) => {
                     alt={description}
                   />
                 </Tippy>
+              </a>
+
+              <a
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                className="relative group block sm:hidden"
+              >
+                <Image
+                  src={image}
+                  className="w-full h-fit mt-3 project-transition hover:project-scale"
+                  alt={description}
+                />
               </a>
             </div>
           );

@@ -12,8 +12,6 @@ I wanted to display the saga's famous [opening crawl](http://starwars.wikia.com/
 
 This blog post will show every step that was necessary to achieve it, from building it in HTML/CSS, to implementing it in an Angular project and adding final touches such as John Williams' famous track.
 
-<br><br>
-
 # First step: Catching the Konami Code
 
 I decided to catch my user's input from the root component of my website: the `AppComponent`.
@@ -55,8 +53,6 @@ handleKeyboardEvent(event: KeyboardEvent) {
 
 Pretty simple, huh? This could be done in many other and better ways, but that will do the trick.
 
-<br><br>
-
 # Second step: Displaying the right component
 
 Once the code has been validated, I wish to display the component that will contain the crawl itself.
@@ -78,8 +74,6 @@ In `app.component.html`:
 
 As you can see, if the code is invalid we display the website's usual content (the `router-outlet`) otherwise we display our newly created component !
 
-<br><br>
-
 # Third step: Creating the crawl
 
 This was tricky at first, but once you break it down into several parts it becomes easy to understand.
@@ -93,8 +87,6 @@ The crawl contains 5 essential elements:
 - The music
 
 All of these steps take place in the newly created `StarWarsComponent`.
-
-<br>
 
 ## Creating the background
 
@@ -158,11 +150,7 @@ And finally in `star-wars.component.sass`:
 
 It looks like this (note that the stars might not be visible on these pictures as they are a single pixel wide):
 
-<p align="center">
-  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/34257748-c9afcda8-e663-11e7-8b3b-c9a0e0bd9119.png">
-</p>
-
-<br>
+![](https://user-images.githubusercontent.com/15229355/34257748-c9afcda8-e663-11e7-8b3b-c9a0e0bd9119.png)
 
 ## Adding the famous intro phrase
 
@@ -216,11 +204,7 @@ section
 
 Result:
 
-<p align="center">
-  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/34257979-c9982382-e664-11e7-8453-8ed19a800c4c.png">
-</p>
-
-<br>
+![](https://user-images.githubusercontent.com/15229355/34257979-c9982382-e664-11e7-8453-8ed19a800c4c.png)
 
 ## Displaying the logo
 
@@ -272,11 +256,7 @@ In `star-wars.component.sass`:
 
 And there we go, our beautifully animated logo:
 
-<p align="center">
-  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/34258253-ced4043c-e665-11e7-9393-3fe729f29a57.png">
-</p>
-
-<br>
+![](https://user-images.githubusercontent.com/15229355/34258253-ced4043c-e665-11e7-9393-3fe729f29a57.png)
 
 ## Adding the scrolling text
 
@@ -361,11 +341,7 @@ p
 
 And there we go !
 
-<p align="center">
-  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/34258462-bafd09a8-e666-11e7-8002-72b1ad71d343.png">
-</p>
-
-<br>
+![](https://user-images.githubusercontent.com/15229355/34258462-bafd09a8-e666-11e7-8002-72b1ad71d343.png)
 
 ## Final touch: the music
 
