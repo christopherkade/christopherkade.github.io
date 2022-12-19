@@ -4,6 +4,7 @@ import Head from "next/head";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import rangeParser from "parse-numeric-range";
 import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { getAllPosts } from "../../services/md";
 
 import { getSinglePost } from "../../services/md";
 import style from "../../styles/markdown-styles.module.css";
@@ -114,9 +115,16 @@ const Post = ({ content, frontmatter }) => {
 
 export default Post;
 
-export const getServerSideProps = async ({ params }) => {
+export const getStaticProps = async ({ params }) => {
   const post = await getSinglePost(params.slug, "content/posts");
   return {
     props: { ...post },
   };
 };
+
+export async function getStaticPaths() {
+  const posts = getAllPosts("/content/posts");
+  const formattedPaths = posts.map((post) => ({ params: { slug: post.slug } }));
+
+  return { paths: formattedPaths, fallback: false };
+}
