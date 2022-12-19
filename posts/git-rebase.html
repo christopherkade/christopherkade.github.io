@@ -1,0 +1,201 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><title>Up your Git game and clean up your history</title><meta name="description" content="Rebase &amp; a few tricks"/><link rel="icon" href="/favicon.ico"/><meta name="next-head-count" content="5"/><link rel="preconnect" href="/" crossorigin="anonymous"/><link rel="preload" href="/personal-website-next/_next/static/css/b9bf710d477f9f5b.css" as="style"/><link rel="stylesheet" href="/personal-website-next/_next/static/css/b9bf710d477f9f5b.css" data-n-g=""/><link rel="preload" href="/personal-website-next/_next/static/css/ec59ef111bf342d3.css" as="style"/><link rel="stylesheet" href="/personal-website-next/_next/static/css/ec59ef111bf342d3.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/personal-website-next/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/personal-website-next/_next/static/chunks/webpack-4069ad83659ee743.js" defer=""></script><script src="/personal-website-next/_next/static/chunks/framework-3b5a00d5d7e8d93b.js" defer=""></script><script src="/personal-website-next/_next/static/chunks/main-b48ab95d69bb6bbe.js" defer=""></script><script src="/personal-website-next/_next/static/chunks/pages/_app-ad888cb65a451e42.js" defer=""></script><script src="/personal-website-next/_next/static/chunks/959-48176e9c336c0ae0.js" defer=""></script><script src="/personal-website-next/_next/static/chunks/89-8a0243d41d3ea2a6.js" defer=""></script><script src="/personal-website-next/_next/static/chunks/pages/posts/%5Bslug%5D-29f78812de4ca83c.js" defer=""></script><script src="/personal-website-next/_next/static/VrhdqO0UEFTJ8sKWqIJk_/_buildManifest.js" defer=""></script><script src="/personal-website-next/_next/static/VrhdqO0UEFTJ8sKWqIJk_/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="__className_1cb113"><nav class="fixed top-0 w-full text-grey-900 px-1 sm:px-4 bg-theme-primary z-10 shadow-none hidden md:block"><div class="container flex flex-wrap items-center justify-center mx-auto"><a class="absolute my-auto left-7 hidden sm:block tracking-wide strike-through-violet" href="/personal-website-next">CHRISTOPHER KADE</a><div class="block w-auto" id="navbar-default"><ul class="flex p-2 flex-row md:space-x-8 mt-0 text-sm font-medium"><li><a class="list__link strike-through-animation hover:strike-through-yellow block py-2 px-2 md:px-0 font-extralight" href="/personal-website-next">About,</a></li><li class="ml-0"><a class="list__link strike-through-animation hover:strike-through-yellow block py-2 px-2 md:px-0 font-extralight" href="/personal-website-next#articles">articles,</a></li><li class="ml-0"><a class="list__link strike-through-animation hover:strike-through-yellow block py-2 px-2 md:px-0 font-extralight" href="/personal-website-next#projects">projects,</a></li><li class="ml-0"><a class="list__link strike-through-animation hover:strike-through-yellow block py-2 px-2 md:px-0 font-extralight" href="/personal-website-next#contact">contact</a></li></ul></div></div></nav><div class="pt-8 md:pt-28 max-w-7xl p-6 mx-auto"><article class="md:max-w-[60%] mx-auto"><header class="mb-14"><a class="flex w-fit mb-8 text-lg group" href="/personal-website-next/posts"><img alt="Back button to all articles" src="/personal-website-next//_next/static/media/back-arrow.0ade2ae6.svg" width="15" height="15" decoding="async" data-nimg="1" class="mr-2" loading="lazy" style="color:transparent"/><span class="group-hover:strike-through-yellow">All articles</span></a><h1 class="text-4xl box-decoration-clone strike-through-yellow inline">Up your Git game and clean up your history</h1></header><main><div class="markdown-styles_reactMarkDown__k3MfX">&lt;br&gt;<!-- -->
+<blockquote>
+<p>This post is aimed for people who want to learn how to use commands such as rebase &amp; learn a few tricks to have a nicer Git experience.</p>
+</blockquote>
+<!-- -->&lt;br&gt;<!-- -->
+<p>Alright, let&#x27;s start by watching the Git history of some of my first ever projects on Github:</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/7vpkyr2vbo9ua1ymfmiy.png" alt="git history 01"/></p>
+<blockquote>
+<p>Oh no</p>
+</blockquote>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/21t7daye6xhkfhnnzc1v.png" alt="git history 02"/></p>
+<blockquote>
+<p>Oh no no no no</p>
+</blockquote>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/a68jim387s5o3v224dlr.png" alt="git history 03"/></p>
+<blockquote>
+<p>OH LORD WHAT HAVE I DONE</p>
+</blockquote>
+<p>Now that I&#x27;ve ridiculed myself, let&#x27;s check out what most of my projects look like now 😄</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/66wi8w9kdgl8x6m6ru4o.png" alt="git history 04"/></p>
+<blockquote>
+<p>Oof, much better</p>
+</blockquote>
+<!-- -->&lt;br&gt;<!-- -->
+<p>If you don&#x27;t know what this all means, let me explain briefly:</p>
+<p>This is a representation of your Git history on Github, meaning the commits you&#x27;ve done over time on your project&#x27;s branches.</p>
+<blockquote>
+<p>You can see your own by navigating to the &quot;Insights&quot; tab of one of your projects, then going to the &quot;Network&quot; tab on the left.</p>
+</blockquote>
+<p>The black bar represents my <code>master</code> branch and each alternating blue &amp; green bars are separate branches.<br/>
+<!-- -->As you can see on the more recent and nicer history, they alternately get merged into master, creating this nice flow of writing code &amp; merging it (which is always recommended, instead of accumulating pull requests).</p>
+<p>So, how can you have a cleaner history? Let&#x27;s go over real use-cases.</p>
+<p>Here&#x27;s what we&#x27;re covering today (make sure to do each section in order):</p>
+<ul>
+<li><a href="#the-magic-of-git-rebase">Rebasing</a>
+<ul>
+<li><a href="#example-1-fixing-up-a-commit-with-rebase">Fixing up a commit</a></li>
+<li><a href="#example-2-dropping-a-commit">Dropping a commit</a></li>
+<li><a href="#example-3-rewording-a-commit">Renaming a commit</a></li>
+<li><a href="#example-4-rebasing-on-master">Rebasing on master</a></li>
+</ul>
+</li>
+<li><a href="#bonus-a-better-git-log">Getting a better git log</a></li>
+</ul>
+<h2>The magic of <code>git rebase</code></h2>
+<p><a href="https://git-scm.com/docs/git-rebase">Official documentation</a></p>
+<p>Git rebase lets your remodel your history to your will. See it as a way to manipulate your list of commits on a given branch.<br/>
+<!-- -->For example, you could drop commits completely (basically say goodbye to them in the abyss of git), rename them (rewriting your commit message), squash them into other commits (which is useful to hide commits that do small things such as adding a semicolon, you don&#x27;t really want to see them in your history) and many more things.</p>
+<h3>Learning by practice</h3>
+<p>Go to the following <a href="https://github.com/christopherkade/up-your-git-game">project</a> I made for the occasion, <strong>fork it</strong> and let&#x27;s get started.</p>
+<p>Forking is basically creating a copy of my project for yourself, you&#x27;ll be able to mess around with it without any problems ! To do it, click on the fork button on the top right:</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/1plindfnefqldmifa3b3.png" alt="fork button"/></p>
+<p>Then, clone the repository you forked.</p>
+<h2>Example 1: fixing up a commit with rebase</h2>
+<p><strong>Scenario</strong>: you have committed something that does not deserve a commit of its own, or you want to reduce the number of commits on your branch to one before making a pull request.</p>
+<ul>
+<li>
+<p>From the <code>master</code> branch, create a new branch.</p>
+</li>
+<li>
+<p>Create a new file, its content doesn&#x27;t really matter.</p>
+</li>
+<li>
+<p>Commit that new file to your branch.</p>
+</li>
+</ul>
+<pre><div class="codeStyle" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:0.5em 0;overflow:auto;border-radius:0.3em"><code class="language-bash" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">1</span><span class="token" style="color:hsl(207, 82%, 66%)">git</span><span> </span><span class="token" style="color:hsl(207, 82%, 66%)">add</span><span> index.js
+</span><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">2</span><span></span><span class="token" style="color:hsl(207, 82%, 66%)">git</span><span> commit -m </span><span class="token" style="color:hsl(95, 38%, 62%)">&quot;add index.js&quot;</span><span>
+</span><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">3</span></code></div></pre>
+<ul>
+<li>
+<p>Update something in that file</p>
+</li>
+<li>
+<p>Commit it again with a message such as &quot;update index.js&quot;</p>
+</li>
+<li>
+<p>Run <code>git log</code>, as you can see, we now have 2 commits</p>
+</li>
+</ul>
+<p>We now want to <code>fixup</code> the <code>update</code> commit into the <code>add</code> commit, because this small change does not deserve a commit of its own.</p>
+<p>To do so, we&#x27;ll use the <strong>interactive</strong> mode of <code>git rebase</code>, which lets us apply the rebasing with a nice interface.</p>
+<ul>
+<li>Run the rebase command like so:</li>
+</ul>
+<pre><div class="codeStyle" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:0.5em 0;overflow:auto;border-radius:0.3em"><code class="language-bash" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">1</span><span class="token" style="color:hsl(207, 82%, 66%)">git</span><span> rebase -i HEAD~2
+</span><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">2</span></code></div></pre>
+<p><code>HEAD~2</code> means start from the last commit on the branch (the head) and go back 2 commits. If we wanted to manipulate more commits, we could change the value to the far right.<br/>
+<!-- -->You should now have an interface that looks something like this:</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/h4po6e92b0icvrpki9sz.png" alt="rebase interactive"/></p>
+<p>Don&#x27;t panic, this only shows you the two commits you are changing at the top, and the available commands bellow them.<br/>
+<!-- -->By default, the rebase interface uses Vim, to write in it, simply press the <strong>i</strong> key. You are now in <strong>&quot;INSERT&quot;</strong> mode. As we want to fixup the second commit in the first one, all we have to do is write <code>fixup</code> or <code>f</code> instead of <code>pick</code> in front of it. Our <code>update index.js</code> commit will now be squashed into the <code>add index.js</code> but only the <code>add index.js</code>&#x27;s message will be kept.</p>
+<ul>
+<li>Update the second line like so:</li>
+</ul>
+<pre><div class="codeStyle" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:0.5em 0;overflow:auto;border-radius:0.3em"><code class="language-bash" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">1</span><span>pick c0091ec </span><span class="token" style="color:hsl(207, 82%, 66%)">add</span><span> index.js
+</span><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">2</span>f a19336e update index.js
+<span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">3</span></code></div></pre>
+<p>Now, we want to apply the rebase, press <strong>escape</strong> to leave the <strong>INSERT</strong> mode, press <strong>:</strong> (colon) and enter <strong>wq</strong> for &quot;write&quot; and &quot;quit&quot; and press <strong>ENTER</strong> to apply these changes. The colon simply allows you to write commands for Vim to execute.</p>
+<p>The following message should now appear in your console:</p>
+<blockquote>
+<p>Successfully rebased and updated refs/heads/{YOUR BRANCH NAME}.</p>
+</blockquote>
+<p>Check your <code>git log</code>, you now have one beautiful and clean commit !</p>
+<ul>
+<li>Finally, force push to that branch to apply the rebase to the remote server</li>
+</ul>
+<pre><div class="codeStyle" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:0.5em 0;overflow:auto;border-radius:0.3em"><code class="language-bash" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">1</span><span class="token" style="color:hsl(207, 82%, 66%)">git</span><span> push origin </span><span class="token" style="color:hsl(220, 14%, 71%)">{</span><span>BRANCH-NAME</span><span class="token" style="color:hsl(220, 14%, 71%)">}</span><span> -f
+</span><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">2</span></code></div></pre>
+<p>The <code>-f</code> is essential as a rebase modifies your git history and requires to be forced.</p>
+<h2>Example 2: dropping a commit</h2>
+<p>These next 2 steps will be extremely similar to the first one because you now have the tools to do any kind of rebasing 🎉</p>
+<p><strong>Scenario</strong>: you want to completely remove a commit</p>
+<p>We&#x27;ll drop the <code>add FILENAME</code> commit we previously made:</p>
+<ul>
+<li>Run the rebase command</li>
+</ul>
+<pre><div class="codeStyle" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:0.5em 0;overflow:auto;border-radius:0.3em"><code class="language-bash" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">1</span><span class="token" style="color:hsl(207, 82%, 66%)">git</span><span> rebase -i HEAD~1
+</span><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">2</span></code></div></pre>
+<ul>
+<li>Add a <code>d</code> or <code>drop</code> in front of the commit you wish to drop.</li>
+</ul>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/nl7wqia23khpgf7by6jf.png" alt="rebase drop"/></p>
+<ul>
+<li>
+<p>Run <code>:wq</code> in your Vim editor (and check with <code>git log</code> that the commit was dropped)</p>
+</li>
+<li>
+<p>Don&#x27;t forget to force push it to your remote server 😀</p>
+</li>
+</ul>
+<h2>Example 3: rewording a commit</h2>
+<p>Pretty similar, with one change.</p>
+<p><strong>Scenario</strong>: you want to fix a typo or rewrite a commit&#x27;s title or description</p>
+<ul>
+<li>Create a random commit</li>
+</ul>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/o88cmcyqj1596f52gyiy.png" alt="git reword"/></p>
+<ul>
+<li>Run the rebase command</li>
+</ul>
+<pre><div class="codeStyle" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:0.5em 0;overflow:auto;border-radius:0.3em"><code class="language-bash" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">1</span><span class="token" style="color:hsl(207, 82%, 66%)">git</span><span> rebase -i HEAD~1
+</span><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">2</span></code></div></pre>
+<ul>
+<li>
+<p>Add a <code>r</code> or <code>reword</code> in front of the commit you wish to reword (no need to edit the title now).</p>
+</li>
+<li>
+<p>Run <code>:wq</code> in your Vim editor. This will open a similar editor with the commit(s) you wish to reword.</p>
+</li>
+</ul>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/ou14d5c0l0wisqix9wr2.png" alt="git reword 2"/></p>
+<ul>
+<li>Update the commit&#x27;s title and description to your will, run <code>:wq</code> and that&#x27;s it ! Check with <code>git log</code> that the rewording was applied</li>
+</ul>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/b1o6v4ichuc69ruig868.png" alt="git reword 3"/></p>
+<ul>
+<li>Don&#x27;t forget to force push it to your remote server 😀</li>
+</ul>
+<h2>Example 4: rebasing on <code>master</code></h2>
+<blockquote>
+<p>This example isn&#x27;t reproduced in the Github project, but feel free to test it out.</p>
+</blockquote>
+<p><strong>Scenario</strong>: you have multiple PRs (Pull Requests) open at the same time</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/ja8pn2wr7pl39yhaxf76.png" alt="rebase master screenshot"/></p>
+<p>You merge one PR, now, your second PR is not up to date with <code>master</code>, oh no !</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/bl9r2aajzi2384qa4f9n.png" alt="rebase master screenshot 2"/></p>
+<p>This very frequent scenario will have us rebase our second PR on <code>master</code> so that it gets the new code merged from the first PR.</p>
+<ul>
+<li>From the branch you want to rebase (in our case, the second PR&#x27;s branch), run the following:</li>
+</ul>
+<pre><div class="codeStyle" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:0.5em 0;overflow:auto;border-radius:0.3em"><code class="language-bash" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">1</span><span class="token" style="color:hsl(207, 82%, 66%)">git</span><span> fetch
+</span><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">2</span></code></div></pre>
+<p>This downloads all the references our branch needs to apply the rebase.</p>
+<ul>
+<li>Then, execute the rebase like so:</li>
+</ul>
+<pre><div class="codeStyle" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:0.5em 0;overflow:auto;border-radius:0.3em"><code class="language-bash" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">1</span><span class="token" style="color:hsl(207, 82%, 66%)">git</span><span> rebase origin/master
+</span><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">2</span></code></div></pre>
+<ul>
+<li>Finally, run a <code>git push origin {MY-BRANCH} -f</code> to apply the rebase to our remote server</li>
+</ul>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/m220k16b638zl42xaqbo.png" alt="rebase master screenshot 3"/></p>
+<blockquote>
+<p>Hurray !</p>
+</blockquote>
+<h2>Bonus: a better <code>git log</code></h2>
+<p>Is your <code>git log</code> too much to handle?</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/pynf7hsq5tgdl43jr5ba.png" alt="git log screenshot"/></p>
+<p>Would you rather have a <code>git log</code> that is straight to the point and looks nicer?</p>
+<p><img src="https://thepracticaldev.s3.amazonaws.com/i/9k0v35fvzng378m4vftg.png" alt="git log screenshot 2"/></p>
+<p>Look no further ! Here&#x27;s how you can achieve it, in your console, paste the following:</p>
+<pre><div class="codeStyle" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1em;margin:0.5em 0;overflow:auto;border-radius:0.3em"><code class="language-bash" style="background:hsl(220, 13%, 18%);color:hsl(220, 14%, 71%);text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:&quot;Fira Code&quot;, &quot;Fira Mono&quot;, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">1</span><span class="token" style="color:hsl(207, 82%, 66%)">git</span><span> config --global alias.lg </span><span class="token" style="color:hsl(95, 38%, 62%)">&quot;log --color --graph --pretty=format:&#x27;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#x27; --abbrev-commit&quot;</span><span>
+</span><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:hsl(220, 10%, 40%);font-style:italic">2</span></code></div></pre>
+<p>You&#x27;ve now created an alias to git log called <code>git lg</code> that will display the nicer output showed before. Try it out by typing <code>git lg</code> (or <code>git lg -p</code> to see the lines that have changed).</p>
+<blockquote>
+<p>Thanks to <a href="https://coderwall.com/p/euwpig/a-better-git-log">Coderwall</a> for this bonus ✨</p>
+</blockquote>
+<h2>Closing thoughts</h2>
+<p>Learning how to use Git is probably one of the most important skills we can acquire as developers. I hope some of you won&#x27;t be as afraid of <code>rebase</code> as I was a while ago.</p>
+<p>If this post has been helpful, please feel free to follow me on Twitter <a href="https://twitter.com/christo_kade">@christo_kade</a> !</p></div></main></article></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"frontmatter":{"title":"Up your Git game and clean up your history","description":"Rebase \u0026 a few tricks","date":"2019-06-18","slug":"/posts/git-rebase","isPublished":true},"content":"\n\u003cbr\u003e\n\n\u003e This post is aimed for people who want to learn how to use commands such as rebase \u0026 learn a few tricks to have a nicer Git experience.\n\n\u003cbr\u003e\n\nAlright, let's start by watching the Git history of some of my first ever projects on Github:\n\n![git history 01](https://thepracticaldev.s3.amazonaws.com/i/7vpkyr2vbo9ua1ymfmiy.png)\n\n\u003e Oh no\n\n![git history 02](https://thepracticaldev.s3.amazonaws.com/i/21t7daye6xhkfhnnzc1v.png)\n\n\u003e Oh no no no no\n\n![git history 03](https://thepracticaldev.s3.amazonaws.com/i/a68jim387s5o3v224dlr.png)\n\n\u003e OH LORD WHAT HAVE I DONE\n\nNow that I've ridiculed myself, let's check out what most of my projects look like now 😄\n\n![git history 04](https://thepracticaldev.s3.amazonaws.com/i/66wi8w9kdgl8x6m6ru4o.png)\n\n\u003e Oof, much better\n\n\u003cbr\u003e\n\nIf you don't know what this all means, let me explain briefly:\n\nThis is a representation of your Git history on Github, meaning the commits you've done over time on your project's branches.\n\n\u003e You can see your own by navigating to the \"Insights\" tab of one of your projects, then going to the \"Network\" tab on the left.\n\nThe black bar represents my `master` branch and each alternating blue \u0026 green bars are separate branches.  \nAs you can see on the more recent and nicer history, they alternately get merged into master, creating this nice flow of writing code \u0026 merging it (which is always recommended, instead of accumulating pull requests).\n\nSo, how can you have a cleaner history? Let's go over real use-cases.\n\nHere's what we're covering today (make sure to do each section in order):\n\n- [Rebasing](#the-magic-of-git-rebase)\n  - [Fixing up a commit](#example-1-fixing-up-a-commit-with-rebase)\n  - [Dropping a commit](#example-2-dropping-a-commit)\n  - [Renaming a commit](#example-3-rewording-a-commit)\n  - [Rebasing on master](#example-4-rebasing-on-master)\n- [Getting a better git log](#bonus-a-better-git-log)\n\n## The magic of `git rebase`\n\n[Official documentation](https://git-scm.com/docs/git-rebase)\n\nGit rebase lets your remodel your history to your will. See it as a way to manipulate your list of commits on a given branch.  \nFor example, you could drop commits completely (basically say goodbye to them in the abyss of git), rename them (rewriting your commit message), squash them into other commits (which is useful to hide commits that do small things such as adding a semicolon, you don't really want to see them in your history) and many more things.\n\n### Learning by practice\n\nGo to the following [project](https://github.com/christopherkade/up-your-git-game) I made for the occasion, **fork it** and let's get started.\n\nForking is basically creating a copy of my project for yourself, you'll be able to mess around with it without any problems ! To do it, click on the fork button on the top right:\n\n![fork button](https://thepracticaldev.s3.amazonaws.com/i/1plindfnefqldmifa3b3.png)\n\nThen, clone the repository you forked.\n\n## Example 1: fixing up a commit with rebase\n\n**Scenario**: you have committed something that does not deserve a commit of its own, or you want to reduce the number of commits on your branch to one before making a pull request.\n\n- From the `master` branch, create a new branch.\n\n- Create a new file, its content doesn't really matter.\n\n- Commit that new file to your branch.\n\n```bash\ngit add index.js\ngit commit -m \"add index.js\"\n```\n\n- Update something in that file\n\n- Commit it again with a message such as \"update index.js\"\n\n- Run `git log`, as you can see, we now have 2 commits\n\nWe now want to `fixup` the `update` commit into the `add` commit, because this small change does not deserve a commit of its own.\n\nTo do so, we'll use the **interactive** mode of `git rebase`, which lets us apply the rebasing with a nice interface.\n\n- Run the rebase command like so:\n\n```bash\ngit rebase -i HEAD~2\n```\n\n`HEAD~2` means start from the last commit on the branch (the head) and go back 2 commits. If we wanted to manipulate more commits, we could change the value to the far right.  \nYou should now have an interface that looks something like this:\n\n![rebase interactive](https://thepracticaldev.s3.amazonaws.com/i/h4po6e92b0icvrpki9sz.png)\n\nDon't panic, this only shows you the two commits you are changing at the top, and the available commands bellow them.  \nBy default, the rebase interface uses Vim, to write in it, simply press the **i** key. You are now in **\"INSERT\"** mode. As we want to fixup the second commit in the first one, all we have to do is write `fixup` or `f` instead of `pick` in front of it. Our `update index.js` commit will now be squashed into the `add index.js` but only the `add index.js`'s message will be kept.\n\n- Update the second line like so:\n\n```bash\npick c0091ec add index.js\nf a19336e update index.js\n```\n\nNow, we want to apply the rebase, press **escape** to leave the **INSERT** mode, press **:** (colon) and enter **wq** for \"write\" and \"quit\" and press **ENTER** to apply these changes. The colon simply allows you to write commands for Vim to execute.\n\nThe following message should now appear in your console:\n\n\u003e Successfully rebased and updated refs/heads/{YOUR BRANCH NAME}.\n\nCheck your `git log`, you now have one beautiful and clean commit !\n\n- Finally, force push to that branch to apply the rebase to the remote server\n\n```bash\ngit push origin {BRANCH-NAME} -f\n```\n\nThe `-f` is essential as a rebase modifies your git history and requires to be forced.\n\n## Example 2: dropping a commit\n\nThese next 2 steps will be extremely similar to the first one because you now have the tools to do any kind of rebasing 🎉\n\n**Scenario**: you want to completely remove a commit\n\nWe'll drop the `add FILENAME` commit we previously made:\n\n- Run the rebase command\n\n```bash\ngit rebase -i HEAD~1\n```\n\n- Add a `d` or `drop` in front of the commit you wish to drop.\n\n![rebase drop](https://thepracticaldev.s3.amazonaws.com/i/nl7wqia23khpgf7by6jf.png)\n\n- Run `:wq` in your Vim editor (and check with `git log` that the commit was dropped)\n\n- Don't forget to force push it to your remote server 😀\n\n## Example 3: rewording a commit\n\nPretty similar, with one change.\n\n**Scenario**: you want to fix a typo or rewrite a commit's title or description\n\n- Create a random commit\n\n![git reword](https://thepracticaldev.s3.amazonaws.com/i/o88cmcyqj1596f52gyiy.png)\n\n- Run the rebase command\n\n```bash\ngit rebase -i HEAD~1\n```\n\n- Add a `r` or `reword` in front of the commit you wish to reword (no need to edit the title now).\n\n- Run `:wq` in your Vim editor. This will open a similar editor with the commit(s) you wish to reword.\n\n![git reword 2](https://thepracticaldev.s3.amazonaws.com/i/ou14d5c0l0wisqix9wr2.png)\n\n- Update the commit's title and description to your will, run `:wq` and that's it ! Check with `git log` that the rewording was applied\n\n![git reword 3](https://thepracticaldev.s3.amazonaws.com/i/b1o6v4ichuc69ruig868.png)\n\n- Don't forget to force push it to your remote server 😀\n\n## Example 4: rebasing on `master`\n\n\u003e This example isn't reproduced in the Github project, but feel free to test it out.\n\n**Scenario**: you have multiple PRs (Pull Requests) open at the same time\n\n![rebase master screenshot](https://thepracticaldev.s3.amazonaws.com/i/ja8pn2wr7pl39yhaxf76.png)\n\nYou merge one PR, now, your second PR is not up to date with `master`, oh no !\n\n![rebase master screenshot 2](https://thepracticaldev.s3.amazonaws.com/i/bl9r2aajzi2384qa4f9n.png)\n\nThis very frequent scenario will have us rebase our second PR on `master` so that it gets the new code merged from the first PR.\n\n- From the branch you want to rebase (in our case, the second PR's branch), run the following:\n\n```bash\ngit fetch\n```\n\nThis downloads all the references our branch needs to apply the rebase.\n\n- Then, execute the rebase like so:\n\n```bash\ngit rebase origin/master\n```\n\n- Finally, run a `git push origin {MY-BRANCH} -f` to apply the rebase to our remote server\n\n![rebase master screenshot 3](https://thepracticaldev.s3.amazonaws.com/i/m220k16b638zl42xaqbo.png)\n\n\u003e Hurray !\n\n## Bonus: a better `git log`\n\nIs your `git log` too much to handle?\n\n![git log screenshot](https://thepracticaldev.s3.amazonaws.com/i/pynf7hsq5tgdl43jr5ba.png)\n\nWould you rather have a `git log` that is straight to the point and looks nicer?\n\n![git log screenshot 2](https://thepracticaldev.s3.amazonaws.com/i/9k0v35fvzng378m4vftg.png)\n\nLook no further ! Here's how you can achieve it, in your console, paste the following:\n\n```bash\ngit config --global alias.lg \"log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)\u003c%an\u003e%Creset' --abbrev-commit\"\n```\n\nYou've now created an alias to git log called `git lg` that will display the nicer output showed before. Try it out by typing `git lg` (or `git lg -p` to see the lines that have changed).\n\n\u003e Thanks to [Coderwall](https://coderwall.com/p/euwpig/a-better-git-log) for this bonus ✨\n\n## Closing thoughts\n\nLearning how to use Git is probably one of the most important skills we can acquire as developers. I hope some of you won't be as afraid of `rebase` as I was a while ago.\n\nIf this post has been helpful, please feel free to follow me on Twitter [@christo_kade](https://twitter.com/christo_kade) !\n"},"__N_SSG":true},"page":"/posts/[slug]","query":{"slug":"git-rebase"},"buildId":"VrhdqO0UEFTJ8sKWqIJk_","assetPrefix":"/personal-website-next","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
