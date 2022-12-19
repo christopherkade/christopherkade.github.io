@@ -9,6 +9,10 @@ module.exports = {
         "theme-text": "#4a060d",
         "theme-primary": "#f5f5f4",
         "theme-secondary": "#fff1e6",
+        "theme-yellow": "#fcd34d",
+        "theme-violet": "#c4b5fd",
+        "theme-blue": "#67e8f9",
+        "theme-green": "#86efac",
       },
       keyframes: {
         addColor: {
