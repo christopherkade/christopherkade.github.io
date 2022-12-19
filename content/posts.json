@@ -1,0 +1,40 @@
+{
+  "files": [
+    {
+      "slug": "async-await",
+      "title": "The dangers of async/await",
+      "description": "Pretty, but dangerous.",
+      "date": "2020-01-16"
+    },
+    {
+      "title": "Creating a custom CSS loader of a Yu-Gi-Oh card flipping",
+      "date": "2022-12-07",
+      "description": "A trip down memory lane with some fun CSS tricks.",
+      "slug": "css-card-flip"
+    },
+    {
+      "title": "Designing for Developers - a discussion at Algolia",
+      "date": "2019-01-23",
+      "description": "What are the differences between designing for developers VS for end consumers? How do developers perceive design?",
+      "slug": "designing-for-devs"
+    },
+    {
+      "title": "Developer health - taking care of yourself as you code",
+      "date": "2019-11-20",
+      "description": "Sitting down all day can have a toll on anyone, here's what you should keep in mind.",
+      "slug": "developer-health"
+    },
+    {
+      "title": "DevTools for productivity",
+      "date": "2019-11-05",
+      "description": "Essential & lesser known tools to make your life easy.",
+      "slug": "devtools"
+    },
+    {
+      "title": "Writing elegant and resilient UI components",
+      "date": "2019-08-06",
+      "description": "",
+      "slug": "elegant-components"
+    }
+  ]
+}

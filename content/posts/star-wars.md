@@ -1,0 +1,399 @@
+---
+title: "Developing the Star Wars opening crawl in HTML/CSS"
+description: "I have a bad feeling about this."
+date: "2018-01-15"
+slug: "/posts/star-wars"
+isPublished: true
+---
+
+To celebrate **Star Wars: The Last Jedi** coming to theaters I decided to implement a fun easter egg on my [personal website](https://christopherkade.com/).
+
+I wanted to display the saga's famous [opening crawl](http://starwars.wikia.com/wiki/Opening_crawl) when a user inputs the [Konami Code](https://en.wikipedia.org/wiki/Konami_Code).
+
+This blog post will show every step that was necessary to achieve it, from building it in HTML/CSS, to implementing it in an Angular project and adding final touches such as John Williams' famous track.
+
+<br><br>
+
+# First step: Catching the Konami Code
+
+I decided to catch my user's input from the root component of my website: the `AppComponent`.
+
+I headed over to `app.component.ts` and added the following:
+
+```typescript
+// The Konami Code itself
+konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+
+// Our user's position in the code
+konamiCodePosition = 0;
+
+// True once the code is valid, false otherwise
+validCode = false;
+
+// Catch keydown events
+@HostListener('document:keydown', ['$event'])
+handleKeyboardEvent(event: KeyboardEvent) {
+  var requiredKey = this.konamiCode[this.konamiCodePosition];
+
+  // If the input equals to the required key
+  if (event.key == requiredKey) {
+    // Go to the next step of the Konami code
+    this.konamiCodePosition++;
+
+    // If we are at the end of it, validate the code and reset the position to 0
+    if (this.konamiCodePosition == this.konamiCode.length) {
+      this.validCode = true;
+      this.konamiCodePosition = 0;
+    }
+  } else {
+    // The input was false, set the validity to false and the position to 0
+    this.validCode = false;
+    this.konamiCodePosition = 0;
+  }
+}
+```
+
+Pretty simple, huh? This could be done in many other and better ways, but that will do the trick.
+
+<br><br>
+
+# Second step: Displaying the right component
+
+Once the code has been validated, I wish to display the component that will contain the crawl itself.
+
+Firstly, I create the new component:  
+`ng g component star-wars`
+
+Then I use the Angular directive `*ngIf` to hide or display it.
+
+In `app.component.html`:
+
+```html
+<div class="parent" *ngIf="!validCode">
+  <router-outlet></router-outlet>
+</div>
+
+<app-star-wars *ngIf="validCode"></app-star-wars>
+```
+
+As you can see, if the code is invalid we display the website's usual content (the `router-outlet`) otherwise we display our newly created component !
+
+<br><br>
+
+# Third step: Creating the crawl
+
+This was tricky at first, but once you break it down into several parts it becomes easy to understand.
+
+The crawl contains 5 essential elements:
+
+- The background
+- The intro phrase
+- The logo
+- The text
+- The music
+
+All of these steps take place in the newly created `StarWarsComponent`.
+
+<br>
+
+## Creating the background
+
+Let's do something a bit more original than adding a picture of space. Let's generate stars randomly !
+
+In `star-wars.component.html`:
+
+```html
+<div id="space"></div>
+```
+
+And in `star-wars.component.ts`:
+
+```typescript
+// Sets the number of stars we wish to display
+readonly numStars = 100;
+
+// Inject what we need to access the native document variable
+constructor(@Inject(DOCUMENT) private document: any) { }
+
+ngOnInit() {
+  // For every star we want to display
+  for (let i = 0; i < this.numStars; i++) {
+    // Create a new element
+    let star = this.document.createElement("div");
+    // Set its style to resemble a star
+    star.style.position = "absolute";
+    star.style.width = "1px";
+    star.style.height = "1px";
+    star.style.backgroundColor = "white";
+    // Get random positions on the screen and set them
+    var xy = this.getRandomPosition();
+    star.style.top = xy[0] + 'px';
+    star.style.left = xy[1] + 'px';
+    // Append our new star
+    this.document.getElementById("space").append(star);
+  }
+}
+
+// Gets random x, y values based on the size of the container
+getRandomPosition() {
+  var y = window.innerWidth;
+  var x = window.innerHeight;
+  var randomX = Math.floor(Math.random()*x);
+  var randomY = Math.floor(Math.random()*y);
+  return [randomX,randomY];
+}
+```
+
+And finally in `star-wars.component.sass`:
+
+```css
+#space
+    background-color: black
+    width: 100%
+    height: 100%
+    position: absolute
+```
+
+**Tada !** We now have a beautiful background to display the crawl on.
+
+It looks like this (note that the stars might not be visible on these pictures as they are a single pixel wide):
+
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/34257748-c9afcda8-e663-11e7-8b3b-c9a0e0bd9119.png">
+</p>
+
+<br>
+
+## Adding the famous intro phrase
+
+> A long time ago in a galaxy far, far away....
+
+Everyone has already heard, seen or whispered this phrase in their lifetime, so let's add it to our component (with the necessary effects).
+
+In `star-wars.component.html`:
+
+```html
+...
+
+<section class="intro">
+  A long time ago, in a galaxy far,<br />
+  far away....
+</section>
+```
+
+In `star-wars.component.sass`:
+
+```css
+...
+
+// Center the section element
+section
+    position: absolute
+    top: 45%
+    left: 50%
+    z-index: 1
+
+// Set the animation, color, size and hide the text
+.intro
+    animation: intro 6s ease-out 1s
+    margin: 0 0 0 (- 15em / 2)
+    color: rgb(75, 213, 238)
+    font-weight: 400
+    font-size: 300%
+    width: 15em
+    opacity: 0
+
+@keyframes intro
+    0%
+        opacity: 0
+    20%
+        opacity: 1
+    90%
+        opacity: 1
+    100%
+        opacity: 0
+```
+
+Result:
+
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/34257979-c9982382-e664-11e7-8453-8ed19a800c4c.png">
+</p>
+
+<br>
+
+## Displaying the logo
+
+The logo is vital to this opening sequence, here's how I added it.
+
+In `star-wars.component.html`:
+
+```html
+...
+
+<section class="logo">
+  <!-- SVG GOES HERE -->
+</section>
+```
+
+The `SVG` being a very long file, I have uploaded it [here](https://gist.github.com/christopherkade/97fd94f20c3a4ffddfa5aba46261082f) for you to copy and paste.
+
+In `star-wars.component.sass`:
+
+```css
+...
+
+// Set the animation & hide the logo
+.logo
+    animation: logo 9s ease-out 9s
+    margin: 0 0 0 (- 18em / 2)
+    opacity: 0
+
+    svg
+        width: inherit
+
+// Scale the logo down and maintain it centered
+@keyframes logo
+    0%
+        width: 18em
+        margin: (- 18em / 2) 0 0 (- 18em / 2)
+        transform: scale(2.75)
+        opacity: 1
+    50%
+        opacity: 1
+        width: 18em
+        margin: (- 18em / 2) 0 0 (- 18em / 2)
+    100%
+        opacity: 0
+        transform: scale(0.1)
+        width: 18em
+        margin: (- 18em / 2) 0 0 (- 18em / 2)
+```
+
+And there we go, our beautifully animated logo:
+
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/34258253-ced4043c-e665-11e7-9393-3fe729f29a57.png">
+</p>
+
+<br>
+
+## Adding the scrolling text
+
+It's probably the most essential part of the crawl but it's rather easy to implement.
+
+In `star-wars.component.html`:
+
+```html
+...
+
+<!-- Change the text to your liking -->
+<div id="board">
+  <div id="content">
+    <p id="title">Episode I</p>
+    <p id="subtitle">THE CODER'S MENACE</p>
+    <br />
+    <!-- And make it cheesy ! -->
+    <p>
+      Turmoil has engulfed the Galactic Republic as Christopher Kade finishes
+      studying to become a master in his trade.
+    </p>
+    <p>
+      Hoping to resolve the matter with side-projects and research, he retreated
+      to the small planet of Ireland for the coming year.
+    </p>
+    <p>
+      As his skills keep on evolving through constant learnings, his passion for
+      open-source technologies grows with it...
+    </p>
+  </div>
+</div>
+```
+
+In `star-wars.component.sass`:
+
+```css
+...
+
+p
+  color: #FFFF82
+
+// Set the font, lean the board, position it
+#board
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif
+  transform: perspective(300px) rotateX(25deg)
+  transform-origin: 50% 100%
+  text-align: justify
+  position: absolute
+  margin-left: -9em
+  font-weight: bold
+  overflow: hidden
+  font-size: 350%
+  height: 50em
+  width: 18em
+  bottom: 0
+  left: 50%
+  &:after
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, transparent 100%)
+    pointer-events: none
+    position: absolute
+    content: ' '
+    bottom: 60%
+    left: 0
+    right: 0
+    top: 0
+
+// Set the scrolling animation and position it
+#content
+  animation: scroll 100s linear 16s
+  position: absolute
+  top: 100%
+
+#title, #subtitle
+  text-align: center
+
+@keyframes scroll
+    0%
+        top: 100%
+    100%
+        top: -170%
+```
+
+And there we go !
+
+<p align="center">
+  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/34258462-bafd09a8-e666-11e7-8002-72b1ad71d343.png">
+</p>
+
+<br>
+
+## Final touch: the music
+
+What would Star Wars be without its music?
+
+Since we have timed our animations in advance, it should be a piece of cake !
+
+First, download the [following](https://s.cdpn.io/1202/Star_Wars_original_opening_crawl_1977.mp3) `.mp3` file and add it to your project's assets.
+
+Then, in our `html` file, add:
+
+```html
+<audio preload="auto" autoplay>
+  <source
+    src="./../../assets/audio/Star_Wars_original_opening_crawl_1977.mp3"
+    type="audio/mpeg"
+  />
+</audio>
+```
+
+Which preloads the music as the page is loaded and plays it automatically.
+
+And voilà, everything should work as expected.
+
+# Final thoughts
+
+You can check out the final product on my [website](https://christopherkade.com/) by inputing the Konami Code (OUTDATED).
+It really was a blast to develop and I hope it shows how much possibilities you have with such a basic kit.
+
+Thanks for reading,  
+[@christo_kade](https://twitter.com/christo_kade)
