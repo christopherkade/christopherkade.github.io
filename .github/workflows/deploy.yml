@@ -2,11 +2,10 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
-		
     runs-on: ubuntu-latest
 
     steps:
@@ -24,8 +23,8 @@ jobs:
           npm run export
           touch out/.nojekyll
 
-      - name: Deploy        
-        uses: JamesIves/github-pages-deploy-action@4.4.0 
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.4.0
         with:
           branch: main
           folder: out
