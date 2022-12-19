@@ -3,14 +3,14 @@ import Image from "next/image";
 import Tippy from "@tippyjs/react/headless";
 import { followCursor } from "tippy.js";
 
-import bannerPng from "./images/banner-generator.png";
-import lockdownPng from "./images/lockdown.png";
-import gitignorePng from "./images/gitignore.png";
-import foodpickerPng from "./images/foodpicker.png";
-import accorPng from "./images/accor.png";
-import ocPng from "./images/oc.png";
-import snippetPng from "./images/snippet.png";
-import reactcraftPng from "./images/reactcraft.png";
+import bannerPng from "../../public/images/banner-generator.png";
+import lockdownPng from "../../public/images/lockdown.png";
+import gitignorePng from "../../public/images/gitignore.png";
+import foodpickerPng from "../../public/images/foodpicker.png";
+import accorPng from "../../public/images/accor.png";
+import ocPng from "../../public/images/oc.png";
+import snippetPng from "../../public/images/snippet.png";
+import reactcraftPng from "../../public/images/reactcraft.png";
 
 import { getRandomStrikeColor } from "../../services/getRandomStrikeColor";
 
