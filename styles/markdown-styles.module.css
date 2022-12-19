@@ -13,8 +13,8 @@
 
 .reactMarkDown h2 {
   font-size: 24px;
-  margin: 16px 0px 16px 0px;
-  background: linear-gradient(
+  margin: 24px 0px 16px 0px;
+  /* background: linear-gradient(
     to top,
     transparent 0%,
     transparent 50%,
@@ -22,9 +22,14 @@
     rgb(196 181 253 / 1) 100%
   );
   width: fit-content;
-  box-decoration-break: clone;
+  box-decoration-break: clone; */
   /* display: inline; */
   /* Inline causing the margin to not work */
+}
+
+.reactMarkDown h3 {
+  font-size: 16px;
+  margin: 24px 0px 16px 0px;
 }
 
 .reactMarkDown pre {
