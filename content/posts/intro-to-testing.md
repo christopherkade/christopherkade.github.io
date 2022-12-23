@@ -15,7 +15,7 @@ But there's one thing you haven't put to practice, either because you were willi
 I'll just go over the basic knowledge to understand the role of unit testing in your everyday applications.  
 Essentially, testing Front-End code can be divided into **3 categories**:
 
-<img style="max-width: 100%" src="https://user-images.githubusercontent.com/15229355/55113335-24fcff00-50df-11e9-87e8-cdd5e0e6ad3f.png">
+![](https://user-images.githubusercontent.com/15229355/55113335-24fcff00-50df-11e9-87e8-cdd5e0e6ad3f.png)
 
 **E2E Testing** or end-to-end testing, is the practice of testing if the execution of an application is performing as designed from start to finish. The entire application is tested in real-world scenarios, which includes testing the communication between components such as the database, network, APIs etc. and executing your code in a diversity of browsers. Basically testing everything. It takes a lot of time to set up and costs the most.
 
@@ -263,7 +263,7 @@ Code coverage tools check the following:
 
 And could look something like this (based on our previous example):
 
-<img style="max-width: 100%" src="https://user-images.githubusercontent.com/15229355/55360258-1d20ce80-54d4-11e9-9cbc-e08a0e437042.png">
+![](https://user-images.githubusercontent.com/15229355/55360258-1d20ce80-54d4-11e9-9cbc-e08a0e437042.png)
 
 One of the most used code coverage tools our there is called [Istanbul](https://istanbul.js.org/) and is used by create-react-app to report your application's code coverage when you run the following command `npm run test --coverage`.
 

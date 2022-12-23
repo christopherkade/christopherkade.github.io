@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = ({ id }) => {
   return (
-    <div id={id} className="section pt-12">
+    <div id={id} className="section py-12">
       <div className="grid md:grid-rows-2 md:grid-cols-2 min-h-[670px]">
         <a
           className="text-6xl p-6 m-auto hover:strike-through-yellow"

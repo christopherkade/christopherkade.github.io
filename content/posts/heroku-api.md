@@ -12,11 +12,7 @@ To do so I implemented an unofficial API called [themeparks](https://github.com/
 
 In this post I'll go through the steps necessary to have your own API up and running on that same platform; let's get started !
 
-<br><br>
-
 ### Step 1: Setting up your API
-
-<br>
 
 #### Node
 
@@ -30,8 +26,6 @@ npm init
 
 Which will prompt you with some basic npm configuration questions, you can go through them by pressing enter, once asked `entry point: (index.js)`, input `server.js`. That simply defines the entry point to our node program.  
 This process will create a `package.json` file, it holds metadata relevant to the project.
-
-<br>
 
 #### Heroku
 
@@ -47,8 +41,6 @@ https://ancient-garden-55847.herokuapp.com/ | https://git.heroku.com/ancient-gar
 Heroku sets up your application with a random (and rather soothing) name. Check out your Heroku dashboard, your project should be present.
 
 We're all set up and ready to create some endpoints !
-
-<br><br>
 
 ### Step 2: The first endpoint
 
@@ -74,8 +66,6 @@ console.log("Server listening on port: " + port);
 ```
 
 And navigate to `localhost:3000` on your browser, you should see the following: `Server works !`.
-
-<br><br>
 
 ### Another example
 
@@ -115,8 +105,6 @@ To test it locally I can run my server and navigate to `localhost:3000/api/parks
 
 An application to this endpoint could be to return an array of Park objects to my client in order to inform the user of the supported parks.
 
-<br><br>
-
 ### Deploying it to Heroku
 
 Deploying to Heroku is extremely easy:
@@ -143,8 +131,6 @@ You can now navigate to your API's URL (or click on Open app) and test it out in
 In my case [https://ancient-garden-55847.herokuapp.com/api/parks](https://ancient-garden-55847.herokuapp.com/api/parks) returns a list of parks !
 
 Please note that Heroku's free version has your server sleep when not used for a certain period of time, so if it's the first time you're launching it it will probably take more time than usual.
-
-<br><br>
 
 ### Wrapping it up
 

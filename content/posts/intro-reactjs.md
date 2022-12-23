@@ -12,8 +12,6 @@ I have stuck to Angular for many reasons, one of them being expertise and anothe
 
 But that has changed, as I truly want to have as many tools as I can on my belt, and feel the need to actually start discovering this extremely popular library. This blog post serves as documentation for my progress, but may help some people to have an approachable structure if they find themselves in a similar situation.
 
-<br><br>
-
 ## Installation
 
 I always love this part, so let's head to React's [installation guidelines](https://reactjs.org/docs/installation.html) and get started.
@@ -36,11 +34,7 @@ npm start
 
 Which opens up my browser to display:
 
-<p align="center">
-  <img width="90%" height="90%" src="https://user-images.githubusercontent.com/15229355/32899842-efd05c0a-cae3-11e7-8187-759c55cd10fd.png">
-</p>
-
-<br><br>
+![](https://user-images.githubusercontent.com/15229355/32899842-efd05c0a-cae3-11e7-8187-759c55cd10fd.png)
 
 ## Learning the basics
 

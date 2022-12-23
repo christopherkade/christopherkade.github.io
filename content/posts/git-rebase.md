@@ -6,11 +6,7 @@ slug: "/posts/git-rebase"
 isPublished: true
 ---
 
-<br>
-
 > This post is aimed for people who want to learn how to use commands such as rebase & learn a few tricks to have a nicer Git experience.
-
-<br>
 
 Alright, let's start by watching the Git history of some of my first ever projects on Github:
 
@@ -31,8 +27,6 @@ Now that I've ridiculed myself, let's check out what most of my projects look li
 ![git history 04](https://thepracticaldev.s3.amazonaws.com/i/66wi8w9kdgl8x6m6ru4o.png)
 
 > Oof, much better
-
-<br>
 
 If you don't know what this all means, let me explain briefly:
 

@@ -59,8 +59,6 @@ Want to check if a feature is supported by a specific browser?
 
 ➡️ [caniuse](https://caniuse.com/)
 
-<br>
-
 ## Browser extensions
 
 ### headingsMap
@@ -91,8 +89,6 @@ Want to execute automated accessibility tests very easily? (Axe won't test every
 
 ➡️ [axe](https://www.deque.com/axe/)
 
-<br>
-
 ## VSCode extensions
 
 ### Bracket Pair Colorizer
@@ -118,8 +114,6 @@ Want to see who introduced that weird line of code?
 Want to live-edit a file collectively in your IDE?
 
 ➡️ [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
-
-<br>
 
 ## CLIs
 

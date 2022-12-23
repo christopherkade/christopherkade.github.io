@@ -76,7 +76,7 @@ One of the best remedies for tendonitis is water ! So always keep a water bottle
 Your average computer mouse is not comfortable and pushes you to have a bad grip over a long perid of time. Ergonomic mouses allow for a comfortable position where your wrist is not twisted. I know it looks weird, but trust me, it works !  
 Note the pad with a foam support for my wrist 😄, it's worth keeping in mind that some types of wrist rests are not recommended as they can block blood circulation.
 
-<img src="https://thepracticaldev.s3.amazonaws.com/i/6nrtvw2t7n9ypb65dg0d.jpg" width="300" height="400">
+![](https://thepracticaldev.s3.amazonaws.com/i/6nrtvw2t7n9ypb65dg0d.jpg)
 
 > My own mouse & pad, 17 & 9 € respectively
 
@@ -88,7 +88,7 @@ In order to have an optimal posture on your keyboard, some people recommend purc
 
 When injured, a wrist brace like the one bellow can be of great help ! It adds pressure on your hand to avoid unecessary movements and allows faster recovery ! It can be found at any sports shop or pharmacies.
 
-<img src="https://thepracticaldev.s3.amazonaws.com/i/clmw7hx74fxwg03npzyx.jpg" width="350" height="500">
+![](https://thepracticaldev.s3.amazonaws.com/i/clmw7hx74fxwg03npzyx.jpg)
 
 > Fall style 2019, 10€
 

@@ -12,8 +12,6 @@ This blog post sums up my journey of learning how to use the famous (and free) H
 
 I will also try to add my struggles and little snippets of advice I get along the way.
 
-<br><br>
-
 ## The beginning
 
 Curiosity led me to Phaser's [getting started tutorial](http://phaser.io/tutorials/getting-started/index), where I got to follow basic steps to set up my working environment.
@@ -24,8 +22,6 @@ These steps included:
 - **Selecting my editor**: I decided to keep on using my favorite text editor, namely [Atom](https://atom.io/).
 - **Downloading Phaser**: as it is an open-source project, it was as easy as cloning the repository locally.
 - **Testing it out**: using their "Hello World" example where I displayed a black game area with their logo by launching my HTTP server, having it serve my game's folder (`http-server ./my-game/`) and navigating to the displayed link.
-
-<br><br>
 
 ## The next step
 
@@ -51,37 +47,25 @@ It is divided as follows:
 
 - **Groups (and a player)**: where we learn about the usage of `group`s, as they allow to group together similar objects and control them as one unit (we have already created a group that contained the platforms). We then create a new variable called player giving it a position and a sprite sheet (loaded in the _Loading assets_ part), enable its physics, set its physics properties (bounce, gravity & collisions) and finally add its walking animations (right and left), while defining the corresponding images in our sprite sheet, the amount of FPS and if it should loop.
 
-<p align="center">
-  <img src="http://phaser.io/content/tutorials/making-your-first-phaser-game/dude.png">
-  <br/>
-  Here's what our player's sprite sheet looks like, it contains our running and standing frames
-</p>
+![](http://phaser.io/content/tutorials/making-your-first-phaser-game/dude.png)
 
-<p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/15229355/32609741-8dd1362c-c558-11e7-9f93-e32ca03b4a1d.png">
-</p>
+> Here's what our player's sprite sheet looks like, it contains our running and standing frames
+
+![](https://user-images.githubusercontent.com/15229355/32609741-8dd1362c-c558-11e7-9f93-e32ca03b4a1d.png)
 
 - **Body and velocity (physics)**: where we learn that _Phaser_ supports a lot of different physics systems (it ships with Arcade and Ninja and P2.JS Full-Body Physics). We must enable the physics property for every sprite or group that should be affected. This gives a new `body` property to our element which offers a lot of properties such as `player.body.gravity.y`. We also notice that the player does not stand on the ground we have set beforehand, that's because we need to introduce a _collision check_ between the player and the platforms.
 
-<p align="center">
-  <img width="460" height="300" src="http://phaser.io/content/tutorials/making-your-first-phaser-game/part6.png">
-</p>
+![](http://phaser.io/content/tutorials/making-your-first-phaser-game/part6.png)
 
 - **Controls**: where we set up our keyboard controls. To do so we start by setting our player's body velocity to 0 in order to reset his movements, then we define a `cursors` variable containing `game.input.keyboard.createCursorKeys()` that will be checked at every frame in `update()` in order to catch a keypress, for example if `cursors.left.isDown` is true, then our user has pressed the left key. We can also let our user jump by checking if he is touching the ground (in order to avoid mid-air jumps) and if the up key has been pressed.
 
 - **Goals**: in this part, we create a star group that contains 12 stars to our scene (evenly spread out), set each of their gravity value and randomly assign a bounce value (between 0 - no bounce and 1 - full bounce). Let's not forget to enable physics for every star using `stars.enableBody = true` and to add collision between our newly created stars and the platform. Finally, using the `overlap` method, we catch when our player touches a star and call the `collectStar` method that simply kills a star in order to have it disapear from the scene using `star.kill()`.
 
-<p align="center">
-  <img width="460" height="300" src="http://phaser.io/content/tutorials/making-your-first-phaser-game/part8.png">
-</p>
+![](http://phaser.io/content/tutorials/making-your-first-phaser-game/part8.png)
 
 - **Score**: finally, using the `Phaser.Text` object, we add the player's score in the scenes top-left. We also add an incrementation in the previously created `collectStar` method and change the text at the same time to display the player's progress.
 
-<p align="center">
-  <img width="460" height="300" src="http://phaser.io/content/tutorials/making-your-first-phaser-game/part9.png">
-</p>
-
-<br><br>
+![](http://phaser.io/content/tutorials/making-your-first-phaser-game/part9.png)
 
 ### Thoughts on this tutorial
 

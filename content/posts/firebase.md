@@ -9,27 +9,19 @@ isPublished: true
 [Firebase](https://firebase.google.com/) is a pretty great tool to build applications without having to worry about an infrastructure. It allows you to manage a multitude of aspects that would normally take many hours to implement such as authentication, databases, storage, monitoring and so on.  
 This short blog post will cover how to add Google authentication to any web project in a matter of minutes.
 
-<br>
-
 ## Step 1: Create and set up your Firebase project
 
 Head to the [Firebase console](https://console.firebase.google.com/u/0/) and create your new project, input the necessary information such as the project's name and your location (no need to touch your project's ID).
 
-<p align="center">
-  <img width="50%" height="70%" src="https://user-images.githubusercontent.com/15229355/53787786-37d94500-3f20-11e9-8f4d-fc4838934155.png">
-</p>
+![](https://user-images.githubusercontent.com/15229355/53787786-37d94500-3f20-11e9-8f4d-fc4838934155.png)
 
 Once this is done and your project has been created, you'll find yourself on your project's overview. Click on the following button
 
-<p align="center">
-  <img width="50%" height="70%" src="https://user-images.githubusercontent.com/15229355/53788105-14fb6080-3f21-11e9-9b52-d6e020108401.png">
-</p>
+![](https://user-images.githubusercontent.com/15229355/53788105-14fb6080-3f21-11e9-9b52-d6e020108401.png)
 
 Which will display your project's configuration, including its API key, ID etc.
 
-<p align="center">
-  <img width="50%" height="70%" src="https://user-images.githubusercontent.com/15229355/53788194-5ee44680-3f21-11e9-9920-77ee0aedf4ac.png">
-</p>
+![](https://user-images.githubusercontent.com/15229355/53788194-5ee44680-3f21-11e9-9920-77ee0aedf4ac.png)
 
 Copy this information, you'll need it to initialize your Firebase app. To do so, you must simply call the `initializeApp` method with your configuration.
 
@@ -51,8 +43,6 @@ firebase.initializeApp(config);
 ```
 
 _Tip: In the case of a Nuxt project, initialize Firebase directly in a plugin._
-
-<br>
 
 ## Step 2: Allow the user to sign in via Google
 
@@ -88,8 +78,6 @@ function signInWithGoogle() {
 
 Calling the `signInWithPopup` method will automatically open the pop-up for you and handle any edge cases. In case of a successful sign in you can access the user's data directly though the `res.user` object. In case of an error, the error response object contains lots of useful information for you to display error messages for example.
 
-<br>
-
 ## Bonus step: Handling user disconnection
 
 To disconnect a user, simply call:
@@ -110,8 +98,5 @@ firebase.auth().onAuthStateChanged((user) => {
   // ...
 });
 ```
-
-<br>
-<br>
 
 As you can see it is very easy to set up authentication with Firebase, remember that there are multiple methods of authentication offered by this tool so feel free to explore them more in detail on their [official documentation](https://firebase.google.com/docs/auth/web/start).

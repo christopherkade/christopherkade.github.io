@@ -10,13 +10,9 @@ Flexbox is a must in today's UI development world as it lets you create responsi
 
 We'll go through concrete examples one at at time and build the following [UI](https://codepen.io/christopherkade/pen/MdyQJE) containing a navbar and a list of cards.
 
-<div style="display: flex; align-items: center; justify-content: center">
-<img class="article-img" alt="render of the component mentioned" src="https://user-images.githubusercontent.com/15229355/57548653-cd9ab180-7361-11e9-9820-00ddda69e799.png">
-</div>
+![](https://user-images.githubusercontent.com/15229355/57548653-cd9ab180-7361-11e9-9820-00ddda69e799.png)
 
 Throughout each step, we'll learn essential Flexbox concepts to get you going on the right foot, so feel free to create your own [codepen](https://codepen.io/) to try them out.
-
-<br>
 
 ## Learning the basics with a navbar
 
@@ -36,8 +32,6 @@ With an icon to the left and two links to the right, pretty standard stuff.
 
 This navbar will use three Flexbox concepts: `display`, `justify-content` and `align-items`, so let's cover them one by one.
 
-<br>
-
 ### display
 
 ```css
@@ -48,8 +42,6 @@ nav {
 
 The first thing you'll type when working with Flexbox. It makes it so that every child of our `nav` takes advantage of the flex context.  
 We can now start moving around the container's children.
-
-<br>
 
 ### justify-content
 
@@ -84,8 +76,6 @@ nav > a:first-child {
 
 Everything is starting to look better, although we still need to center our icon vertically.
 
-<br>
-
 ### align-items
 
 ```css
@@ -108,8 +98,6 @@ nav {
 
 And that's it, we have a fully fledged navbar and we learned three essential concepts of Flexbox ! 🎉
 
-<br>
-
 ### Bonus: flex-direction
 
 Even though we're not using it here, I think it's worth mentioning `flex-direction`.
@@ -123,8 +111,6 @@ Even though we're not using it here, I think it's worth mentioning `flex-directi
 Just like its name entails, it determines the container's main axis, think of it as creating a horizontal (by default) or vertical layout.
 
 Try it out ! You'll see that defining it as `column` will have the expected result: a vertical layout.
-
-<br>
 
 ## Going a bit further with a card list
 
@@ -152,8 +138,6 @@ We will display a large amount of cards on **multiple lines**, these can be arti
 
 To do so, we only need one new concept: `flex-wrap`.
 
-<br>
-
 ### flex-wrap
 
 It tells our container to wrap its items onto multiple lines when needed. By default `flex` will fit every item on the same line.
@@ -175,8 +159,6 @@ So, our `.card-container` will now look like the following:
 ```
 
 > Try moving your window's size around, it's responsive and will render the the amount of cards that can fit each line automatically.
-
-<br>
 
 ## Wait, that's it?
 
