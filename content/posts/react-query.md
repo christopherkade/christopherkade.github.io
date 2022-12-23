@@ -8,7 +8,7 @@ isPublished: true
 
 I’ve been introduced to React Query at work last year and I wouldn’t be the first to say that it was a bit jarring initially. For the sake of personal growth, let’s document an introduction to it with actual use cases !
 
-> The complete Codesandbox with example is available [here](https://codesandbox.io/s/react-query-seh4sj).
+> The complete Codesandbox with examples is available [here](https://codesandbox.io/s/react-query-seh4sj).
 
 ## What’s React Query?
 
