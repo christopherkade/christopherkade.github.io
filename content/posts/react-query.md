@@ -1,5 +1,5 @@
 ---
-title: "Introduction to React Query in 2023"
+title: "Optimize your data fetching with React Query"
 description: "So much more than a request framework"
 date: "2022-12-23"
 slug: "/posts/react-query"
