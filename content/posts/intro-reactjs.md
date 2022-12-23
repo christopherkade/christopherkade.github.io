@@ -38,8 +38,6 @@ Which opens up my browser to display:
 
 ## Learning the basics
 
-<br>
-
 ### JSX
 
 React uses the Javascript syntax extension called **JSX**, it produces React elements and can embed any Javascript expression when wrapped in curly braces.
@@ -75,8 +73,6 @@ function getGreeting(user) {
 
 Now that's pretty cool, I can already see many use cases where JSX would have been useful in my previous projects.
 
-<br>
-
 ### Elements
 
 The concept is very simple to understand, an element defines what we want to see on our screen, just like the one we have defined previously.
@@ -95,8 +91,6 @@ Simply renders "Hello, world" on the page.
 One thing to remember is that elements are **immutable**, once created, we can't change its children or attributes and the only way to update the UI is to create a new element and pass it to `ReactDOM.render()`.
 
 Check out this [Codepen example](https://codepen.io/gaearon/pen/gwoJZk?editors=0010) given by the tutorial.
-
-<br>
 
 ### Components
 
@@ -141,8 +135,6 @@ Lastly, something to keep in mind:
 
 > All React components must act like pure functions with respect to their props.
 
-<br>
-
 ### States
 
 In React, states are similar to props but are private and fully controlled by the component, but **they may only be used by components defined in a class** (as opposed to a function).
@@ -181,8 +173,6 @@ this.setState({
 });
 ```
 
-<br>
-
 ### Lifecycle
 
 It is essential to free up resources when components are destroyed, let's check out how we can do exactly that using React.
@@ -204,8 +194,6 @@ componentWillUnmount() {
 
 They are called automatically when the conditions written previously are met.  
 As simple as it gets !
-
-<br>
 
 ### Events
 
@@ -258,8 +246,6 @@ In order to pass arguments to an event handler, we must do the following:
 
 Where the second argument will always be the synthetic event.
 
-<br>
-
 ### Conditional Rendering
 
 Where Angular uses `*ngIf`, React seems to offer something that fits its components design.
@@ -299,8 +285,6 @@ Note that there are other ways to evaluate component's rendering such as with **
 
 If we wish to prevent a component from rendering, all we have to do is return `null`.
 
-<br>
-
 ### Lists and Keys
 
 Where Angular uses `*ngFor`, React uses the `map` function to generate multiple elements. For example:
@@ -322,8 +306,6 @@ const listItems = numbers.map((number) => (
 ```
 
 > A good rule of thumb is that elements inside the map() call need keys.
-
-<br><br>
 
 ## Thoughts so far
 
