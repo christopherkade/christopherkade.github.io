@@ -13,6 +13,9 @@ import snippetPng from "../../public/images/snippet.png";
 import twitterPng from "../../public/images/twitter-thread-generator.png";
 import jammerPng from "../../public/images/jammer.png";
 import reactcraftPng from "../../public/images/reactcraft.png";
+import dailyChessClubPng from "../../public/images/dailychessclub.png";
+
+const colors = ["yellow", "violet", "cyan", "green"];
 
 const Projects = ({ id }) => {
   useEffect(() => {
@@ -25,31 +28,39 @@ const Projects = ({ id }) => {
       href: "https://openclassrooms.com/fr/courses/7168871-apprenez-les-bases-du-langage-python",
       image: ocPng,
       description:
-        "The new OpenClassrooms course page, including the chapter & quiz layouts !",
-      color: "yellow",
+        "Most visited page of the online training platform, including the homepage, chapters & quiz",
+      color: colors[0],
     },
     {
       title: "Accor hotel's reservation funnel",
       href: "https://all.accor.com/",
       image: accorPng,
-      description: "Consulted on the rework of their website",
-      color: "violet",
+      description:
+        "Consulted on the rework of their website used by over 11M users per year",
+      color: colors[1],
     },
     {
       title: "Banner generator",
       href: "https://christopherkade.com/banner-generator/",
       image: bannerPng,
       description:
-        "A banner generator, allowing the user to generate a png file to use as a banner for your articles on Dev.to",
-      color: "cyan",
+        "Generate a png file to use as a banner for your articles on Dev.to",
+      color: colors[2],
+    },
+    {
+      title: "Daily chess club",
+      href: "https://dailychess.club/",
+      image: dailyChessClubPng,
+      description: "Daily challenges & stats based on previous games",
+      color: colors[3],
     },
     {
       title: "Lockdown center",
       href: null,
       image: lockdownPng,
       description:
-        "A website to find ways to stimulate your mind during the lockdown: presentations, talks, hobbies etc.",
-      color: "green",
+        "Find ways to stimulate your mind during the lockdown: presentations, talks, hobbies etc.",
+      color: colors[0],
     },
     {
       title: "Gitignore it",
@@ -57,15 +68,15 @@ const Projects = ({ id }) => {
       image: gitignorePng,
       description:
         "An npm package used to generate relevant gitignore files for your projects",
-      color: "yellow",
+      color: colors[1],
     },
     {
       title: "Foodpicker",
       href: null,
       image: foodpickerPng,
       description:
-        "A website to chose where to eat with your colleagues using a realtime websocket voting system",
-      color: "violet",
+        "Choose where to eat with your colleagues using a realtime websocket voting system",
+      color: colors[2],
     },
     {
       title: "Snippet",
@@ -73,7 +84,7 @@ const Projects = ({ id }) => {
       image: snippetPng,
       description:
         "Generate code snippets to easily share with your colleagues",
-      color: "cyan",
+      color: colors[3],
     },
     {
       title: "Twitter thread generator",
@@ -81,7 +92,7 @@ const Projects = ({ id }) => {
       image: twitterPng,
       description:
         "Automatically divide your rants into Tweet-sized copyable boxes",
-      color: "green",
+      color: colors[0],
     },
     {
       title: "Jammer",
@@ -89,15 +100,15 @@ const Projects = ({ id }) => {
       image: jammerPng,
       description:
         "Find which songs to jam to by comparing them to your bandmate's",
-      color: "yellow",
+      color: colors[1],
     },
     {
       title: "ReactCraft",
       href: "https://christopherkade.com/ReactCraft/?path=/story/button--with-text",
       image: reactcraftPng,
       description:
-        "A small Design System based on World of Warcraft's UI identity",
-      color: "violet",
+        "A small design system based on World of Warcraft's UI identity",
+      color: colors[2],
     },
   ];
 
