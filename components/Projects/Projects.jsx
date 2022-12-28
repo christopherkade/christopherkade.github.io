@@ -130,7 +130,7 @@ const Projects = ({ id }) => {
               key={title}
               data-aos={`fade-${index % 2 === 0 ? "right" : "left"}`}
               data-aos-duration="1000"
-              data-aos-anchor-placement="center-bottom"
+              data-aos-anchor-placement="top-bottom"
             >
               <div className="mb-2 text-center">
                 <a
