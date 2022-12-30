@@ -21,7 +21,7 @@ const Hero = ({ id }) => {
     >
       <div
         ref={textRef}
-        className="animate-textAppear text-4xl md:text-5xl 2xl:text-8xl tracking-wide md:leading-[60px] 2xl:leading-[1.2rem]"
+        className="animate-textAppear text-4xl md:text-5xl 2xl:text-8xl tracking-wide md:leading-[60px]"
       >
         <span className="strike-through-green">{hello}</span> I'm Christopher, a{" "}
         <span className="strike-through-green">front-end engineer</span> with
