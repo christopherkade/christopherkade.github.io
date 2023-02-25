@@ -15,6 +15,7 @@ import jammerPng from "../../public/images/jammer.png";
 import reactcraftPng from "../../public/images/reactcraft.png";
 import dailyChessClubPng from "../../public/images/dailychessclub.png";
 import packingHelperPng from "../../public/images/packing-helper.png";
+import cfvDeckExporter from "../../public/images/cfv-deck-exporter.png";
 
 const colors = ["yellow", "violet", "cyan", "green"];
 
@@ -41,12 +42,20 @@ const Projects = ({ id }) => {
       color: colors[1],
     },
     {
+      title: "CFV Deck Exporter",
+      href: "https://chrome.google.com/webstore/detail/cfv-deck-exporter/dcclinglnjcbdggbamlneoclnaligkea?hl=en-GB&authuser=2",
+      image: cfvDeckExporter,
+      description:
+        "Chrome extension to export Cardfight!! Vanguard decks in a single click",
+      color: colors[2],
+    },
+    {
       title: "Banner generator",
       href: "https://christopherkade.com/banner-generator/",
       image: bannerPng,
       description:
         "Generate a png file to use as a banner for your articles on Dev.to",
-      color: colors[2],
+      color: colors[3],
     },
     {
       title: "Packing Helper GPT",
@@ -54,14 +63,14 @@ const Projects = ({ id }) => {
       image: packingHelperPng,
       description:
         "ChatGPT-powered luggage packing assistant to help you pack efficiently",
-      color: colors[3],
+      color: colors[0],
     },
     {
       title: "Daily chess club",
       href: "https://dailychess.club/",
       image: dailyChessClubPng,
       description: "Daily challenges & stats based on previous games",
-      color: colors[0],
+      color: colors[1],
     },
     {
       title: "Lockdown center",
@@ -69,7 +78,7 @@ const Projects = ({ id }) => {
       image: lockdownPng,
       description:
         "Find ways to stimulate your mind during the lockdown: presentations, talks, hobbies etc.",
-      color: colors[1],
+      color: colors[2],
     },
     {
       title: "Gitignore it",
@@ -77,7 +86,7 @@ const Projects = ({ id }) => {
       image: gitignorePng,
       description:
         "An npm package used to generate relevant gitignore files for your projects",
-      color: colors[2],
+      color: colors[3],
     },
     {
       title: "Foodpicker",
@@ -85,7 +94,7 @@ const Projects = ({ id }) => {
       image: foodpickerPng,
       description:
         "Choose where to eat with your colleagues using a realtime websocket voting system",
-      color: colors[3],
+      color: colors[0],
     },
     {
       title: "Snippet",
@@ -93,7 +102,7 @@ const Projects = ({ id }) => {
       image: snippetPng,
       description:
         "Generate code snippets to easily share with your colleagues",
-      color: colors[0],
+      color: colors[1],
     },
     {
       title: "Twitter thread generator",
@@ -101,7 +110,7 @@ const Projects = ({ id }) => {
       image: twitterPng,
       description:
         "Automatically divide your rants into Tweet-sized copyable boxes",
-      color: colors[1],
+      color: colors[2],
     },
     {
       title: "Jammer",
@@ -109,7 +118,7 @@ const Projects = ({ id }) => {
       image: jammerPng,
       description:
         "Find which songs to jam to by comparing them to your bandmate's",
-      color: colors[2],
+      color: colors[3],
     },
     {
       title: "ReactCraft",
@@ -117,7 +126,7 @@ const Projects = ({ id }) => {
       image: reactcraftPng,
       description:
         "A small design system based on World of Warcraft's UI identity",
-      color: colors[3],
+      color: colors[0],
     },
   ];
 
