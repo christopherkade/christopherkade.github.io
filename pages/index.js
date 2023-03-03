@@ -18,7 +18,7 @@ const Home = ({ posts }) => {
         <title>Christopher Kade - Frontend Engineer</title>
         <meta
           name="description"
-          content="Christopher Kade's portfolio website"
+          content="Portfolio website of Christopher Kade, a Frontend Engineer from Paris"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

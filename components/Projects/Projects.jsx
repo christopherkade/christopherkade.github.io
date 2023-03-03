@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 import bannerPng from "../../public/images/banner-generator.png";
 import lockdownPng from "../../public/images/lockdown.png";
@@ -20,10 +18,6 @@ import cfvDeckExporter from "../../public/images/cfv-deck-exporter.png";
 const colors = ["yellow", "violet", "cyan", "green"];
 
 const Projects = ({ id }) => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   const projects = [
     {
       title: "OpenClassroom's course page",
@@ -135,13 +129,8 @@ const Projects = ({ id }) => {
       <div className="h-full p-6 max-w-7xl mx-auto">
         {projects.map(({ title, href, image, description, color }, index) => {
           return (
-            <div
-              key={title}
-              data-aos={`fade-${index % 2 === 0 ? "right" : "left"}`}
-              data-aos-duration="1000"
-              data-aos-anchor-placement="top-bottom"
-            >
-              <div className="mb-2 text-center">
+            <>
+              <div key={title} className="mb-2 mt-4 text-center">
                 <a
                   href={href}
                   target="_blank"
@@ -152,12 +141,21 @@ const Projects = ({ id }) => {
                 </a>
                 <p className="block font-extralight text-sm">{description}</p>
               </div>
-              <div className="h-full">
-                <a href={href} target="_blank" rel="noreferrer">
-                  <Image src={image} className="mb-8" alt={description} />
+              <div className="h-full md:max-w-[80%] overflow-hidden m-auto">
+                <a
+                  className="h-full w-full"
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image
+                    src={image}
+                    className="object-cover transition-transform ease-in hover:scale-105"
+                    alt={description}
+                  />
                 </a>
               </div>
-            </div>
+            </>
           );
         })}
       </div>

@@ -26,7 +26,7 @@ const Articles = ({ id, posts }) => {
   const firstFourFiles = posts.slice(0, 4);
 
   return (
-    <div id={id} className="section pt-12">
+    <div id={id} className="section pt-24">
       <div
         className={
           "modal-transition max-w-7xl mx-auto border-t border-b border-black p-6 mb-10"

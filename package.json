@@ -12,7 +12,6 @@
   "dependencies": {
     "@next/font": "^13.0.6",
     "@tippyjs/react": "^4.2.6",
-    "aos": "^2.3.4",
     "classnames": "^2.3.2",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
