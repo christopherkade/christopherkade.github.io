@@ -28,7 +28,7 @@ const Navigation = () => {
   return (
     <nav
       className={classNames(
-        "fixed top-0 w-full text-grey-900 px-1 sm:px-4 bg-theme-primary z-10",
+        "animate-textAppear fixed top-0 w-full text-grey-900 px-1 sm:px-4 bg-theme-primary z-10",
         {
           shadow: scrollPosition > 10,
           "shadow-none": scrollPosition === 0,

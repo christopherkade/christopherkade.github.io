@@ -130,7 +130,10 @@ const Projects = ({ id }) => {
         {projects.map(({ title, href, image, description, color }, index) => {
           return (
             <>
-              <div key={title} className="mb-2 mt-4 text-center">
+              <div
+                key={title}
+                className="mb-2 mt-4 text-center [&:not(:first-child)]:mt-8"
+              >
                 <a
                   href={href}
                   target="_blank"
