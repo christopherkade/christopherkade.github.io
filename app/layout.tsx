@@ -44,6 +44,7 @@ export default function RootLayout({
       lang="en"
       className={cx(
         "text-black bg-white dark:text-white dark:bg-black",
+        "md:before:content-[''] md:before:border-[5px] md:before:border-white md:before:shadow-[inset_0_0_30px_rgba(0,0,0,0.25)] md:before:h-screen md:before:w-screen md:before:fixed md:before:pointer-events-none",
         GeistSans.variable,
         GeistMono.variable
       )}

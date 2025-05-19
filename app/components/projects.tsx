@@ -15,7 +15,7 @@ export function Projects() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  className="mb-4 border-2 hover:border-rose-500"
+                  className="mb-4"
                 />
               </Link>
               <h2 className="font-semibold text-xl tracking-tighter">
