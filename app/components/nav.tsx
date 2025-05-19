@@ -45,7 +45,7 @@ export function Navbar() {
             })}
           </div>
 
-          <div className="flex flex-row space-x-0 pr-10 ml-auto">
+          <div className="flex flex-row space-x-0 ml-auto">
             {Object.entries(linkItems).map(([key, { name, href }]) => {
               return (
                 <a
