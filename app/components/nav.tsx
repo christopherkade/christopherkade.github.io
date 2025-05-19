@@ -1,16 +1,27 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const navItems = {
-  '/': {
-    name: 'home',
+  "/": {
+    name: "home",
   },
-  '/blog': {
-    name: 'blog',
+  "/blog": {
+    name: "blog",
   },
-  '/projects': {
-    name: 'projects',
+  "/projects": {
+    name: "projects",
   },
-}
+};
+
+const linkItems = {
+  github: {
+    name: "github",
+    href: "http://github.com/christopherkade",
+  },
+  linkedin: {
+    name: "linkedin",
+    href: "https://www.linkedin.com/in/christopher-kade/",
+  },
+};
 
 export function Navbar() {
   return (
@@ -30,11 +41,27 @@ export function Navbar() {
                 >
                   {name}
                 </Link>
-              )
+              );
+            })}
+          </div>
+
+          <div className="flex flex-row space-x-0 pr-10 ml-auto">
+            {Object.entries(linkItems).map(([key, { name, href }]) => {
+              return (
+                <a
+                  key={key}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1"
+                >
+                  {name}
+                </a>
+              );
             })}
           </div>
         </nav>
       </div>
     </aside>
-  )
+  );
 }

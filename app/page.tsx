@@ -18,6 +18,9 @@ export default function Page() {
         applications. I have a strong background in React, Vue and TypeScript,
         and I love creating beautiful and performant user interfaces.
       </p>
+
+      <div className="border-t border-neutral-300 dark:border-neutral-700 my-8 mx-auto w-md" />
+
       <div className="my-8">
         <BlogPosts />
       </div>
