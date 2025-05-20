@@ -45,6 +45,7 @@ export default function RootLayout({
       className={cx(
         "text-black bg-white dark:text-white dark:bg-black",
         "md:before:content-[''] md:before:border-[5px] md:before:border-white md:before:shadow-[inset_0_0_30px_rgba(0,0,0,0.25)] md:before:h-screen md:before:w-screen md:before:fixed md:before:pointer-events-none",
+        "overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-white [&::-webkit-scrollbar-thumb]:bg-white dark:[&::-webkit-scrollbar-track]:bg-white dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500",
         GeistSans.variable,
         GeistMono.variable
       )}
