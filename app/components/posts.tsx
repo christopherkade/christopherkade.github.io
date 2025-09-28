@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import { formatDate, getBlogPosts } from 'app/blog/utils'
+import Link from "next/link";
+import { getBlogPosts } from "app/blog/utils";
 
 export function BlogPosts() {
-  let allBlogs = getBlogPosts()
+  let allBlogs = getBlogPosts();
 
   return (
     <div>
@@ -11,9 +11,9 @@ export function BlogPosts() {
           if (
             new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
           ) {
-            return -1
+            return -1;
           }
-          return 1
+          return 1;
         })
         .map((post) => (
           <Link
@@ -22,12 +22,12 @@ export function BlogPosts() {
             href={`/blog/${post.slug}`}
           >
             <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
-              <p className="text-neutral-900 dark:text-neutral-100 tracking-tight hover:underline">
+              <p className="tracking-tight hover:underline transition-colors duration-300">
                 {post.metadata.title}
               </p>
             </div>
           </Link>
         ))}
     </div>
-  )
+  );
 }

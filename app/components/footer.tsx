@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="mb-16">
-      <p className="mt-8 text-neutral-600 dark:text-neutral-300">
+      <p className="mt-8 footer-text">
         Christopher KADE - {new Date().getFullYear()}
       </p>
     </footer>

@@ -19,7 +19,7 @@ export default function Page() {
         and I love creating beautiful and performant user interfaces.
       </p>
 
-      <div className="border-t border-neutral-300 dark:border-neutral-700 my-8 mx-auto md:w-md sm:w-sm" />
+      <div className="home-divider border-t my-8 mx-auto md:w-md sm:w-sm" />
 
       <div className="my-8">
         <BlogPosts />

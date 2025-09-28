@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 ::selection {
   background-color: #47a3f3;
@@ -33,6 +33,72 @@ html {
   min-width: 360px;
 }
 
+/* Base theme colors toggled by next-themes (html.dark) */
+html,
+body {
+  background-color: white;
+  color: black;
+}
+html.dark,
+html.dark body {
+  background-color: black;
+  color: white;
+}
+
+/* Frame border color controlled by theme */
+.theme-frame::before {
+  border-color: black;
+}
+html.dark.theme-frame::before {
+  border-color: white;
+}
+
+/* Scrollbar track/thumb colors follow frame border via theme-frame on html */
+html.theme-frame body::-webkit-scrollbar-track {
+  background: black;
+}
+html.theme-frame body::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-600);
+}
+html.dark.theme-frame body::-webkit-scrollbar-track {
+  background: white;
+}
+html.dark.theme-frame body::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-500);
+}
+
+/* Firefox */
+html.theme-frame body {
+  scrollbar-color: var(--color-neutral-600) black;
+}
+html.dark.theme-frame body {
+  scrollbar-color: var(--color-neutral-500) white;
+}
+
+/* Footer text color that responds to html.dark */
+.footer-text {
+  color: var(--color-neutral-800);
+}
+:where(.dark) .footer-text {
+  color: var(--color-neutral-400);
+}
+
+/* Article date text color */
+.article-date {
+  color: var(--color-neutral-600);
+}
+:where(.dark) .article-date {
+  color: var(--color-neutral-400);
+}
+
+/* Home divider: explicit top border color for each theme */
+.home-divider {
+  border-top-color: black;
+}
+:where(.dark) .home-divider {
+  border-top-color: var(--color-neutral-700);
+}
+
 .prose .anchor {
   @apply absolute invisible no-underline;
 
@@ -48,12 +114,19 @@ html {
 }
 
 .prose a {
-  @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+  @apply underline transition-all underline-offset-2 decoration-[0.1em];
+  text-decoration-color: var(--color-neutral-400);
+}
+:where(.dark) .prose a {
+  text-decoration-color: var(--color-neutral-600);
 }
 
 .prose .anchor:after {
-  @apply text-neutral-300 dark:text-neutral-700;
-  content: '#';
+  content: "#";
+  color: var(--color-neutral-300);
+}
+:where(.dark) .prose .anchor:after {
+  color: var(--color-neutral-700);
 }
 
 .prose *:hover > .anchor {
@@ -84,23 +157,43 @@ html {
 }
 
 .prose p {
-  @apply my-4 text-neutral-800 dark:text-neutral-200;
+  @apply my-4;
+  color: var(--color-neutral-800);
+}
+:where(.dark) .prose p {
+  color: var(--color-neutral-200);
 }
 
 .prose h1 {
   @apply text-4xl font-medium tracking-tight mt-6 mb-2;
+  color: var(--color-neutral-900);
+}
+:where(.dark) .prose h1 {
+  color: var(--color-neutral-100);
 }
 
 .prose h2 {
   @apply text-xl font-medium tracking-tight mt-6 mb-2;
+  color: var(--color-neutral-900);
+}
+:where(.dark) .prose h2 {
+  color: var(--color-neutral-100);
 }
 
 .prose h3 {
   @apply text-xl font-medium tracking-tight mt-6 mb-2;
+  color: var(--color-neutral-900);
+}
+:where(.dark) .prose h3 {
+  color: var(--color-neutral-100);
 }
 
 .prose h4 {
   @apply text-lg font-medium tracking-tight mt-6 mb-2;
+  color: var(--color-neutral-900);
+}
+:where(.dark) .prose h4 {
+  color: var(--color-neutral-100);
 }
 
 .prose strong {
@@ -131,8 +224,8 @@ pre {
 }
 
 /* Remove Safari input shadow on mobile */
-input[type='text'],
-input[type='email'] {
+input[type="text"],
+input[type="email"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
