@@ -43,7 +43,7 @@ export default function ThemeSwitch() {
   if (!mounted) {
     return (
       <div
-        className="h-7 w-12 rounded-full bg-neutral-200/60 dark:bg-neutral-800/60"
+        className="h-9 w-9 rounded-full border border-neutral-200 dark:border-neutral-700 bg-neutral-200/60 dark:bg-neutral-800/60"
         aria-hidden
       />
     );
@@ -51,28 +51,29 @@ export default function ThemeSwitch() {
 
   return (
     <button
-      aria-label="Toggle theme"
+      aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
+      title={isDark ? "Switch to light theme" : "Switch to dark theme"}
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="relative inline-flex h-7 w-12 items-center rounded-full border border-neutral-200 dark:border-neutral-700 transition-colors duration-300 ease-out bg-white dark:bg-neutral-900"
+      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 dark:border-neutral-700 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100/60 dark:hover:bg-neutral-800/60 transition-colors duration-200"
     >
-      <span
-        className={
-          "absolute left-0.5 top-1/2 -translate-y-1/2 h-6 w-6 rounded-full bg-neutral-100 dark:bg-neutral-800 shadow-sm transition-transform duration-300 ease-out " +
-          (isDark ? "translate-x-5" : "translate-x-0")
-        }
-      />
-      <SunIcon
-        className={
-          "absolute left-1.5 h-4 w-4 text-yellow-500 transition-opacity duration-300 " +
-          (isDark ? "opacity-0" : "opacity-100")
-        }
-      />
-      <MoonIcon
-        className={
-          "absolute right-1.5 h-4 w-4 text-blue-400 transition-opacity duration-300 " +
-          (isDark ? "opacity-100" : "opacity-0")
-        }
-      />
+      <span className="relative h-5 w-5">
+        <SunIcon
+          className={
+            "absolute inset-0 h-5 w-5 text-neutral-700 transition-all duration-300 ease-out " +
+            (isDark
+              ? "opacity-0 scale-75 rotate-90"
+              : "opacity-100 scale-100 rotate-0")
+          }
+        />
+        <MoonIcon
+          className={
+            "absolute inset-0 h-5 w-5 text-neutral-200 transition-all duration-300 ease-out " +
+            (isDark
+              ? "opacity-100 scale-100 rotate-0"
+              : "opacity-0 scale-75 -rotate-90")
+          }
+        />
+      </span>
     </button>
   );
 }
