@@ -58,21 +58,21 @@ html.theme-frame body::-webkit-scrollbar-track {
   background: black;
 }
 html.theme-frame body::-webkit-scrollbar-thumb {
-  background: var(--color-neutral-600);
+  background: var(--color-neutral-900);
 }
 html.dark.theme-frame body::-webkit-scrollbar-track {
   background: white;
 }
 html.dark.theme-frame body::-webkit-scrollbar-thumb {
-  background: var(--color-neutral-500);
+  background: var(--color-neutral-100);
 }
 
 /* Firefox */
 html.theme-frame body {
-  scrollbar-color: var(--color-neutral-600) black;
+  scrollbar-color: var(--color-neutral-900) black;
 }
 html.dark.theme-frame body {
-  scrollbar-color: var(--color-neutral-500) white;
+  scrollbar-color: var(--color-neutral-100) white;
 }
 
 /* Footer text color that responds to html.dark */
