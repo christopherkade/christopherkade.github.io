@@ -33,7 +33,7 @@ export default function Page() {
           </svg>
         </a>{" "}
         making education accessible.
-        <br />I am passionate about building{" "}
+        <br /> <br />I am passionate about building{" "}
         <span className="bg-yellow-200 dark:bg-yellow-400/30 px-1 py-0.5 inline-block -rotate-[0.8deg] skew-x-[1deg]">
           user-friendly
         </span>{" "}
