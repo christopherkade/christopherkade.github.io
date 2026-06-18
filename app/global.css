@@ -91,6 +91,28 @@ html.dark.theme-frame body {
   color: var(--color-neutral-400);
 }
 
+/* Highlighter streak animation for blog post links */
+.highlight-streak {
+  position: relative;
+  isolation: isolate;
+}
+.highlight-streak::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  background-color: var(--streak-color);
+  transform: skewX(-2deg) skewY(var(--streak-skew-y, 0.4deg));
+  transition: width 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: -1;
+}
+.highlight-streak:hover::before {
+  width: 100%;
+}
+html.dark .highlight-streak::before {
+  background-color: color-mix(in srgb, var(--streak-color) 30%, transparent);
+}
+
 /* Home divider: explicit top border color for each theme */
 .home-divider {
   border-top-color: black;
