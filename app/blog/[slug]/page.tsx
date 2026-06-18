@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import { CustomMDX } from "app/components/mdx";
-import { formatDate, getBlogPosts } from "app/blog/utils";
+import { formatDate, getBlogPosts, getReadingTime } from "app/blog/utils";
 
-const baseUrl = "christopherkade.com";
+const baseUrl = "https://christopherkade.com";
 
 export async function generateStaticParams() {
   let posts = getBlogPosts();
@@ -89,6 +89,9 @@ export default function Blog({ params }) {
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
         <p className="text-sm article-date">
           {formatDate(post.metadata.publishedAt)}
+        </p>
+        <p className="text-sm article-date">
+          {getReadingTime(post.content)} min read
         </p>
       </div>
       <article className="prose">

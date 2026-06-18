@@ -9,14 +9,22 @@ export function Projects() {
 
   return (
     <div>
-      {allProjects.map((project) => (
-        <div key={project.title}>
+      {allProjects.map((project, index) => (
+        <div
+          key={project.title}
+          className="animate-[fadeSlideIn_0.4s_ease-out_both]"
+          style={{ animationDelay: `${index * 80}ms` }}
+        >
           {project.href ? (
-            <Link href={project.href} target="_blank">
+            <Link
+              href={project.href}
+              target="_blank"
+              className="block overflow-hidden rounded-lg mb-4 group"
+            >
               <Image
                 src={project.image}
                 alt={project.title}
-                className="mb-4 rounded-lg"
+                className="transition-transform duration-300 ease-out group-hover:scale-[1.03]"
                 placeholder="blur"
                 blurDataURL={project.blurDataURL}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -27,18 +35,19 @@ export function Projects() {
               />
             </Link>
           ) : (
-            <Image
-              src={project.image}
-              alt={project.title}
-              className="mb-4 border-2 rounded-lg"
-              placeholder="blur"
-              blurDataURL={project.blurDataURL}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              style={{
-                width: "100%",
-                height: "auto",
-              }}
-            />
+            <div className="overflow-hidden rounded-lg border-2 mb-4">
+              <Image
+                src={project.image}
+                alt={project.title}
+                placeholder="blur"
+                blurDataURL={project.blurDataURL}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+              />
+            </div>
           )}
           {project.href ? (
             <Link

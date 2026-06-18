@@ -11,11 +11,12 @@ export const metadata: Metadata = {
     default: "Christopher KADE | Portfolio",
     template: "%s | Christopher KADE",
   },
-  description: "",
+  description:
+    "Portfolio of Christopher Kade, a Senior Frontend Engineer focused on Agentic Coding and Product Engineering.",
   openGraph: {
     title: "Christopher KADE | Portfolio",
     description:
-      "Portfolio website of Christopher Kade, a Senior Frontend Engineer from Paris",
+      "Portfolio of Christopher Kade, a Senior Frontend Engineer focused on Agentic Coding and Product Engineering.",
     siteName: "Christopher KADE",
     locale: "en_US",
     type: "website",
@@ -47,7 +48,7 @@ export default function RootLayout({
       className={cx(
         "theme-frame md:before:content-[''] md:before:border-[5px] md:before:shadow-[inset_0_0_30px_rgba(0,0,0,0.25)] md:before:h-screen md:before:w-screen md:before:fixed md:before:pointer-events-none",
         GeistSans.variable,
-        GeistMono.variable
+        GeistMono.variable,
       )}
     >
       <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto overflow-y-auto [&::-webkit-scrollbar]:w-[5px] transition-colors duration-300">

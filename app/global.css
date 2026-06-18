@@ -75,6 +75,22 @@ html.dark.theme-frame body {
   scrollbar-color: var(--color-neutral-100) white;
 }
 
+/* Active nav link color responds to html.dark */
+.nav-link-active {
+  color: black;
+}
+html.dark .nav-link-active {
+  color: white;
+}
+
+/* Inactive nav link color responds to html.dark */
+.nav-link-inactive {
+  color: var(--color-neutral-500);
+}
+html.dark .nav-link-inactive {
+  color: var(--color-neutral-300);
+}
+
 /* Footer text color that responds to html.dark */
 .footer-text {
   color: var(--color-neutral-800);
@@ -262,4 +278,30 @@ table {
 
 .title {
   text-wrap: balance;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    translate: 0 6px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+main > section {
+  animation: pageIn 0.35s ease-out both;
 }

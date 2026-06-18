@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ThemeSwitch from "./ThemeSwitch";
+import { NavLink } from "./NavLink";
 
 function GitHubIcon({ className = "h-4 w-4" }: { className?: string }) {
   return (
@@ -63,13 +64,9 @@ export function Navbar() {
           <div className="flex flex-row space-x-0 pr-5 md:pr-10">
             {Object.entries(navItems).map(([path, { name }]) => {
               return (
-                <Link
-                  key={path}
-                  href={path}
-                  className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1"
-                >
+                <NavLink key={path} href={path}>
                   {name}
-                </Link>
+                </NavLink>
               );
             })}
           </div>

@@ -21,7 +21,8 @@ export function BlogPosts() {
         .map((post, index) => (
           <Link
             key={post.slug}
-            className="flex flex-col space-y-1 mb-4"
+            className="flex flex-col space-y-1 mb-4 animate-[fadeSlideIn_0.4s_ease-out_both]"
+            style={{ animationDelay: `${index * 60}ms` }}
             href={`/blog/${post.slug}`}
           >
             <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
