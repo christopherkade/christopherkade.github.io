@@ -55,7 +55,7 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           enableSystem={false}
-          defaultTheme="dark"
+          defaultTheme="light"
           disableTransitionOnChange
         >
           <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">

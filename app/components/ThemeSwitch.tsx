@@ -38,22 +38,16 @@ export default function ThemeSwitch() {
 
   useEffect(() => setMounted(true), []);
 
-  const isDark = (resolvedTheme ?? theme) === "dark";
-
-  if (!mounted) {
-    return (
-      <div
-        className="h-9 w-9 rounded-full border border-neutral-200 dark:border-neutral-700 bg-neutral-200/60 dark:bg-neutral-800/60"
-        aria-hidden
-      />
-    );
-  }
+  // Default to dark for SSR — matches defaultTheme="dark" in ThemeProvider,
+  // so the icon is correct on first paint and avoids a placeholder flash.
+  const isDark = mounted ? (resolvedTheme ?? theme) === "dark" : false;
 
   return (
     <button
       aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
       title={isDark ? "Switch to light theme" : "Switch to dark theme"}
       onClick={() => setTheme(isDark ? "light" : "dark")}
+      suppressHydrationWarning
       className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-neutral-200 dark:border-neutral-700 text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100/60 dark:hover:bg-neutral-800/60 transition-colors duration-200 cursor-pointer"
     >
       <span className="relative h-5 w-5">

@@ -24,9 +24,6 @@ export function generateMetadata({ params }) {
     summary: description,
     image,
   } = post.metadata;
-  let ogImage = image
-    ? image
-    : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
 
   return {
     title,
@@ -37,17 +34,13 @@ export function generateMetadata({ params }) {
       type: "article",
       publishedTime,
       url: `${baseUrl}/blog/${post.slug}`,
-      images: [
-        {
-          url: ogImage,
-        },
-      ],
+      ...(image ? { images: [{ url: image }] } : {}),
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage],
+      ...(image ? { images: [image] } : {}),
     },
   };
 }

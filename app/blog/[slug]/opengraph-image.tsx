@@ -1,10 +1,16 @@
 import { ImageResponse } from "next/og";
+import { getBlogPosts } from "app/blog/utils";
 
-export const runtime = "edge";
+export const size = { width: 1200, height: 630 };
+export const contentType = "image/png";
 
-export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const title = searchParams.get("title") ?? "Christopher KADE";
+export async function generateStaticParams() {
+  return getBlogPosts().map((post) => ({ slug: post.slug }));
+}
+
+export default async function Image({ params }: { params: { slug: string } }) {
+  const post = getBlogPosts().find((p) => p.slug === params.slug);
+  const title = post?.metadata.title ?? "Christopher KADE";
 
   return new ImageResponse(
     <div
@@ -19,7 +25,6 @@ export async function GET(request: Request) {
         fontFamily: "sans-serif",
       }}
     >
-      {/* top accent line */}
       <div
         style={{
           position: "absolute",
@@ -30,7 +35,6 @@ export async function GET(request: Request) {
           backgroundColor: "#fff",
         }}
       />
-
       <p
         style={{
           fontSize: 18,
@@ -43,7 +47,6 @@ export async function GET(request: Request) {
       >
         christopherkade.com
       </p>
-
       <p
         style={{
           fontSize: title.length > 50 ? 44 : 56,
@@ -57,7 +60,6 @@ export async function GET(request: Request) {
       >
         {title}
       </p>
-
       <p
         style={{
           fontSize: 18,
@@ -69,9 +71,6 @@ export async function GET(request: Request) {
         Senior Frontend Engineer · Agentic Coding · Product Engineering
       </p>
     </div>,
-    {
-      width: 1200,
-      height: 630,
-    },
+    { ...size },
   );
 }
