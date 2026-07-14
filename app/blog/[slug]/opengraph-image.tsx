@@ -8,8 +8,13 @@ export async function generateStaticParams() {
   return getBlogPosts().map((post) => ({ slug: post.slug }));
 }
 
-export default async function Image({ params }: { params: { slug: string } }) {
-  const post = getBlogPosts().find((p) => p.slug === params.slug);
+export default async function Image({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const post = getBlogPosts().find((p) => p.slug === slug);
   const title = post?.metadata.title ?? "Christopher KADE";
 
   return new ImageResponse(

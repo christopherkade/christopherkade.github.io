@@ -1,0 +1,167 @@
+---
+title: "Web Accessibility in the age of Agentic Coding"
+summary: "AI is breaking web accessibility. As agentic coding spikes WCAG errors, here is how to "Shift-Left" and force your AI agents to write clean, semantic, and compliant code."
+publishedAt: "2026-07-14"
+slug: "/posts/web-a11y-agentic-coding"
+isPublished: true
+---
+
+So I fell down the rabbit-hole of agentic coding a while back, but I’m now back from the depths and ready to write a short article after a long pause on two of my favorite subjects in tech: AI and Web Accessibility.
+
+I’ll try to break down how agentic coding has impacted web A11Y, why we’re in such a state, and how we can improve the level of A11Y of code outputted by our agents on a day-to-day basis.
+
+Every year WebAIM releases their [“Million”](https://webaim.org/projects/million/) report on the accessibility of the top 1M home pages. It’s an incredibly insightful dive with fun facts, graphs and, more importantly, ✨data✨. Most of the numbers mentioned here will be from their report, so give it a read - it’s worth it!
+
+---
+
+## Part 1: The Broken Foundation
+
+At this point, we all have the broad understanding that AI models are trained on terabytes and terabytes of data. This data includes a ton of publicly available code and, as we all know, most code is not accessible. Industry data consistently shows that digital products heavily fail accessibility compliance right out of the box.
+
+WebAIM confirms it: **over 95% of analyzed pages had at least one detectable WCAG 2 failure**, with an average of 56.1 errors per page.
+
+The insightful part is that this year’s report (2026) marks a reversal in the slow progress we’ve had over many years, showing a **10.1% YoY increase in errors**.
+
+Could it be directly linked to the explosion of agentic coding?
+
+---
+
+## Part 2: Corruption at the Source
+
+Think of LLMs as *pattern-matching engines* that are optimized to output what is *statistically common*. Meaning, they mimic the exact bad habits we spoke about above. Knowing this, it’s our responsibility to be **proactive** in our approach, otherwise we might not notice inaccessible code as it sneaks into our codebases.
+
+Keep in mind that asking the agent to “make your code accessible” won’t be enough. The reality is that models typically over-compensate by slapping custom ARIA labels left and right, and the ✨data✨ proves it: **on average, sites using ARIA had 59.1 errors per page compared to “only” 42 on basic, non-ARIA sites.**
+
+Our value as engineers, now more than ever, comes from our ability to make decisions and to apply our knowledge with the full context of our company in mind. Context matters, especially when it comes to how people use your UI.  
+An agent will tell you that your UI looks beautiful but will remain unable to natively register screen reader audio pipelines (for now), so it's your resposibility to catch these use-cases and implement code that can be parsed efficiently by screen-readers.  
+The best way to catch these use-cases is through manual testing - as it has you use a website the way actual humans might navigate it.
+
+So what approach should be take to improve the A11Y of our code in the age of agentic coding?
+
+---
+
+## Part 3: The “Shift-Left” Approach
+
+Historically, A11Y testing has always been treated as an afterthought - done after the application was fully built, or even after it was deployed to production. And we all know that fixing accessibility issues at this stage can be incredibly expensive and slow.
+
+### The Testing Timeline Shift
+
+```
+Traditional:  [ Design ] ──> [ Code ] ──> [ QA ] ──> [ Production ] ──> ⚠️ [ A11Y Audit ]
+                                                                                
+Shift-Left:   [ Design ] ──> [ Code + A11Y Scan ] ──> [ QA ] ──> [ Production ]
+
+```
+
+The “Shift-Left” approach is exactly what it sounds like: we move accessibility auditing as close to the beginning (the left) of the timeline as possible. Instead of waiting for the QA team or end-users to find violations, we run A11Y checks while the code is actively being written.
+
+I can already hear you saying: *“duh Chris, OUR platform has an average Lighthouse score of 97 and is WCAG AA compliant because we already integrated A11Y checks in our CI pipeline to make sure we never degrade our user’s experience.”* But it might not be obvious for all teams, especially ones that don’t value accessibility as much as you do.
+
+### Setting Up This Approach
+
+I'll share my setup and let you tweak it as you see fit.  
+First, install Playwright and the `axe-core` plugin:
+
+```bash
+npm install -D @playwright/test @axe-core/playwright
+npx playwright install --with-deps chromium
+```
+
+Next, set up your automated test suite to scan your primary routes:
+
+```typescript
+import { test, expect } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+
+const routes = ['/', '/about', '/pricing'];
+
+for (const route of routes) {
+  test(`a11y scan: ${route}`, async ({ page }) => {
+    await page.goto(route);
+    const results = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
+      .analyze();
+
+    expect(results.violations, formatViolations(results.violations)).toEqual([]);
+  });
+}
+
+// Makes failures readable in the terminal instead of dumping raw JSON.
+// Shows rule ID, impact, and the offending selector for each violation.
+function formatViolations(violations: import('axe-core').Result[]): string {
+  if (violations.length === 0) return '';
+  return violations
+    .map((v) => {
+      const nodes = v.nodes.map((n) => `    - ${n.target.join(' ')}`).join('\n');
+      return `[${v.impact ?? 'unknown'}] ${v.id}: ${v.help}\n${nodes}`;
+    })
+    .join('\n\n');
+}
+```
+
+---
+
+## Part 4: Teaching the Agent the Rules
+
+Automating the test is only half the battle. To actually solve the agentic coding loop, we need to inject this context directly into the agent's brain.
+
+Next, create a **SKILL** configuration file to instruct your AI agent exactly how to handle test failures without defaulting to the bad ARIA overrides we spoke about earlier.
+
+> 📄 **File:** `.agents/skills/a11y-shift-left-testing.md`
+
+```markdown
+---
+name: a11y-shift-left-testing
+description: Use whenever UI in this project is built, edited, or reviewed and accessibility hasn't been verified yet. Trigger on changes to UI components, pages, or when asked to review WCAG compliance. Proactively suggest a scan after any non-trivial JSX change.
+---
+
+# Shift-Left Accessibility Testing (Playwright + axe-core)
+
+Automated axe-core checks catch ~1/3 of WCAG issues (missing labels, bad contrast, invalid ARIA). They do not catch reading order or focus traps. Run the automated pass first as a fast filter, then hand off for manual review.
+
+## Project Setup
+- Tests live in: `tests/a11y/pages.spec.ts`
+- Run via: `npm run test:a11y`
+
+## The Execution Loop
+1. **Identify** what changed (routes, components).
+2. **Run** the scan: `npm run test:a11y`
+3. **Triage** by impact: fix critical/serious violations first.
+4. **Fix the root cause, not the symptom.** Reach for the correct native HTML element first (`<button>` over `<div onClick>`). Only add ARIA when no native element expresses the same semantics. Check `references/common-fixes.md` before adding multiple ARIA attributes.
+5. **Re-run** until the suite is green.
+6. **Hand off** for manual keyboard and screen reader review.
+```
+
+If you read this file carefuly (you did, right?) you probably noticed a reference file. It's sole purpose is to prevent the agent from slapping `aria-label` everywhere to silence the linter.
+
+
+> 📄 **File:** `.agents/a11y-shift-left-testing/references/common-fixes.md`
+
+```markdown
+# Common axe-core Violations & Root-Cause Fixes
+
+## `button-name` / `link-name`
+- **Wrong fix:** `<div onClick={...} aria-label="Submit">Submit</div>`
+- **Right fix:** Use a real `<button>` or `<a>`. Native elements are keyboard-focusable and accessible by default without manual keydown handlers.
+
+## `label` — Missing Form Label
+- **Wrong fix:** Hiding an `aria-label="Email"` on the input while removing the visible label.
+- **Right fix:** `<label htmlFor="email">Email</label>` paired with `<input id="email">`. This fixes the visual target for sighted users too.
+
+## `color-contrast`
+- **Wrong fix:** Adding ARIA. (This is a design token issue, not an ARIA issue!)
+- **Right fix:** Adjust the actual hex values in your Tailwind/design config to meet WCAG AA standards (4.5:1).
+
+## `image-alt`
+- **Wrong fix:** Spreading `alt=""` on every image blindly to quiet the scanner.
+- **Right fix:** Use `alt=""` *only* for purely decorative elements. If the image conveys context, describe it accurately.
+```
+
+---
+
+## Conclusion: A Virtuous Circle
+
+We often forget how deeply linked Agentic Coding is to Web Accessibility. Accessible, semantic code is inherently structured, deterministic, and clean - making it significantly easier for an LLM to parse and update.
+
+Writing accessible code has a direct and measurable correlation with your AI agent's productivity. So make sure to write accessible code. If not for the [1.3 billion disabled people around the world](https://www.who.int/news-room/fact-sheets/detail/disability-and-health), then do it to create value for your shareholders. :)
+

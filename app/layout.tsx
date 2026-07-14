@@ -46,7 +46,7 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
       className={cx(
-        "theme-frame md:before:content-[''] md:before:border-[5px] md:before:shadow-[inset_0_0_30px_rgba(0,0,0,0.25)] md:before:h-screen md:before:w-screen md:before:fixed md:before:pointer-events-none",
+        "theme-frame md:before:content-[''] md:before:border-[5px] md:before:shadow-[inset_0_0_30px_rgba(0,0,0,0.25)] md:before:h-screen md:before:w-screen md:before:fixed md:before:pointer-events-none md:before:z-50",
         GeistSans.variable,
         GeistMono.variable,
       )}

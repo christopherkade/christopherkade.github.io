@@ -11,22 +11,34 @@
   --sh-sign: #8996a3;
   --sh-string: #007f7a;
   --sh-keyword: #e02518;
-  --sh-comment: #a19595;
+  /* Darkened from #a19595 (2.78:1) to meet 4.5:1 against the .prose pre
+     background (#fafafa) — restored to the lighter value in dark mode below,
+     where it already passes against the dark background. */
+  --sh-comment: #716868;
   --sh-jsxliterals: #6266d1;
-  --sh-property: #e25a1c;
-  --sh-entity: #e25a1c;
+  /* Darkened from #e25a1c (3.52:1) to meet 4.5:1 against the .prose pre
+     background (#fafafa) — restored to the original value in dark mode below,
+     where it already passes against the dark background. */
+  --sh-property: #c04d18;
+  --sh-entity: #c04d18;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sh-class: #4c97f8;
-    --sh-identifier: white;
-    --sh-keyword: #f47067;
-    --sh-string: #0fa295;
-  }
-  html {
-    color-scheme: dark;
-  }
+/* These drive sugar-high's syntax highlight token colors for both inline
+   `code` and fenced code blocks (`pre code`). They must key off the app's
+   own `html.dark` class (set by the theme switcher) rather than the OS
+   `prefers-color-scheme` media query — otherwise, when the OS preference
+   and the selected app theme disagree, tokens like `--sh-identifier: white`
+   can end up rendered on a light background (or vice versa), making them
+   unreadable. */
+html.dark {
+  --sh-class: #4c97f8;
+  --sh-identifier: white;
+  --sh-keyword: #f47067;
+  --sh-string: #0fa295;
+  --sh-comment: #a19595;
+  --sh-property: #e25a1c;
+  --sh-entity: #e25a1c;
+  color-scheme: dark;
 }
 
 html {
@@ -171,8 +183,16 @@ html.dark .highlight-streak::before {
   @apply visible;
 }
 
+/* Uses `html.dark` (not Tailwind's `dark:` variant, which defaults to the
+   OS `prefers-color-scheme` media query in this project) so the code block
+   background follows the app's own theme toggle instead of the OS
+   preference. Otherwise, when the OS prefers dark but the light theme is
+   selected, the background can turn dark while the text stays black. */
 .prose pre {
-  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-2 px-3 text-sm;
+  @apply bg-neutral-50 rounded-lg overflow-x-auto border border-neutral-200 py-2 px-3 text-sm;
+}
+html.dark .prose pre {
+  @apply bg-neutral-900 border-neutral-900;
 }
 
 .prose code {
@@ -183,6 +203,27 @@ html.dark .highlight-streak::before {
   @apply p-0;
   border: initial;
   line-height: 1.5;
+}
+
+/* Copy-to-clipboard button shown on hover/focus of a fenced code block.
+   Colors are hand-written against `html.dark` (not Tailwind's `dark:`,
+   which follows the OS preference in this project) so they follow the
+   app's own theme toggle instead. */
+.code-copy-button {
+  color: var(--color-neutral-500);
+  background-color: var(--color-neutral-100);
+  border: 1px solid var(--color-neutral-200);
+}
+.code-copy-button:hover {
+  color: var(--color-neutral-900);
+}
+html.dark .code-copy-button {
+  color: var(--color-neutral-400);
+  background-color: var(--color-neutral-800);
+  border-color: var(--color-neutral-700);
+}
+html.dark .code-copy-button:hover {
+  color: var(--color-neutral-50);
 }
 
 .prose code span {
@@ -304,4 +345,17 @@ table {
 
 main > section {
   animation: pageIn 0.35s ease-out both;
+}
+
+/* Respect motion sensitivity preferences (WCAG 2.3.3) and avoid axe-core
+   flagging text mid-fade as a color-contrast violation: opacity transitions
+   temporarily blend text toward the background color while animating. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
