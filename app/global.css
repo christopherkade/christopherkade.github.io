@@ -43,6 +43,10 @@ html.dark {
 
 html {
   min-width: 360px;
+  /* Always reserve space for the vertical scrollbar so its width doesn't
+     change (and doesn't encroach on the .theme-frame border) depending on
+     whether the page content is tall enough to scroll. */
+  scrollbar-gutter: stable;
 }
 
 /* Base theme colors toggled by next-themes (html.dark) */
