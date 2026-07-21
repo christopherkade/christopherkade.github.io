@@ -145,6 +145,31 @@ html.dark .highlight-streak::before {
   background-color: color-mix(in srgb, var(--streak-color) 30%, transparent);
 }
 
+/* Polaroid-style image tooltip that follows the cursor when hovering
+   "Christopher" on the homepage: tilted to the left and shaking slightly,
+   like a photo being wobbled to catch attention. Runs 1 time and settles
+   on a slightly rotated resting position rather than snapping back flat. */
+.chris-tooltip {
+  transform-origin: top left;
+  animation: chris-tooltip-shake 0.7s cubic-bezier(0.45, 0, 0.55, 1) 1 forwards;
+}
+
+@keyframes chris-tooltip-shake {
+  0%,
+  100% {
+    transform: rotate(-8deg);
+  }
+  25% {
+    transform: rotate(-13deg);
+  }
+  50% {
+    transform: rotate(-6deg);
+  }
+  75% {
+    transform: rotate(-11deg);
+  }
+}
+
 /* Home divider: explicit top border color for each theme */
 .home-divider {
   border-top-color: black;

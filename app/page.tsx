@@ -1,10 +1,11 @@
 import { BlogPosts } from "app/components/posts";
+import { NameTooltip } from "app/components/name-tooltip";
 
 export default function Page() {
   return (
     <section>
       <p className="mb-4">
-        Bonjour ! I'm Christopher, a{" "}
+        Bonjour ! I'm <NameTooltip />, a{" "}
         <span className="bg-rose-200 dark:bg-rose-400/30 px-1 py-0.5 inline-block rotate-[0.7deg] skew-x-[-0.5deg]">
           Senior Frontend Engineer
         </span>{" "}
