@@ -77,15 +77,18 @@ export function MusicProvider({ children }: { children: React.ReactNode }) {
       return;
     }
 
+    // Set the song synchronously alongside `audio.src` rather than in the
+    // `play()` promise's `.then()`. That promise only resolves once the
+    // browser has buffered enough of the track to actually start playing —
+    // fast/cached locally, but slow enough over a real network in
+    // production to create a window where `isPlaying` is already true
+    // (playback requested) while `currentSong` still holds the previous
+    // track, which briefly shows the wrong title/cover in the snackbar.
+    setCurrentSong(song);
     audio.src = song.src;
-    audio
-      .play()
-      .then(() => {
-        setCurrentSong(song);
-      })
-      .catch((error) => {
-        console.error("Unable to play track:", error);
-      });
+    audio.play().catch((error) => {
+      console.error("Unable to play track:", error);
+    });
   }, [isPlaying, pickRandomSong]);
 
   return (
