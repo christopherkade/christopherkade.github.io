@@ -5,6 +5,8 @@ import { GeistMono } from "geist/font/mono";
 import { Navbar } from "./components/nav";
 import Footer from "./components/footer";
 import { ThemeProvider } from "next-themes";
+import { MusicProvider } from "./components/MusicProvider";
+import MusicSnackbar from "./components/MusicSnackbar";
 
 export const metadata: Metadata = {
   title: {
@@ -58,11 +60,14 @@ export default function RootLayout({
           defaultTheme="light"
           disableTransitionOnChange
         >
-          <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-            <Navbar />
-            {children}
-            <Footer />
-          </main>
+          <MusicProvider>
+            <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+              <Navbar />
+              {children}
+              <Footer />
+            </main>
+            <MusicSnackbar />
+          </MusicProvider>
         </ThemeProvider>
       </body>
     </html>

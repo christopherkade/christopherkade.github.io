@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ThemeSwitch from "./ThemeSwitch";
+import MusicSwitch from "./MusicSwitch";
 import { NavLink } from "./NavLink";
 
 function GitHubIcon({ className = "h-4 w-4" }: { className?: string }) {
@@ -94,7 +95,8 @@ export function Navbar() {
                 </a>
               );
             })}
-            <div className="pl-2 pr-1 m-1">
+            <div className="flex items-center gap-1 pl-2 pr-1 m-1">
+              <MusicSwitch />
               <ThemeSwitch />
             </div>
           </div>

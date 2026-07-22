@@ -170,6 +170,23 @@ html.dark .highlight-streak::before {
   }
 }
 
+/* Equalizer bars shown on the music switch icon while a song is playing */
+.eq-bar {
+  transform-origin: bottom;
+  transform-box: fill-box;
+  animation: eq-bar 0.9s ease-in-out infinite;
+}
+
+@keyframes eq-bar {
+  0%,
+  100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
 /* Home divider: explicit top border color for each theme */
 .home-divider {
   border-top-color: black;
