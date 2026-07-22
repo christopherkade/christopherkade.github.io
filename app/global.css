@@ -107,6 +107,19 @@ html.dark .nav-link-inactive {
   color: var(--color-neutral-300);
 }
 
+/* Mobile nav dropdown panel background/border. Keyed off the literal
+   html.dark class (not Tailwind's dark: variant, which tracks OS
+   prefers-color-scheme in this project rather than the app's own theme
+   toggle) so the panel never renders with a mismatched surface color. */
+.mobile-menu-panel {
+  background-color: white;
+  border-color: var(--color-neutral-200);
+}
+html.dark .mobile-menu-panel {
+  background-color: black;
+  border-color: var(--color-neutral-700);
+}
+
 /* Footer text color that responds to html.dark */
 .footer-text {
   color: var(--color-neutral-800);
